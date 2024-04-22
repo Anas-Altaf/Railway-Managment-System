@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.passengerButton = new System.Windows.Forms.Button();
+            this.employeePassenger = new System.Windows.Forms.Button();
+            this.adminPassenger = new System.Windows.Forms.Button();
             this.customPictureBox3 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
             this.customPictureBox2 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
             this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox2)).BeginInit();
@@ -48,9 +48,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.passengerButton);
+            this.panel1.Controls.Add(this.employeePassenger);
+            this.panel1.Controls.Add(this.adminPassenger);
             this.panel1.Controls.Add(this.customPictureBox3);
             this.panel1.Controls.Add(this.customPictureBox2);
             this.panel1.Controls.Add(this.customPictureBox1);
@@ -63,89 +63,53 @@
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label2
+            // passengerButton
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(148, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(191, 32);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Select Category";
-            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            this.passengerButton.BackColor = System.Drawing.Color.Crimson;
+            this.passengerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.passengerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passengerButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passengerButton.ForeColor = System.Drawing.Color.White;
+            this.passengerButton.Location = new System.Drawing.Point(26, 285);
+            this.passengerButton.Margin = new System.Windows.Forms.Padding(0);
+            this.passengerButton.Name = "passengerButton";
+            this.passengerButton.Size = new System.Drawing.Size(109, 35);
+            this.passengerButton.TabIndex = 16;
+            this.passengerButton.Text = "Passenger";
+            this.passengerButton.UseVisualStyleBackColor = false;
+            this.passengerButton.Click += new System.EventHandler(this.passengerButton_Click);
             // 
-            // label4
+            // employeePassenger
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Ebrima", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(41, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(406, 40);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Railway Managment System";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.employeePassenger.BackColor = System.Drawing.Color.Crimson;
+            this.employeePassenger.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.employeePassenger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.employeePassenger.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employeePassenger.ForeColor = System.Drawing.Color.White;
+            this.employeePassenger.Location = new System.Drawing.Point(338, 285);
+            this.employeePassenger.Margin = new System.Windows.Forms.Padding(0);
+            this.employeePassenger.Name = "employeePassenger";
+            this.employeePassenger.Size = new System.Drawing.Size(109, 35);
+            this.employeePassenger.TabIndex = 15;
+            this.employeePassenger.Text = "Employee";
+            this.employeePassenger.UseVisualStyleBackColor = false;
+            this.employeePassenger.Click += new System.EventHandler(this.employeePassenger_Click);
             // 
-            // label1
+            // adminPassenger
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Ebrima", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(136, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 47);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Welcome to";
-            this.label1.Click += new System.EventHandler(this.label1_Click_2);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Crimson;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(184, 285);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 35);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Admin";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Crimson;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(338, 285);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 35);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Employee";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Crimson;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(26, 285);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 35);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Passenger";
-            this.button1.UseVisualStyleBackColor = false;
+            this.adminPassenger.BackColor = System.Drawing.Color.Crimson;
+            this.adminPassenger.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.adminPassenger.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adminPassenger.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminPassenger.ForeColor = System.Drawing.Color.White;
+            this.adminPassenger.Location = new System.Drawing.Point(184, 285);
+            this.adminPassenger.Margin = new System.Windows.Forms.Padding(0);
+            this.adminPassenger.Name = "adminPassenger";
+            this.adminPassenger.Size = new System.Drawing.Size(109, 35);
+            this.adminPassenger.TabIndex = 0;
+            this.adminPassenger.Text = "Admin";
+            this.adminPassenger.UseVisualStyleBackColor = false;
+            this.adminPassenger.Click += new System.EventHandler(this.adminPassenger_Click);
             // 
             // customPictureBox3
             // 
@@ -198,6 +162,42 @@
             this.customPictureBox1.TabIndex = 12;
             this.customPictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(148, 140);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(191, 32);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Select Category";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Ebrima", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(41, 81);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(406, 40);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Railway Managment System";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Ebrima", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(136, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(218, 47);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Welcome to";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,7 +211,6 @@
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Dashboard";
             this.Text = "Railway Managment System";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox3)).EndInit();
@@ -229,9 +228,9 @@
         private Static_Resources.CustomPictureBox customPictureBox1;
         private Static_Resources.CustomPictureBox customPictureBox2;
         private Static_Resources.CustomPictureBox customPictureBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button adminPassenger;
+        private System.Windows.Forms.Button passengerButton;
+        private System.Windows.Forms.Button employeePassenger;
     }
 }
 

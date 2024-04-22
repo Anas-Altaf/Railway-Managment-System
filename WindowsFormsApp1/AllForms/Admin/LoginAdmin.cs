@@ -103,5 +103,10 @@ namespace WindowsFormsApp1
             dashboardObj.Show();
             this.Close();
         }
+
+        private void forgotPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

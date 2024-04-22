@@ -38,7 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.forgotPassword = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
@@ -160,23 +160,24 @@
             this.label9.TabIndex = 29;
             this.label9.Text = "Admin";
             // 
-            // label2
+            // forgotPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkKhaki;
-            this.label2.Location = new System.Drawing.Point(52, 247);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 20);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Forgot Password?";
+            this.forgotPassword.AutoSize = true;
+            this.forgotPassword.BackColor = System.Drawing.Color.Transparent;
+            this.forgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.forgotPassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotPassword.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.forgotPassword.Location = new System.Drawing.Point(52, 247);
+            this.forgotPassword.Name = "forgotPassword";
+            this.forgotPassword.Size = new System.Drawing.Size(125, 20);
+            this.forgotPassword.TabIndex = 30;
+            this.forgotPassword.Text = "Forgot Password?";
+            this.forgotPassword.Click += new System.EventHandler(this.forgotPassword_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.forgotPassword);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.customPictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -239,7 +240,7 @@
         private System.Windows.Forms.Label label1;
         private Static_Resources.CustomPictureBox customPictureBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label forgotPassword;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
     }

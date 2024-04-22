@@ -117,54 +117,55 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginAdmin.cs">
+    <Compile Include="AllForms\Admin\LoginAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginAdmin.Designer.cs">
+    <Compile Include="AllForms\Admin\LoginAdmin.Designer.cs">
       <DependentUpon>LoginAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminDashboard.cs">
+    <Compile Include="AllForms\Admin\AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminDashboard.Designer.cs">
+    <Compile Include="AllForms\Admin\AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginEmployee.cs">
+    <Compile Include="AllForms\Employee\LoginEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginEmployee.Designer.cs">
+    <Compile Include="AllForms\Employee\LoginEmployee.Designer.cs">
       <DependentUpon>LoginEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginPassenger.cs">
+    <Compile Include="AllForms\Passenger\LoginPassenger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginPassenger.Designer.cs">
+    <Compile Include="AllForms\Passenger\LoginPassenger.Designer.cs">
       <DependentUpon>LoginPassenger.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUpPassenger.cs">
+    <Compile Include="AllForms\Passenger\SignUpPassenger.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUpPassenger.Designer.cs">
+    <Compile Include="AllForms\Passenger\SignUpPassenger.Designer.cs">
       <DependentUpon>SignUpPassenger.cs</DependentUpon>
     </Compile>
     <Compile Include="Static Resources\CustomPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Static Resources\UserFunctions.cs" />
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginAdmin.resx">
+    <EmbeddedResource Include="AllForms\Admin\LoginAdmin.resx">
       <DependentUpon>LoginAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminDashboard.resx">
+    <EmbeddedResource Include="AllForms\Admin\AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginEmployee.resx">
+    <EmbeddedResource Include="AllForms\Employee\LoginEmployee.resx">
       <DependentUpon>LoginEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginPassenger.resx">
+    <EmbeddedResource Include="AllForms\Passenger\LoginPassenger.resx">
       <DependentUpon>LoginPassenger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -177,7 +178,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SignUpPassenger.resx">
+    <EmbeddedResource Include="AllForms\Passenger\SignUpPassenger.resx">
       <DependentUpon>SignUpPassenger.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
