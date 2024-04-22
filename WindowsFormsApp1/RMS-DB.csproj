@@ -129,6 +129,12 @@
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginEmployee.Designer.cs">
+      <DependentUpon>LoginEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPassenger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginEmployee.resx">
+      <DependentUpon>LoginEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPassenger.resx">
       <DependentUpon>LoginPassenger.cs</DependentUpon>
