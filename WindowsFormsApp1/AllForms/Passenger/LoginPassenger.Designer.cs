@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.forgotPassword = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.createAccountButton = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.forgotPassword);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.createAccountButton);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.customPictureBox1);
             this.panel1.Controls.Add(this.label1);
@@ -79,6 +79,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(473, 364);
             this.panel1.TabIndex = 12;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // forgotPassword
             // 
@@ -94,18 +95,19 @@
             this.forgotPassword.Text = "Forgot Password?";
             this.forgotPassword.Click += new System.EventHandler(this.forgotPassword_Click);
             // 
-            // label8
+            // createAccountButton
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label8.Location = new System.Drawing.Point(243, 248);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(178, 20);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Already have an account?";
+            this.createAccountButton.AutoSize = true;
+            this.createAccountButton.BackColor = System.Drawing.Color.Transparent;
+            this.createAccountButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.createAccountButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createAccountButton.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.createAccountButton.Location = new System.Drawing.Point(311, 247);
+            this.createAccountButton.Name = "createAccountButton";
+            this.createAccountButton.Size = new System.Drawing.Size(113, 20);
+            this.createAccountButton.TabIndex = 26;
+            this.createAccountButton.Text = "Create Account";
+            this.createAccountButton.Click += new System.EventHandler(this.createAccountButton_Click);
             // 
             // label9
             // 
@@ -166,7 +168,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(52, 194);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 20);
@@ -190,7 +192,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(52, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 20);
@@ -217,6 +219,7 @@
             this.backButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.backButton.TabIndex = 13;
             this.backButton.TabStop = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // LoginPassenger
             // 
@@ -252,7 +255,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox statusBarTextBox;
         private System.Windows.Forms.PictureBox backButton;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label createAccountButton;
         private System.Windows.Forms.Label forgotPassword;
     }
 }

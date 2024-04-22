@@ -32,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.alreadyHaveAccount = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.alreadyHaveAccount);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
@@ -108,19 +108,19 @@
             this.label9.TabIndex = 26;
             this.label9.Text = "Passenger";
             // 
-            // label8
+            // alreadyHaveAccount
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label8.Location = new System.Drawing.Point(235, 329);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(178, 20);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Already have an account?";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.alreadyHaveAccount.AutoSize = true;
+            this.alreadyHaveAccount.BackColor = System.Drawing.Color.Transparent;
+            this.alreadyHaveAccount.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.alreadyHaveAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alreadyHaveAccount.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.alreadyHaveAccount.Location = new System.Drawing.Point(235, 329);
+            this.alreadyHaveAccount.Name = "alreadyHaveAccount";
+            this.alreadyHaveAccount.Size = new System.Drawing.Size(185, 20);
+            this.alreadyHaveAccount.TabIndex = 25;
+            this.alreadyHaveAccount.Text = "Already have an account?";
+            this.alreadyHaveAccount.Click += new System.EventHandler(this.alreadyHaveAccount_Click);
             // 
             // textBox3
             // 
@@ -139,7 +139,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(55, 219);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 21);
@@ -151,7 +151,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(229, 107);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 21);
@@ -175,7 +175,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Silver;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(55, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 21);
@@ -228,7 +228,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(55, 274);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 21);
@@ -252,7 +252,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(55, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 21);
@@ -349,6 +349,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label alreadyHaveAccount;
     }
 }

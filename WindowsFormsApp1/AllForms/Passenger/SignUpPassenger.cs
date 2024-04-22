@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Static_Resources;
 
 namespace WindowsFormsApp1
 {
@@ -19,22 +20,22 @@ namespace WindowsFormsApp1
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            int opacity = 85; // 50% of 255 (maximum alpha value)
-
-            // Set the background color of the panel with adjusted opacity
-            panel1.BackColor = Color.FromArgb(opacity, panel1.BackColor);
+            UserFunctions.Apply_Panel1_Transparency(panel1);
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            Dashboard dashboardObj = new Dashboard();
-            dashboardObj.Show();
+            this.Hide();
             this.Close();
+            Dashboard dashboardObj = new Dashboard();
+            dashboardObj.ShowDialog();
         }
-
-        private void label8_Click(object sender, EventArgs e)
+        private void alreadyHaveAccount_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            this.Close();
+            LoginPassenger passengerLoginForm = new LoginPassenger();
+            passengerLoginForm.ShowDialog();
         }
     }
 }

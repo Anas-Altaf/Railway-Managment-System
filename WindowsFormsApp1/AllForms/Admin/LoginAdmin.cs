@@ -28,10 +28,7 @@ namespace WindowsFormsApp1
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            int opacity = 85; // 50% of 255 (maximum alpha value)
-
-            // Set the background color of the panel with adjusted opacity
-            panel1.BackColor = Color.FromArgb(opacity, panel1.BackColor);
+            UserFunctions.Apply_Panel1_Transparency(panel1);
         }
 
 
@@ -98,10 +95,11 @@ namespace WindowsFormsApp1
 
 
         private void backButton_Click(object sender, EventArgs e)
-        { 
-            Dashboard dashboardObj = new Dashboard();
-            dashboardObj.Show();
+        {
+            this.Hide();
             this.Close();
+            Dashboard dashboardObj = new Dashboard();
+            dashboardObj.ShowDialog();
         }
 
         private void forgotPassword_Click(object sender, EventArgs e)

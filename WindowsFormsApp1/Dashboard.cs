@@ -42,5 +42,10 @@ namespace WindowsFormsApp1
         {
            UserFunctions.Apply_Panel1_Transparency(panel1);
         }
+
+        private void Dashboard_Deactivate(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

@@ -12,8 +12,9 @@ namespace WindowsFormsApp1.Static_Resources
     {
         public static void Apply_Panel1_Transparency(Panel panel1)
         {
-            int opacity = 85;
+            int opacity = 80;
             panel1.BackColor = Color.FromArgb(opacity, panel1.BackColor);
+            
         }
     }
 }

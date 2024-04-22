@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Static_Resources;
 
 namespace WindowsFormsApp1
 {
@@ -17,9 +18,18 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void forgotPassword_Click(object sender, EventArgs e)
-        {
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            UserFunctions.Apply_Panel1_Transparency(panel1);
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+            Dashboard dashboardObj = new Dashboard();
+            dashboardObj.ShowDialog();
         }
     }
 }
