@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class Dashboard : Form
     {
-        Login LoginForm1 = new Login();
+        LoginAdmin LoginForm1 = new LoginAdmin();
         public Dashboard()
         {
             InitializeComponent();

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class navpage
+    partial class AdminDashboard
     {
         /// <summary>
         /// Required designer variable.

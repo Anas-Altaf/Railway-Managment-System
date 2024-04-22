@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class navpage : Form
+    public partial class AdminDashboard : Form
     {
         bool sideBarExpand;
-        public navpage()
+        public AdminDashboard()
         {
             InitializeComponent();
         }

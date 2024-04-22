@@ -17,11 +17,11 @@ using WindowsFormsApp1.Static_Resources;
 
 namespace WindowsFormsApp1
 {
-    public partial class Login : Form
+    public partial class LoginAdmin : Form
     {
         //Establishing Oracle Connection
         string conStr = @"DATA SOURCE = localhost:1521/XE; USER ID = umair; PASSWORD = umair";
-        public Login()
+        public LoginAdmin()
         {
             InitializeComponent();
         }
