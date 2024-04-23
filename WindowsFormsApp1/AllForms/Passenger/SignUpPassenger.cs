@@ -27,8 +27,7 @@ namespace WindowsFormsApp1
         {
             this.Hide();
             this.Close();
-            Dashboard dashboardObj = new Dashboard();
-            dashboardObj.ShowDialog();
+            Dashboard.getDashboard().Show();
         }
         private void alreadyHaveAccount_Click(object sender, EventArgs e)
         {

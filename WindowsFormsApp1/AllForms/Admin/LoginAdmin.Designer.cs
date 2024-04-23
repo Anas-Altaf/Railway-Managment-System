@@ -40,7 +40,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.forgotPassword = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -185,28 +185,28 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.emailBox);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.loginButton);
             this.panel1.Location = new System.Drawing.Point(164, 43);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(473, 364);
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button1
+            // loginButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Crimson;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 333);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(473, 31);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.loginButton.BackColor = System.Drawing.Color.Crimson;
+            this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.loginButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButton.ForeColor = System.Drawing.Color.White;
+            this.loginButton.Location = new System.Drawing.Point(0, 333);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(473, 31);
+            this.loginButton.TabIndex = 3;
+            this.loginButton.Text = "Login";
+            this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // LoginAdmin
             // 
@@ -242,6 +242,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label forgotPassword;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button loginButton;
     }
 }

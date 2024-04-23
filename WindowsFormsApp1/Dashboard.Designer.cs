@@ -211,7 +211,6 @@
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Dashboard";
             this.Text = "Railway Managment System";
-            this.Deactivate += new System.EventHandler(this.Dashboard_Deactivate);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox3)).EndInit();

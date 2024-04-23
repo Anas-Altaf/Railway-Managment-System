@@ -47,8 +47,8 @@ namespace WindowsFormsApp1
         {
             this.Hide();
             this.Close();
-            Dashboard dashboardObj = new Dashboard();
-            dashboardObj.ShowDialog();
+            Dashboard.getDashboard().Show();
+
         }
     }
 }

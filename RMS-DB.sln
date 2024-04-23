@@ -5,6 +5,13 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMS-DB", "WindowsFormsApp1\RMS-DB.csproj", "{AF71D188-683D-424C-BE56-9299BC03BC75}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB-Queries", "DB-Queries", "{654A800D-2F37-4E98-91D1-50224B5862F4}"
+	ProjectSection(SolutionItems) = preProject
+		Administrator.sql = Administrator.sql
+		Employee.sql = Employee.sql
+		Passenger.sql = Passenger.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

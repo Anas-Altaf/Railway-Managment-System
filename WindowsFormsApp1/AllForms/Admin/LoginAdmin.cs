@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
     public partial class LoginAdmin : Form
     {
         //Establishing Oracle Connection
-        string conStr = @"DATA SOURCE = localhost:1521/XE; USER ID = umair; PASSWORD = umair";
+        string conStr = Dashboard.connectionString;
         public LoginAdmin()
         {
             InitializeComponent();
@@ -32,7 +32,20 @@ namespace WindowsFormsApp1
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+            Dashboard.getDashboard().Show();
+        }
+
+        private void forgotPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
         {
             string email = emailBox.Text.Trim();
             string password = passwordBox.Text.Trim();
@@ -58,9 +71,15 @@ namespace WindowsFormsApp1
                 {
                     // Login successful!
                     string a_id = userDR.GetString(0);
-                    statusBarTextBox.Text = $"5- a_id: {a_id}, email: {email}";
+                    statusBarTextBox.Text = $"5- a_id: {a_id}= email: {email}";
+                    statusBarTextBox.Text = $"6- Logged In , ID:{a_id}";
+
                     MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // Optionally, proceed to the main application window here
+                    this.Hide();
+                    this.Close();
+                    AdminDashboard adminDash = new AdminDashboard();
+                    //Going to show admin dashboard
+                    adminDash.ShowDialog();
                 }
                 else
                 {
@@ -70,6 +89,8 @@ namespace WindowsFormsApp1
                 }
 
                 userDR.Close(); // Manually close DataReader
+                connection.Close();
+                statusBarTextBox.Text = $"6- Connection Closed";
             }
             catch (OracleException ex)
             {
@@ -90,21 +111,6 @@ namespace WindowsFormsApp1
                     statusBarTextBox.Text = $"6- Connection Closed";
                 }
             }
-        }
-
-
-
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.Close();
-            Dashboard dashboardObj = new Dashboard();
-            dashboardObj.ShowDialog();
-        }
-
-        private void forgotPassword_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

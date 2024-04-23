@@ -14,11 +14,17 @@ namespace WindowsFormsApp1
 {
     public partial class Dashboard : Form
     {
-        public Dashboard()
+        public static readonly string connectionString = @"DATA SOURCE = localhost:1521/XE; USER ID = umair; PASSWORD = umair";
+
+         static Dashboard dashboard = new Dashboard();
+        private Dashboard()
         {
             InitializeComponent();
         }
-
+        public static Dashboard getDashboard()
+        {
+            return dashboard;
+        }
         private void passengerButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -43,9 +49,5 @@ namespace WindowsFormsApp1
            UserFunctions.Apply_Panel1_Transparency(panel1);
         }
 
-        private void Dashboard_Deactivate(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
     }
 }
