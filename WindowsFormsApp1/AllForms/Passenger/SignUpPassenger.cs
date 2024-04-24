@@ -36,5 +36,10 @@ namespace WindowsFormsApp1
             LoginPassenger passengerLoginForm = new LoginPassenger();
             passengerLoginForm.ShowDialog();
         }
+
+        private void SignUpPassenger_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Dashboard.getDashboard().Show();
+        }
     }
 }
