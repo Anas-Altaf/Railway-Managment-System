@@ -129,7 +129,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Gold;
             this.label9.Location = new System.Drawing.Point(131, 12);
@@ -297,6 +297,7 @@
             this.statusBarTextBox.Location = new System.Drawing.Point(0, 430);
             this.statusBarTextBox.Multiline = true;
             this.statusBarTextBox.Name = "statusBarTextBox";
+            this.statusBarTextBox.ReadOnly = true;
             this.statusBarTextBox.Size = new System.Drawing.Size(800, 20);
             this.statusBarTextBox.TabIndex = 14;
             // 
@@ -363,7 +364,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label forgotPassLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox statusBarTextBox;
+        public System.Windows.Forms.TextBox statusBarTextBox;
         private System.Windows.Forms.PictureBox backButton;
         private System.Windows.Forms.Label passengerName;
         private System.Windows.Forms.TextBox NameBox;

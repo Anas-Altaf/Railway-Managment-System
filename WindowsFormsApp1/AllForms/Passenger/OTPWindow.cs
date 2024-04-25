@@ -29,7 +29,7 @@ namespace WindowsFormsApp1.AllForms.Passenger
             {
                 var error = emailManager.SendEmail(recipientAddress);
                 OTPBox.Text = error.ToString();
-                MessageBox.Show("Done!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
             catch (Exception ex)
             {

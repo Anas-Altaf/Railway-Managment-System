@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OTPWindow));
             this.label9 = new System.Windows.Forms.Label();
-            this.signUpButton = new System.Windows.Forms.Button();
+            this.OTPVerifyButton = new System.Windows.Forms.Button();
             this.resendOTPLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
@@ -52,23 +52,23 @@
             this.label9.TabIndex = 32;
             this.label9.Text = "Passenger";
             // 
-            // signUpButton
+            // OTPVerifyButton
             // 
-            this.signUpButton.BackColor = System.Drawing.Color.Crimson;
-            this.signUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signUpButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.signUpButton.FlatAppearance.BorderSize = 0;
-            this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.signUpButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signUpButton.ForeColor = System.Drawing.Color.White;
-            this.signUpButton.Location = new System.Drawing.Point(0, 135);
-            this.signUpButton.Margin = new System.Windows.Forms.Padding(0);
-            this.signUpButton.Name = "signUpButton";
-            this.signUpButton.Size = new System.Drawing.Size(367, 31);
-            this.signUpButton.TabIndex = 27;
-            this.signUpButton.Text = "Send OTP";
-            this.signUpButton.UseVisualStyleBackColor = false;
-            this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
+            this.OTPVerifyButton.BackColor = System.Drawing.Color.Crimson;
+            this.OTPVerifyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OTPVerifyButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.OTPVerifyButton.FlatAppearance.BorderSize = 0;
+            this.OTPVerifyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OTPVerifyButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OTPVerifyButton.ForeColor = System.Drawing.Color.White;
+            this.OTPVerifyButton.Location = new System.Drawing.Point(0, 135);
+            this.OTPVerifyButton.Margin = new System.Windows.Forms.Padding(0);
+            this.OTPVerifyButton.Name = "OTPVerifyButton";
+            this.OTPVerifyButton.Size = new System.Drawing.Size(367, 31);
+            this.OTPVerifyButton.TabIndex = 27;
+            this.OTPVerifyButton.Text = "Verify OTP";
+            this.OTPVerifyButton.UseVisualStyleBackColor = false;
+            this.OTPVerifyButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
             // resendOTPLabel
             // 
@@ -140,7 +140,7 @@
             // 
             // OTPWindow
             // 
-            this.AcceptButton = this.signUpButton;
+            this.AcceptButton = this.OTPVerifyButton;
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -150,7 +150,7 @@
             this.Controls.Add(this.enterOTPLabel);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.customPictureBox1);
-            this.Controls.Add(this.signUpButton);
+            this.Controls.Add(this.OTPVerifyButton);
             this.Controls.Add(this.resendOTPLabel);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.White;
@@ -174,7 +174,7 @@
 
         private System.Windows.Forms.Label label9;
         private Static_Resources.CustomPictureBox customPictureBox1;
-        private System.Windows.Forms.Button signUpButton;
+        private System.Windows.Forms.Button OTPVerifyButton;
         private System.Windows.Forms.Label resendOTPLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label enterOTPLabel;

@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class LoginEmployee : Form
     {
         //Establishing Oracle Connection
-        string conStr = Dashboard.connectionString;
+        string conStr = UserFunctions.connectionString;
         public LoginEmployee()
         {
             InitializeComponent();
