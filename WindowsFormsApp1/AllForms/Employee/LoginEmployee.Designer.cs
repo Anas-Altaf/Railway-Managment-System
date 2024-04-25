@@ -59,7 +59,7 @@
             // 
             this.backButton.BackColor = System.Drawing.Color.Transparent;
             this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backButton.Image = global::WindowsFormsApp1.Properties.Resources.angle_circle_arrow_left_icon;
+//            this.backButton.Image = global::WindowsFormsApp1.Properties.Resources.angle_circle_arrow_left_icon;
             this.backButton.Location = new System.Drawing.Point(12, 6);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(56, 50);
