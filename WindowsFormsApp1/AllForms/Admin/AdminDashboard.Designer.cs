@@ -162,6 +162,7 @@
             // menuButton
             // 
             this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_menu_50;
             this.menuButton.Location = new System.Drawing.Point(9, 9);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(36, 32);
@@ -184,6 +185,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_employees_25__1_;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(-3, -8);
             this.button1.Name = "button1";
@@ -193,7 +195,6 @@
             this.button1.Text = "          Check Profile";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel5
             // 
@@ -208,12 +209,13 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::WindowsFormsApp1.Properties.Resources.icons8_administrator_male_25__1_;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(-3, -9);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(211, 55);
-            this.button4.TabIndex = 5;
+            this.button4.TabIndex = 0;
             this.button4.Text = "          Manage Profiles";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = true;
@@ -231,6 +233,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_clock_25;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(-2, -12);
             this.button3.Name = "button3";
@@ -254,6 +257,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_pdf_25;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(-1, -15);
             this.button2.Name = "button2";
@@ -277,6 +281,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Image = global::WindowsFormsApp1.Properties.Resources.icons8_train_25;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button8.Location = new System.Drawing.Point(-1, -14);
             this.button8.Name = "button8";
@@ -300,6 +305,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Image = global::WindowsFormsApp1.Properties.Resources.icons8_task_25;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.Location = new System.Drawing.Point(-1, -14);
             this.button9.Name = "button9";
@@ -323,6 +329,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Image = global::WindowsFormsApp1.Properties.Resources.icons8_open_email_25;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.Location = new System.Drawing.Point(-1, -14);
             this.button10.Name = "button10";
@@ -346,6 +353,7 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Image = global::WindowsFormsApp1.Properties.Resources.icons8_logout_25;
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.Location = new System.Drawing.Point(-1, -13);
             this.button11.Name = "button11";
@@ -378,6 +386,7 @@
             // 
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::WindowsFormsApp1.Properties.Resources.icons8_notification_25;
             this.button7.Location = new System.Drawing.Point(646, 14);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(37, 28);
@@ -389,6 +398,7 @@
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button6.Image = global::WindowsFormsApp1.Properties.Resources.icons8_message_25;
             this.button6.Location = new System.Drawing.Point(692, 15);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(32, 27);
@@ -400,6 +410,7 @@
             this.button5.BackColor = System.Drawing.Color.Black;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = global::WindowsFormsApp1.Properties.Resources.icons8_administrator_male_48;
             this.button5.Location = new System.Drawing.Point(732, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(40, 40);
@@ -441,6 +452,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_employees_48;
             this.pictureBox1.Location = new System.Drawing.Point(142, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(58, 59);
@@ -491,6 +503,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.icons8_employee_48;
             this.pictureBox2.Location = new System.Drawing.Point(142, 14);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(58, 59);
@@ -541,6 +554,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.icons8_clock_64;
             this.pictureBox3.Location = new System.Drawing.Point(142, 14);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 59);
@@ -591,6 +605,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.icons8_pdf_64;
             this.pictureBox4.Location = new System.Drawing.Point(144, 15);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(58, 59);
@@ -641,6 +656,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.icons8_feedback_48;
             this.pictureBox5.Location = new System.Drawing.Point(137, 16);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(58, 59);
@@ -691,6 +707,7 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.icons8_train_64;
             this.pictureBox6.Location = new System.Drawing.Point(138, 14);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(58, 59);
@@ -741,6 +758,7 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.Image = global::WindowsFormsApp1.Properties.Resources.icons8_task_64;
             this.pictureBox7.Location = new System.Drawing.Point(141, 16);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(58, 59);

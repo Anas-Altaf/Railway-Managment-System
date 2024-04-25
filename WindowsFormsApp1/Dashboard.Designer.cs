@@ -202,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-//            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.high_speed_train_at_station_and_blurred_cityscape_at_night_on_background_postproducted_generative_ai_digital_illustration_of_non_existing_train_model_free_photo;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.high_speed_train_at_station_and_blurred_cityscape_at_night_on_background_postproducted_generative_ai_digital_illustration_of_non_existing_train_model_free_photo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
