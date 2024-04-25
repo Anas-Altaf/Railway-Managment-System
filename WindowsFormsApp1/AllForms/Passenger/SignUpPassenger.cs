@@ -34,12 +34,27 @@ namespace WindowsFormsApp1
             this.Hide();
             this.Close();
             LoginPassenger passengerLoginForm = new LoginPassenger();
-            passengerLoginForm.ShowDialog();
+            passengerLoginForm.Show();
         }
 
         private void SignUpPassenger_FormClosed(object sender, FormClosedEventArgs e)
         {
             Dashboard.getDashboard().Show();
+        }
+
+        private void signUpButton_Click(object sender, EventArgs e)
+        {
+            string passengerEmail = emailBox.Text.ToString();
+            string passengerName = NameBox.Text.ToString();
+            string passengerPhoneNumber = phoneNumberBox.Text.ToString();
+            string passengerCNIC = cnicBox.Text.ToString();
+            string passengerPass = passwordBox.Text.ToString();
+            bool signUpInputStatus = UserFunctions.ValidateUserInput(passengerEmail, passengerPhoneNumber, passengerCNIC, passengerName, this);
+            if(signUpInputStatus)
+            {
+                statusBarTextBox.Text = @"Great!, You got the right formats.";
+            }
+
         }
     }
 }
