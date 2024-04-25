@@ -35,12 +35,10 @@
             this.alreadyHaveAccount = new System.Windows.Forms.Label();
             this.emailBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lastNameBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.firstNameBox = new System.Windows.Forms.TextBox();
+            this.passengerName = new System.Windows.Forms.Label();
+            this.NameBox = new System.Windows.Forms.TextBox();
             this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
-            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.cnicBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.phoneNumberBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +47,8 @@
             this.statusBarTextBox = new System.Windows.Forms.TextBox();
             this.backButton = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.passwordBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
@@ -71,21 +71,22 @@
             this.signUpButton.TabIndex = 0;
             this.signUpButton.Text = "Sign Up";
             this.signUpButton.UseVisualStyleBackColor = false;
+            this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
             // 
             // panel1
             // 
             this.panel1.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.passwordBox);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.alreadyHaveAccount);
             this.panel1.Controls.Add(this.emailBox);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.lastNameBox);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.firstNameBox);
+            this.panel1.Controls.Add(this.passengerName);
+            this.panel1.Controls.Add(this.NameBox);
             this.panel1.Controls.Add(this.customPictureBox1);
-            this.panel1.Controls.Add(this.passwordBox);
+            this.panel1.Controls.Add(this.cnicBox);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.phoneNumberBox);
             this.panel1.Controls.Add(this.label3);
@@ -119,7 +120,7 @@
             this.alreadyHaveAccount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.alreadyHaveAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.alreadyHaveAccount.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.alreadyHaveAccount.Location = new System.Drawing.Point(235, 329);
+            this.alreadyHaveAccount.Location = new System.Drawing.Point(229, 349);
             this.alreadyHaveAccount.Name = "alreadyHaveAccount";
             this.alreadyHaveAccount.Size = new System.Drawing.Size(185, 20);
             this.alreadyHaveAccount.TabIndex = 25;
@@ -133,7 +134,7 @@
             this.emailBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.emailBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
             this.emailBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailBox.Location = new System.Drawing.Point(59, 223);
+            this.emailBox.Location = new System.Drawing.Point(59, 213);
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(354, 27);
             this.emailBox.TabIndex = 24;
@@ -144,59 +145,35 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(56, 199);
+            this.label7.Location = new System.Drawing.Point(56, 189);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 21);
             this.label7.TabIndex = 23;
             this.label7.Text = "Email";
             // 
-            // label6
+            // passengerName
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(235, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 21);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Last Name";
+            this.passengerName.AutoSize = true;
+            this.passengerName.BackColor = System.Drawing.Color.Transparent;
+            this.passengerName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passengerName.ForeColor = System.Drawing.Color.White;
+            this.passengerName.Location = new System.Drawing.Point(55, 81);
+            this.passengerName.Name = "passengerName";
+            this.passengerName.Size = new System.Drawing.Size(53, 21);
+            this.passengerName.TabIndex = 20;
+            this.passengerName.Text = "Name";
             // 
-            // lastNameBox
+            // NameBox
             // 
-            this.lastNameBox.AutoCompleteCustomSource.AddRange(new string[] {
+            this.NameBox.AutoCompleteCustomSource.AddRange(new string[] {
             "@gmail.com"});
-            this.lastNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.lastNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.lastNameBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lastNameBox.Location = new System.Drawing.Point(233, 115);
-            this.lastNameBox.Name = "lastNameBox";
-            this.lastNameBox.Size = new System.Drawing.Size(180, 27);
-            this.lastNameBox.TabIndex = 21;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(55, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 21);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "First Name";
-            // 
-            // firstNameBox
-            // 
-            this.firstNameBox.AutoCompleteCustomSource.AddRange(new string[] {
-            "@gmail.com"});
-            this.firstNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.firstNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.firstNameBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firstNameBox.Location = new System.Drawing.Point(59, 115);
-            this.firstNameBox.Name = "firstNameBox";
-            this.firstNameBox.Size = new System.Drawing.Size(168, 27);
-            this.firstNameBox.TabIndex = 19;
+            this.NameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.NameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
+            this.NameBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameBox.Location = new System.Drawing.Point(59, 105);
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(355, 27);
+            this.NameBox.TabIndex = 19;
             // 
             // customPictureBox1
             // 
@@ -214,18 +191,18 @@
             this.customPictureBox1.TabIndex = 11;
             this.customPictureBox1.TabStop = false;
             // 
-            // passwordBox
+            // cnicBox
             // 
-            this.passwordBox.AutoCompleteCustomSource.AddRange(new string[] {
+            this.cnicBox.AutoCompleteCustomSource.AddRange(new string[] {
             "@gmail.com"});
-            this.passwordBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.passwordBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
-            this.passwordBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordBox.Location = new System.Drawing.Point(60, 277);
-            this.passwordBox.Name = "passwordBox";
-            this.passwordBox.PasswordChar = '*';
-            this.passwordBox.Size = new System.Drawing.Size(354, 27);
-            this.passwordBox.TabIndex = 18;
+            this.cnicBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cnicBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
+            this.cnicBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cnicBox.Location = new System.Drawing.Point(60, 267);
+            this.cnicBox.Name = "cnicBox";
+            this.cnicBox.PasswordChar = '*';
+            this.cnicBox.Size = new System.Drawing.Size(354, 27);
+            this.cnicBox.TabIndex = 18;
             // 
             // label4
             // 
@@ -233,11 +210,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(56, 253);
+            this.label4.Location = new System.Drawing.Point(56, 243);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 21);
+            this.label4.Size = new System.Drawing.Size(47, 21);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Password";
+            this.label4.Text = "CNIC";
             // 
             // phoneNumberBox
             // 
@@ -246,7 +223,7 @@
             this.phoneNumberBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.phoneNumberBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
             this.phoneNumberBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneNumberBox.Location = new System.Drawing.Point(59, 169);
+            this.phoneNumberBox.Location = new System.Drawing.Point(59, 159);
             this.phoneNumberBox.Name = "phoneNumberBox";
             this.phoneNumberBox.Size = new System.Drawing.Size(354, 27);
             this.phoneNumberBox.TabIndex = 15;
@@ -257,7 +234,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(56, 145);
+            this.label3.Location = new System.Drawing.Point(56, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 21);
             this.label3.TabIndex = 14;
@@ -270,7 +247,7 @@
             this.forgotPassLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.forgotPassLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forgotPassLabel.ForeColor = System.Drawing.Color.Gold;
-            this.forgotPassLabel.Location = new System.Drawing.Point(56, 329);
+            this.forgotPassLabel.Location = new System.Drawing.Point(56, 349);
             this.forgotPassLabel.Name = "forgotPassLabel";
             this.forgotPassLabel.Size = new System.Drawing.Size(125, 20);
             this.forgotPassLabel.TabIndex = 11;
@@ -323,6 +300,31 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(56, 297);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 21);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Password";
+            // 
+            // passwordBox
+            // 
+            this.passwordBox.AutoCompleteCustomSource.AddRange(new string[] {
+            "@gmail.com"});
+            this.passwordBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.passwordBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
+            this.passwordBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordBox.Location = new System.Drawing.Point(60, 319);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.PasswordChar = '*';
+            this.passwordBox.Size = new System.Drawing.Size(354, 27);
+            this.passwordBox.TabIndex = 28;
+            // 
             // SignUpPassenger
             // 
             this.AcceptButton = this.signUpButton;
@@ -355,7 +357,7 @@
         private System.Windows.Forms.Button signUpButton;
         private System.Windows.Forms.Panel panel1;
         private Static_Resources.CustomPictureBox customPictureBox1;
-        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.TextBox cnicBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox phoneNumberBox;
         private System.Windows.Forms.Label label3;
@@ -363,14 +365,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox statusBarTextBox;
         private System.Windows.Forms.PictureBox backButton;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox lastNameBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox firstNameBox;
+        private System.Windows.Forms.Label passengerName;
+        private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label alreadyHaveAccount;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.Label label2;
     }
 }
