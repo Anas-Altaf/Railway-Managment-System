@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.AllForms.Passenger;
 using WindowsFormsApp1.Static_Resources;
 
 namespace WindowsFormsApp1
@@ -52,7 +53,12 @@ namespace WindowsFormsApp1
             bool signUpInputStatus = UserFunctions.ValidateUserInput(passengerEmail, passengerPhoneNumber, passengerCNIC, passengerName, this);
             if(signUpInputStatus)
             {
-                statusBarTextBox.Text = @"Great!, You got the right formats.";
+                statusBarTextBox.Text = @"Great!, You got the right format.";
+                statusBarTextBox.Text = @"Email Verification Started!";
+
+                var otpObj = new OTPWindow();
+                otpObj.Show();
+
             }
 
         }

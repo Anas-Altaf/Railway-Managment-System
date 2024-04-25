@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
     public partial class LoginAdmin : Form
     {
         //Establishing Oracle Connection
-        string conStr = Dashboard.connectionString;
+        string conStr = UserFunctions.connectionString;
         public LoginAdmin()
         {
             InitializeComponent();

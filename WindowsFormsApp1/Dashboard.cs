@@ -14,9 +14,9 @@ namespace WindowsFormsApp1
 {
     public partial class Dashboard : Form
     {
-        public static readonly string connectionString = @"DATA SOURCE = localhost:1521/XE; USER ID = umair; PASSWORD = umair";
+        
 
-         static Dashboard dashboard = new Dashboard();
+         static readonly Dashboard dashboard = new Dashboard();
         private Dashboard()
         {
             InitializeComponent();
