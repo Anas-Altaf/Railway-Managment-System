@@ -123,6 +123,36 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Direction_Top_to_Bottom {
+            get {
+                object obj = ResourceManager.GetObject("Direction-Top-to-Bottom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gradient {
+            get {
+                object obj = ResourceManager.GetObject("gradient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gradient_1 {
+            get {
+                object obj = ResourceManager.GetObject("gradient-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap high_speed_train_at_station_and_blurred_cityscape_at_night_on_background_postproducted_generative_ai_digital_illustration_of_non_existing_train_model_free_photo {
             get {
                 object obj = ResourceManager.GetObject("high-speed-train-at-station-and-blurred-cityscape-at-night-on-background-postprod" +

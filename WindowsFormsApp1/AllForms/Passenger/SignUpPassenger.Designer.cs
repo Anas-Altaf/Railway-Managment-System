@@ -48,23 +48,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.statusBarTextBox = new System.Windows.Forms.TextBox();
             this.backButton = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // signUpButton
             // 
             this.signUpButton.BackColor = System.Drawing.Color.Crimson;
+            this.signUpButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.signUpButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.signUpButton.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.signUpButton.FlatAppearance.BorderSize = 0;
             this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signUpButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpButton.ForeColor = System.Drawing.Color.White;
-            this.signUpButton.Location = new System.Drawing.Point(0, 356);
+            this.signUpButton.Location = new System.Drawing.Point(60, 379);
             this.signUpButton.Margin = new System.Windows.Forms.Padding(0);
             this.signUpButton.Name = "signUpButton";
-            this.signUpButton.Size = new System.Drawing.Size(473, 31);
+            this.signUpButton.Size = new System.Drawing.Size(354, 31);
             this.signUpButton.TabIndex = 0;
             this.signUpButton.Text = "Sign Up";
             this.signUpButton.UseVisualStyleBackColor = false;
@@ -89,9 +92,10 @@
             this.panel1.Controls.Add(this.signUpButton);
             this.panel1.Controls.Add(this.forgotPassLabel);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(164, 28);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(347, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(473, 387);
+            this.panel1.Size = new System.Drawing.Size(453, 430);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -101,8 +105,8 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Crimson;
-            this.label9.Location = new System.Drawing.Point(211, 19);
+            this.label9.ForeColor = System.Drawing.Color.Gold;
+            this.label9.Location = new System.Drawing.Point(131, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(74, 20);
             this.label9.TabIndex = 26;
@@ -114,7 +118,7 @@
             this.alreadyHaveAccount.BackColor = System.Drawing.Color.Transparent;
             this.alreadyHaveAccount.Cursor = System.Windows.Forms.Cursors.Hand;
             this.alreadyHaveAccount.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alreadyHaveAccount.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.alreadyHaveAccount.ForeColor = System.Drawing.Color.DodgerBlue;
             this.alreadyHaveAccount.Location = new System.Drawing.Point(235, 329);
             this.alreadyHaveAccount.Name = "alreadyHaveAccount";
             this.alreadyHaveAccount.Size = new System.Drawing.Size(185, 20);
@@ -197,15 +201,15 @@
             // customPictureBox1
             // 
             this.customPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Round;
-            this.customPictureBox1.BorderColor = System.Drawing.Color.Crimson;
-            this.customPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.customPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.customPictureBox1.BorderColor = System.Drawing.Color.Black;
+            this.customPictureBox1.BorderColor2 = System.Drawing.Color.Black;
+            this.customPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.customPictureBox1.BorderSize = 2;
             this.customPictureBox1.GradientAngle = 50F;
             this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
-            this.customPictureBox1.Location = new System.Drawing.Point(132, 19);
+            this.customPictureBox1.Location = new System.Drawing.Point(59, 12);
             this.customPictureBox1.Name = "customPictureBox1";
-            this.customPictureBox1.Size = new System.Drawing.Size(69, 69);
+            this.customPictureBox1.Size = new System.Drawing.Size(66, 66);
             this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.customPictureBox1.TabIndex = 11;
             this.customPictureBox1.TabStop = false;
@@ -265,7 +269,7 @@
             this.forgotPassLabel.BackColor = System.Drawing.Color.Transparent;
             this.forgotPassLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.forgotPassLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgotPassLabel.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.forgotPassLabel.ForeColor = System.Drawing.Color.Gold;
             this.forgotPassLabel.Location = new System.Drawing.Point(56, 329);
             this.forgotPassLabel.Name = "forgotPassLabel";
             this.forgotPassLabel.Size = new System.Drawing.Size(125, 20);
@@ -276,11 +280,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(207, 31);
+            this.label1.Location = new System.Drawing.Point(128, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 47);
+            this.label1.Size = new System.Drawing.Size(116, 40);
             this.label1.TabIndex = 9;
             this.label1.Text = "SignUp";
             // 
@@ -308,16 +312,31 @@
             this.backButton.TabStop = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-37, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(465, 413);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // SignUpPassenger
             // 
+            this.AcceptButton = this.signUpButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.a_fast_modern_train_in_motion_at_sunset_a_commercial_transportation_free_photo;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackColor = System.Drawing.Color.Crimson;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusBarTextBox);
-            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.Name = "SignUpPassenger";
             this.Text = "SignUp";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SignUpPassenger_FormClosed);
@@ -325,6 +344,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,5 +371,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label alreadyHaveAccount;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
