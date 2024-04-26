@@ -12,7 +12,7 @@ namespace WindowsFormsApp1.Static_Resources
     public class UserFunctions
     {
         //MEMEBERS
-        public static readonly string connectionString = @"DATA SOURCE = localhost:1521/XE; USER ID = umair; PASSWORD = umair";
+        public static readonly string connectionString = @"DATA SOURCE = localhost:1521/XE; USER ID = rmsdb; PASSWORD = rmsdb";
         //Apply Transparency to any panel
         public static void Apply_Panel1_Transparency(Panel panel1)
         {

@@ -57,7 +57,8 @@ namespace WindowsFormsApp1
                 statusBarTextBox.Text = @"Email Verification Started!";
 
                 var otpObj = new OTPWindow();
-                otpObj.Show();
+                otpObj.ShowDialog();
+
 
             }
 
