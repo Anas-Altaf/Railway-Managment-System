@@ -1,7 +1,7 @@
 ﻿//For Oracle Connectivity
 using Oracle.ManagedDataAccess.Client;
 using Oracle.ManagedDataAccess.EntityFramework;
-//Other
+//Other Collections
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
