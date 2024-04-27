@@ -151,6 +151,12 @@
     <Compile Include="AllForms\Admin\revenuePdfAdmin.Designer.cs">
       <DependentUpon>revenuePdfAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllForms\Admin\viewFeedbacksAAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Admin\viewFeedbacksAAdmin.Designer.cs">
+      <DependentUpon>viewFeedbacksAAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllForms\Admin\viewTrainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Admin\revenuePdfAdmin.resx">
       <DependentUpon>revenuePdfAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Admin\viewFeedbacksAAdmin.resx">
+      <DependentUpon>viewFeedbacksAAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Admin\viewTrainAdmin.resx">
       <DependentUpon>viewTrainAdmin.cs</DependentUpon>
