@@ -68,7 +68,7 @@
             this.OTPVerifyButton.TabIndex = 27;
             this.OTPVerifyButton.Text = "Verify OTP";
             this.OTPVerifyButton.UseVisualStyleBackColor = false;
-            this.OTPVerifyButton.Click += new System.EventHandler(this.signUpButton_Click);
+            this.OTPVerifyButton.Click += new System.EventHandler(this.OTPVerifyButton_Click);
             // 
             // resendOTPLabel
             // 

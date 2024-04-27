@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
                 statusBarTextBox.Text = $"1- Connection Opened";
 
                 OracleCommand userId = connection.CreateCommand();
-                userId.CommandText = "SELECT a_email_id FROM ADMINISTRATOR WHERE  e_email_id = :email AND a_password = :password";
+                userId.CommandText = "SELECT a_email_id FROM ADMINISTRATOR WHERE  a_email_id = :email AND a_password = :password";
                 userId.Parameters.Add(new OracleParameter(":email", email));
                 userId.Parameters.Add(new OracleParameter(":password", password));
                 userId.CommandType = CommandType.Text;

@@ -13,6 +13,8 @@ namespace WindowsFormsApp1.Static_Resources
     {
         //MEMEBERS
         public static readonly string connectionString = @"DATA SOURCE = localhost:1521/XE; USER ID = rmsdb; PASSWORD = rmsdb";
+        public static readonly string testEmail = "f223639@cfd.nu.edu.pk";
+        public static readonly string testEmailPass = "HOME@0310";
         //Apply Transparency to any panel
         public static void Apply_Panel1_Transparency(Panel panel1)
         {

@@ -88,9 +88,8 @@
             this.emailBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
             this.emailBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailBox.Location = new System.Drawing.Point(56, 141);
-            this.emailBox.Multiline = true;
             this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(365, 27);
+            this.emailBox.Size = new System.Drawing.Size(310, 27);
             this.emailBox.TabIndex = 15;
             // 
             // label4
@@ -113,10 +112,9 @@
             this.passwordBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.RecentlyUsedList;
             this.passwordBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.Location = new System.Drawing.Point(56, 217);
-            this.passwordBox.Multiline = true;
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
-            this.passwordBox.Size = new System.Drawing.Size(365, 27);
+            this.passwordBox.Size = new System.Drawing.Size(310, 27);
             this.passwordBox.TabIndex = 18;
             // 
             // label1
@@ -125,7 +123,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(207, 36);
+            this.label1.Location = new System.Drawing.Point(122, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 47);
             this.label1.TabIndex = 27;
@@ -140,9 +138,9 @@
             this.customPictureBox1.BorderSize = 2;
             this.customPictureBox1.GradientAngle = 50F;
             this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
-            this.customPictureBox1.Location = new System.Drawing.Point(132, 24);
+            this.customPictureBox1.Location = new System.Drawing.Point(56, 36);
             this.customPictureBox1.Name = "customPictureBox1";
-            this.customPictureBox1.Size = new System.Drawing.Size(69, 69);
+            this.customPictureBox1.Size = new System.Drawing.Size(60, 60);
             this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.customPictureBox1.TabIndex = 28;
             this.customPictureBox1.TabStop = false;
@@ -153,8 +151,8 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Crimson;
-            this.label9.Location = new System.Drawing.Point(211, 24);
+            this.label9.ForeColor = System.Drawing.Color.Gold;
+            this.label9.Location = new System.Drawing.Point(126, 36);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 20);
             this.label9.TabIndex = 29;
@@ -166,7 +164,7 @@
             this.forgotPassword.BackColor = System.Drawing.Color.Transparent;
             this.forgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.forgotPassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgotPassword.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.forgotPassword.ForeColor = System.Drawing.Color.Gold;
             this.forgotPassword.Location = new System.Drawing.Point(52, 247);
             this.forgotPassword.Name = "forgotPassword";
             this.forgotPassword.Size = new System.Drawing.Size(125, 20);
@@ -186,9 +184,9 @@
             this.panel1.Controls.Add(this.emailBox);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.loginButton);
-            this.panel1.Location = new System.Drawing.Point(164, 43);
+            this.panel1.Location = new System.Drawing.Point(385, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(473, 364);
+            this.panel1.Size = new System.Drawing.Size(415, 438);
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -196,13 +194,12 @@
             // 
             this.loginButton.BackColor = System.Drawing.Color.Crimson;
             this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loginButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(0, 333);
+            this.loginButton.Location = new System.Drawing.Point(56, 297);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(473, 31);
+            this.loginButton.Size = new System.Drawing.Size(310, 31);
             this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
@@ -210,6 +207,7 @@
             // 
             // LoginAdmin
             // 
+            this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.a_fast_modern_train_in_motion_at_sunset_a_commercial_transportation_free_photo;

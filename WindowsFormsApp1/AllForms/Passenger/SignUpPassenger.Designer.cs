@@ -68,7 +68,7 @@
             this.signUpButton.Margin = new System.Windows.Forms.Padding(0);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(354, 31);
-            this.signUpButton.TabIndex = 0;
+            this.signUpButton.TabIndex = 6;
             this.signUpButton.Text = "Sign Up";
             this.signUpButton.UseVisualStyleBackColor = false;
             this.signUpButton.Click += new System.EventHandler(this.signUpButton_Click);
@@ -111,7 +111,7 @@
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(354, 27);
-            this.passwordBox.TabIndex = 28;
+            this.passwordBox.TabIndex = 5;
             // 
             // label2
             // 
@@ -148,7 +148,7 @@
             this.alreadyHaveAccount.Location = new System.Drawing.Point(229, 349);
             this.alreadyHaveAccount.Name = "alreadyHaveAccount";
             this.alreadyHaveAccount.Size = new System.Drawing.Size(185, 20);
-            this.alreadyHaveAccount.TabIndex = 25;
+            this.alreadyHaveAccount.TabIndex = 8;
             this.alreadyHaveAccount.Text = "Already have an account?";
             this.alreadyHaveAccount.Click += new System.EventHandler(this.alreadyHaveAccount_Click);
             // 
@@ -162,7 +162,7 @@
             this.emailBox.Location = new System.Drawing.Point(59, 213);
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(354, 27);
-            this.emailBox.TabIndex = 24;
+            this.emailBox.TabIndex = 3;
             // 
             // label7
             // 
@@ -198,7 +198,7 @@
             this.NameBox.Location = new System.Drawing.Point(59, 105);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(355, 27);
-            this.NameBox.TabIndex = 19;
+            this.NameBox.TabIndex = 0;
             // 
             // customPictureBox1
             // 
@@ -227,7 +227,7 @@
             this.cnicBox.Name = "cnicBox";
             this.cnicBox.PasswordChar = '*';
             this.cnicBox.Size = new System.Drawing.Size(354, 27);
-            this.cnicBox.TabIndex = 18;
+            this.cnicBox.TabIndex = 4;
             // 
             // label4
             // 
@@ -251,7 +251,7 @@
             this.phoneNumberBox.Location = new System.Drawing.Point(59, 159);
             this.phoneNumberBox.Name = "phoneNumberBox";
             this.phoneNumberBox.Size = new System.Drawing.Size(354, 27);
-            this.phoneNumberBox.TabIndex = 15;
+            this.phoneNumberBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -275,7 +275,7 @@
             this.forgotPassLabel.Location = new System.Drawing.Point(56, 349);
             this.forgotPassLabel.Name = "forgotPassLabel";
             this.forgotPassLabel.Size = new System.Drawing.Size(125, 20);
-            this.forgotPassLabel.TabIndex = 11;
+            this.forgotPassLabel.TabIndex = 7;
             this.forgotPassLabel.Text = "Forgot Password?";
             // 
             // label1
