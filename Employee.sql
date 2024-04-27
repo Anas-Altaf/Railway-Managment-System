@@ -6,8 +6,8 @@ CREATE TABLE EMPLOYEE(
 
 
 INSERT INTO EMPLOYEE
-Values ('umair1', 'umairemployee');
+Values ('umair1@rmsdb.com', 'umairemployee');
 
 INSERT INTO EMPLOYEE
-Values ('anas1', 'anasemployee');
+Values ('anas1@rmsdb.com', 'anasemployee');
 

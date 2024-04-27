@@ -37,7 +37,7 @@
             this.alreadyHaveAccount = new System.Windows.Forms.Label();
             this.emailBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.passengerName = new System.Windows.Forms.Label();
+            this.passengerNameLabel = new System.Windows.Forms.Label();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
             this.cnicBox = new System.Windows.Forms.TextBox();
@@ -83,7 +83,7 @@
             this.panel1.Controls.Add(this.alreadyHaveAccount);
             this.panel1.Controls.Add(this.emailBox);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.passengerName);
+            this.panel1.Controls.Add(this.passengerNameLabel);
             this.panel1.Controls.Add(this.NameBox);
             this.panel1.Controls.Add(this.customPictureBox1);
             this.panel1.Controls.Add(this.cnicBox);
@@ -176,17 +176,17 @@
             this.label7.TabIndex = 23;
             this.label7.Text = "Email";
             // 
-            // passengerName
+            // passengerNameLabel
             // 
-            this.passengerName.AutoSize = true;
-            this.passengerName.BackColor = System.Drawing.Color.Transparent;
-            this.passengerName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passengerName.ForeColor = System.Drawing.Color.White;
-            this.passengerName.Location = new System.Drawing.Point(55, 81);
-            this.passengerName.Name = "passengerName";
-            this.passengerName.Size = new System.Drawing.Size(53, 21);
-            this.passengerName.TabIndex = 20;
-            this.passengerName.Text = "Name";
+            this.passengerNameLabel.AutoSize = true;
+            this.passengerNameLabel.BackColor = System.Drawing.Color.Transparent;
+            this.passengerNameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passengerNameLabel.ForeColor = System.Drawing.Color.White;
+            this.passengerNameLabel.Location = new System.Drawing.Point(55, 81);
+            this.passengerNameLabel.Name = "passengerNameLabel";
+            this.passengerNameLabel.Size = new System.Drawing.Size(53, 21);
+            this.passengerNameLabel.TabIndex = 20;
+            this.passengerNameLabel.Text = "Name";
             // 
             // NameBox
             // 
@@ -366,7 +366,7 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox statusBarTextBox;
         private System.Windows.Forms.PictureBox backButton;
-        private System.Windows.Forms.Label passengerName;
+        private System.Windows.Forms.Label passengerNameLabel;
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.Label label7;
