@@ -560,6 +560,15 @@
   <ItemGroup>
     <None Include="Resources\icons8-search-25.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngwing.com %286%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
