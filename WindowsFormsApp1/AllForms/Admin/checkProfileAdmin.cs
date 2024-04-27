@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.AllForms.Admin
 {
-    public partial class chechProfileAdmin : Form
+    public partial class checkProfileAdmin : Form
     {
-        public chechProfileAdmin()
+        public checkProfileAdmin()
         {
             InitializeComponent();
         }

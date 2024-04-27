@@ -121,11 +121,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AllForms\Admin\chechProfileAdmin.cs">
+    <Compile Include="AllForms\Admin\assignTasksAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllForms\Admin\chechProfileAdmin.Designer.cs">
-      <DependentUpon>chechProfileAdmin.cs</DependentUpon>
+    <Compile Include="AllForms\Admin\assignTasksAdmin.Designer.cs">
+      <DependentUpon>assignTasksAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Admin\checkProfileAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Admin\checkProfileAdmin.Designer.cs">
+      <DependentUpon>checkProfileAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Admin\manageProfileAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Admin\manageProfileAdmin.Designer.cs">
+      <DependentUpon>manageProfileAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Admin\manageTrainAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Admin\manageTrainAdmin.Designer.cs">
+      <DependentUpon>manageTrainAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Admin\revenuePdfAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Admin\revenuePdfAdmin.Designer.cs">
+      <DependentUpon>revenuePdfAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Admin\viewTrainAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Admin\viewTrainAdmin.Designer.cs">
+      <DependentUpon>viewTrainAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="AllForms\Passenger\OTPWindow.cs">
       <SubType>Form</SubType>
@@ -176,8 +206,23 @@
     </Compile>
     <Compile Include="Static Resources\UserFunctions.cs" />
     <Compile Include="Utilities\EmailManager\EmailManager.cs" />
-    <EmbeddedResource Include="AllForms\Admin\chechProfileAdmin.resx">
-      <DependentUpon>chechProfileAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="AllForms\Admin\assignTasksAdmin.resx">
+      <DependentUpon>assignTasksAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Admin\checkProfileAdmin.resx">
+      <DependentUpon>checkProfileAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Admin\manageProfileAdmin.resx">
+      <DependentUpon>manageProfileAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Admin\manageTrainAdmin.resx">
+      <DependentUpon>manageTrainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Admin\revenuePdfAdmin.resx">
+      <DependentUpon>revenuePdfAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Admin\viewTrainAdmin.resx">
+      <DependentUpon>viewTrainAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Passenger\OTPWindow.resx">
       <DependentUpon>OTPWindow.cs</DependentUpon>
@@ -511,6 +556,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-dashboard-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-25.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

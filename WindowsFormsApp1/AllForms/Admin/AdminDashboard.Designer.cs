@@ -270,10 +270,12 @@
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.label3);
+            this.panel7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel7.Location = new System.Drawing.Point(217, 103);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(211, 92);
             this.panel7.TabIndex = 4;
+            this.panel7.Click += new System.EventHandler(this.panel7_Click);
             // 
             // label6
             // 
@@ -311,6 +313,7 @@
             this.panel8.Controls.Add(this.label7);
             this.panel8.Controls.Add(this.label8);
             this.panel8.Controls.Add(this.label9);
+            this.panel8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel8.Location = new System.Drawing.Point(472, 103);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(211, 92);
@@ -352,6 +355,7 @@
             this.panel9.Controls.Add(this.label10);
             this.panel9.Controls.Add(this.label11);
             this.panel9.Controls.Add(this.label12);
+            this.panel9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel9.Location = new System.Drawing.Point(727, 103);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(211, 92);
@@ -393,6 +397,7 @@
             this.panel10.Controls.Add(this.label13);
             this.panel10.Controls.Add(this.label14);
             this.panel10.Controls.Add(this.label15);
+            this.panel10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel10.Location = new System.Drawing.Point(217, 229);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(211, 92);
@@ -434,6 +439,7 @@
             this.panel11.Controls.Add(this.label16);
             this.panel11.Controls.Add(this.label17);
             this.panel11.Controls.Add(this.label18);
+            this.panel11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel11.Location = new System.Drawing.Point(472, 350);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(211, 92);
@@ -475,6 +481,7 @@
             this.panel12.Controls.Add(this.label19);
             this.panel12.Controls.Add(this.label20);
             this.panel12.Controls.Add(this.label21);
+            this.panel12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel12.Location = new System.Drawing.Point(472, 229);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(211, 92);
@@ -516,6 +523,7 @@
             this.panel13.Controls.Add(this.label22);
             this.panel13.Controls.Add(this.label23);
             this.panel13.Controls.Add(this.label24);
+            this.panel13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel13.Location = new System.Drawing.Point(727, 229);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(211, 92);
@@ -623,6 +631,7 @@
             // button7
             // 
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = global::WindowsFormsApp1.Properties.Resources.icons8_notification_25;
             this.button7.Location = new System.Drawing.Point(646, 14);
@@ -634,6 +643,7 @@
             // button6
             // 
             this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button6.Image = global::WindowsFormsApp1.Properties.Resources.icons8_message_25;
@@ -647,6 +657,7 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Black;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = global::WindowsFormsApp1.Properties.Resources.icons8_administrator_male_48;
             this.button5.Location = new System.Drawing.Point(732, 2);
@@ -669,6 +680,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -682,9 +694,11 @@
             this.button1.Text = "          Check Profile";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button4
             // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
@@ -701,6 +715,7 @@
             // 
             // button3
             // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
@@ -717,6 +732,7 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
@@ -733,6 +749,7 @@
             // 
             // button8
             // 
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
@@ -749,6 +766,7 @@
             // 
             // button9
             // 
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
@@ -765,6 +783,7 @@
             // 
             // button10
             // 
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
@@ -781,6 +800,7 @@
             // 
             // button11
             // 
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
