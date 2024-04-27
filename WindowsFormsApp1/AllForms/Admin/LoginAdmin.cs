@@ -59,7 +59,7 @@ namespace WindowsFormsApp1
                 statusBarTextBox.Text = $"1- Connection Opened";
 
                 OracleCommand userId = connection.CreateCommand();
-                userId.CommandText = "SELECT a_id FROM ADMINISTRATOR WHERE a_id = :email AND a_password = :password";
+                userId.CommandText = "SELECT a_email_id FROM ADMINISTRATOR WHERE  e_email_id = :email AND a_password = :password";
                 userId.Parameters.Add(new OracleParameter(":email", email));
                 userId.Parameters.Add(new OracleParameter(":password", password));
                 userId.CommandType = CommandType.Text;
@@ -70,9 +70,9 @@ namespace WindowsFormsApp1
                 if (userDR.Read())
                 {
                     // Login successful!
-                    string a_id = userDR.GetString(0);
-                    statusBarTextBox.Text = $"5- a_id: {a_id}= email: {email}";
-                    statusBarTextBox.Text = $"6- Logged In , ID:{a_id}";
+                    string a_email_id = userDR.GetString(0);
+                    statusBarTextBox.Text = $"5- a_email_id: {a_email_id}= email: {email}";
+                    statusBarTextBox.Text = $"6- Logged In , ID:{a_email_id}";
 
                     MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();

@@ -9,7 +9,7 @@
 
 
 INSERT INTO PASSENGER
-Values ('umair2', 'umairpass');
+Values ('umair@rmsdb.com','Umair Altaf','03001234567', 'umairpass','3310134823729','');
 
 INSERT INTO PASSENGER
-Values ('anas2', 'anaspass');
+Values ('anas@rmsdb.com','Anas Altaf','03011234567', 'anaspass','3320134823721','');

@@ -14,6 +14,11 @@ namespace WindowsFormsApp1
 {
     public partial class SignUpPassenger : Form
     {
+        string passengerEmail;
+       private string passengerName ; 
+         string passengerPhoneNumber;
+        string passengerCNIC;
+        string passengerPass; 
         public SignUpPassenger()
         {
             InitializeComponent();
@@ -45,16 +50,18 @@ namespace WindowsFormsApp1
 
         private void signUpButton_Click(object sender, EventArgs e)
         {
-            string passengerEmail = emailBox.Text.ToString();
-            string passengerName = NameBox.Text.ToString();
-            string passengerPhoneNumber = phoneNumberBox.Text.ToString();
-            string passengerCNIC = cnicBox.Text.ToString();
-            string passengerPass = passwordBox.Text.ToString();
+            passengerEmail = emailBox.Text.ToString();
+            passengerName = NameBox.Text.ToString();
+            passengerPhoneNumber = phoneNumberBox.Text.ToString();
+            passengerCNIC = cnicBox.Text.ToString();
+            passengerPass = passwordBox.Text.ToString();
             bool signUpInputStatus = UserFunctions.ValidateUserInput(passengerEmail, passengerPhoneNumber, passengerCNIC, passengerName, this);
+            //Check if already Exists or Not
+
             if(signUpInputStatus)
             {
                 statusBarTextBox.Text = @"Great!, You got the right format.";
-                statusBarTextBox.Text = @"Email Verification Started!";
+                statusBarTextBox.Text = @"Checkin for Existing Accounts!";
 
                 var otpObj = new OTPWindow();
                 otpObj.ShowDialog();
