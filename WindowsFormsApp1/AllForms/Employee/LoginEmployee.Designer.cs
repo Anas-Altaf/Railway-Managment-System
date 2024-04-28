@@ -29,37 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginEmployee));
-            this.statusBarTextBox = new System.Windows.Forms.TextBox();
             this.backButton = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.forgotPassword = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.emailBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // statusBarTextBox
-            // 
-            this.statusBarTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusBarTextBox.Location = new System.Drawing.Point(0, 430);
-            this.statusBarTextBox.Multiline = true;
-            this.statusBarTextBox.Name = "statusBarTextBox";
-            this.statusBarTextBox.Size = new System.Drawing.Size(800, 20);
-            this.statusBarTextBox.TabIndex = 14;
-            // 
             // backButton
             // 
             this.backButton.BackColor = System.Drawing.Color.Transparent;
             this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
-//            this.backButton.Image = global::WindowsFormsApp1.Properties.Resources.angle_circle_arrow_left_icon;
             this.backButton.Location = new System.Drawing.Point(12, 6);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(56, 50);
@@ -71,18 +60,19 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.forgotPassword);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.customPictureBox1);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.forgotPassword);
             this.panel1.Controls.Add(this.passwordBox);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.emailBox);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.loginButton);
-            this.panel1.Location = new System.Drawing.Point(164, 37);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(385, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(473, 364);
+            this.panel1.Size = new System.Drawing.Size(415, 450);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -92,53 +82,12 @@
             this.forgotPassword.BackColor = System.Drawing.Color.Transparent;
             this.forgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.forgotPassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgotPassword.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.forgotPassword.ForeColor = System.Drawing.Color.Gold;
             this.forgotPassword.Location = new System.Drawing.Point(52, 247);
             this.forgotPassword.Name = "forgotPassword";
             this.forgotPassword.Size = new System.Drawing.Size(125, 20);
             this.forgotPassword.TabIndex = 30;
             this.forgotPassword.Text = "Forgot Password?";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Crimson;
-            this.label9.Location = new System.Drawing.Point(211, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 20);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Employee";
-            // 
-            // customPictureBox1
-            // 
-            this.customPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Round;
-            this.customPictureBox1.BorderColor = System.Drawing.Color.Crimson;
-            this.customPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.customPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.customPictureBox1.BorderSize = 2;
-            this.customPictureBox1.GradientAngle = 50F;
-            this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
-            this.customPictureBox1.Location = new System.Drawing.Point(132, 24);
-            this.customPictureBox1.Name = "customPictureBox1";
-            this.customPictureBox1.Size = new System.Drawing.Size(69, 69);
-            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customPictureBox1.TabIndex = 28;
-            this.customPictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(207, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 47);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Login";
             // 
             // passwordBox
             // 
@@ -151,7 +100,7 @@
             this.passwordBox.Multiline = true;
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
-            this.passwordBox.Size = new System.Drawing.Size(365, 27);
+            this.passwordBox.Size = new System.Drawing.Size(310, 27);
             this.passwordBox.TabIndex = 18;
             // 
             // label4
@@ -176,8 +125,9 @@
             this.emailBox.Location = new System.Drawing.Point(56, 141);
             this.emailBox.Multiline = true;
             this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(365, 27);
-            this.emailBox.TabIndex = 15;
+            this.emailBox.Size = new System.Drawing.Size(310, 27);
+            this.emailBox.TabIndex = 0;
+            this.emailBox.TabStop = false;
             // 
             // label3
             // 
@@ -195,17 +145,57 @@
             // 
             this.loginButton.BackColor = System.Drawing.Color.Crimson;
             this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loginButton.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.White;
-            this.loginButton.Location = new System.Drawing.Point(0, 333);
+            this.loginButton.Location = new System.Drawing.Point(56, 293);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(473, 31);
+            this.loginButton.Size = new System.Drawing.Size(310, 31);
             this.loginButton.TabIndex = 3;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gold;
+            this.label9.Location = new System.Drawing.Point(126, 40);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 20);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "Employee";
+            // 
+            // customPictureBox1
+            // 
+            this.customPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Round;
+            this.customPictureBox1.BorderColor = System.Drawing.Color.Crimson;
+            this.customPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.customPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.customPictureBox1.BorderSize = 2;
+            this.customPictureBox1.GradientAngle = 50F;
+            this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
+            this.customPictureBox1.Location = new System.Drawing.Point(56, 40);
+            this.customPictureBox1.Name = "customPictureBox1";
+            this.customPictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customPictureBox1.TabIndex = 32;
+            this.customPictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(122, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 47);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Login";
             // 
             // LoginEmployee
             // 
@@ -215,7 +205,6 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.a_fast_modern_train_in_motion_at_sunset_a_commercial_transportation_free_photo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.statusBarTextBox);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.panel1);
             this.Name = "LoginEmployee";
@@ -225,23 +214,20 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox statusBarTextBox;
         private System.Windows.Forms.PictureBox backButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label forgotPassword;
-        private System.Windows.Forms.Label label9;
-        private Static_Resources.CustomPictureBox customPictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Label label9;
+        private Static_Resources.CustomPictureBox customPictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

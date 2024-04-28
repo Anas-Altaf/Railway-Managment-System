@@ -29,31 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginAdmin));
-            this.statusBarTextBox = new System.Windows.Forms.TextBox();
             this.backButton = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.emailBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.forgotPassword = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.loginButton = new System.Windows.Forms.Button();
+            this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // statusBarTextBox
-            // 
-            this.statusBarTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusBarTextBox.Location = new System.Drawing.Point(0, 430);
-            this.statusBarTextBox.Multiline = true;
-            this.statusBarTextBox.Name = "statusBarTextBox";
-            this.statusBarTextBox.Size = new System.Drawing.Size(800, 20);
-            this.statusBarTextBox.TabIndex = 11;
             // 
             // backButton
             // 
@@ -129,22 +119,6 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Login";
             // 
-            // customPictureBox1
-            // 
-            this.customPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Round;
-            this.customPictureBox1.BorderColor = System.Drawing.Color.Crimson;
-            this.customPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.customPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.customPictureBox1.BorderSize = 2;
-            this.customPictureBox1.GradientAngle = 50F;
-            this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
-            this.customPictureBox1.Location = new System.Drawing.Point(56, 36);
-            this.customPictureBox1.Name = "customPictureBox1";
-            this.customPictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customPictureBox1.TabIndex = 28;
-            this.customPictureBox1.TabStop = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -184,9 +158,10 @@
             this.panel1.Controls.Add(this.emailBox);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.loginButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(385, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(415, 438);
+            this.panel1.Size = new System.Drawing.Size(415, 450);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -205,6 +180,22 @@
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // customPictureBox1
+            // 
+            this.customPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Round;
+            this.customPictureBox1.BorderColor = System.Drawing.Color.Crimson;
+            this.customPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.customPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.customPictureBox1.BorderSize = 2;
+            this.customPictureBox1.GradientAngle = 50F;
+            this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
+            this.customPictureBox1.Location = new System.Drawing.Point(56, 36);
+            this.customPictureBox1.Name = "customPictureBox1";
+            this.customPictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customPictureBox1.TabIndex = 28;
+            this.customPictureBox1.TabStop = false;
+            // 
             // LoginAdmin
             // 
             this.AcceptButton = this.loginButton;
@@ -213,23 +204,19 @@
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.a_fast_modern_train_in_motion_at_sunset_a_commercial_transportation_free_photo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.statusBarTextBox);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.panel1);
             this.Name = "LoginAdmin";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox statusBarTextBox;
         private System.Windows.Forms.PictureBox backButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox emailBox;

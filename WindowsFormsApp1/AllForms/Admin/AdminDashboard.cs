@@ -13,20 +13,24 @@ namespace WindowsFormsApp1
 {
     public partial class AdminDashboard : Form
     {
+        Form pageForm;
         bool sideBarExpand;
+
+        public void LoadPage(Form _pageForm )
+        {
+
+            centralPanel.Controls.Clear();
+            pageForm = _pageForm;
+            pageForm.Dock = DockStyle.Fill;
+            pageForm.TopLevel = false;
+            centralPanel.Controls.Add(pageForm);
+            pageForm.Show();
+        }
+
         public AdminDashboard()
         {
+
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void sideBarTimer_Tick(object sender, EventArgs e)
@@ -34,7 +38,7 @@ namespace WindowsFormsApp1
             if (sideBarExpand)
             {
                 sideBar.Width -= 10;
-                if(sideBar.Width == sideBar.MinimumSize.Width)
+                if (sideBar.Width == sideBar.MinimumSize.Width)
                 {
                     sideBarExpand = false;
                     sideBarTimer.Stop();
@@ -51,23 +55,64 @@ namespace WindowsFormsApp1
             }
         }
 
+        //
+        private void AdminDashboard_Activated(object sender, EventArgs e)
+        {
+            LoadPage(new MainAdminPage());
+        }
+        //Back button
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            LoadPage(new MainAdminPage());
+        }
         private void menuButton_Click(object sender, EventArgs e)
         {
             sideBarTimer.Start();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+
+        private void adminCheckProfileBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var chechProfileAdmin = new checkProfileAdmin();
-            chechProfileAdmin.Show();
+            LoadPage(new checkProfileAdmin());
         }
 
-        private void panel7_Click(object sender, EventArgs e)
+ 
+
+        private void adminManageProfileBtn_Click(object sender, EventArgs e)
+        {
+            LoadPage(new manageProfileAdmin());
+        }
+
+        private void adminManageScheduleBtn_Click(object sender, EventArgs e)
+        {
+            LoadPage(new manageTrainAdmin());
+        }
+
+        private void adminRevenueBtn_Click(object sender, EventArgs e)
+        {
+            LoadPage(new viewTrainAdmin());
+        }
+
+        private void adminViewTrainsBtn_Click(object sender, EventArgs e)
+        {
+            LoadPage(new viewTrainAdmin());
+        }
+
+        private void adminTasksBtn_Click(object sender, EventArgs e)
+        {
+            LoadPage(new assignTasksAdmin());
+
+        }
+
+        private void adminViewFeedbackBtn_Click(object sender, EventArgs e)
+        {
+            LoadPage(new viewFeedbacksAAdmin());
+        }
+
+        private void adminLogoutBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var chechProfileAdmin = new checkProfileAdmin();
-            chechProfileAdmin.Show();
+            Dashboard.getDashboard().Show();
         }
     }
 }

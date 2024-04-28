@@ -184,7 +184,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OTPWindow";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.otpStatusBoxIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
             this.ResumeLayout(false);
