@@ -36,16 +36,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel12.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel12
             // 
-            this.panel12.BackColor = System.Drawing.Color.Purple;
+            this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.Controls.Add(this.button15);
             this.panel12.Controls.Add(this.textBox2);
             this.panel12.Controls.Add(this.button12);
@@ -53,10 +55,10 @@
             this.panel12.Controls.Add(this.label7);
             this.panel12.Controls.Add(this.label6);
             this.panel12.Controls.Add(this.label5);
-            this.panel12.Controls.Add(this.panel13);
             this.panel12.Controls.Add(this.button14);
             this.panel12.Controls.Add(this.button13);
             this.panel12.Controls.Add(this.label4);
+            this.panel12.Controls.Add(this.panel1);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Name = "panel12";
@@ -98,6 +100,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(235, 238);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -107,6 +110,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Purple;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(61, 238);
@@ -118,6 +122,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Purple;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(61, 206);
@@ -129,6 +134,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Purple;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(61, 67);
@@ -137,16 +143,9 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Status:";
             // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(66, 99);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(657, 94);
-            this.panel13.TabIndex = 4;
-            // 
             // button14
             // 
+            this.button14.BackColor = System.Drawing.Color.Purple;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ForeColor = System.Drawing.Color.White;
             this.button14.Location = new System.Drawing.Point(272, 70);
@@ -154,10 +153,11 @@
             this.button14.Size = new System.Drawing.Size(100, 23);
             this.button14.TabIndex = 3;
             this.button14.Text = "Completed Tasks";
-            this.button14.UseVisualStyleBackColor = true;
+            this.button14.UseVisualStyleBackColor = false;
             // 
             // button13
             // 
+            this.button13.BackColor = System.Drawing.Color.Purple;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.ForeColor = System.Drawing.Color.White;
             this.button13.Location = new System.Drawing.Point(151, 70);
@@ -165,11 +165,12 @@
             this.button13.Size = new System.Drawing.Size(93, 23);
             this.button13.TabIndex = 2;
             this.button13.Text = "Assigned Tasks";
-            this.button13.UseVisualStyleBackColor = true;
+            this.button13.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Purple;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(59, 21);
@@ -177,6 +178,23 @@
             this.label4.Size = new System.Drawing.Size(92, 37);
             this.label4.TabIndex = 0;
             this.label4.Text = "Tasks:";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Purple;
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Location = new System.Drawing.Point(27, 21);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(728, 352);
+            this.panel1.TabIndex = 13;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(39, 78);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(657, 104);
+            this.textBox3.TabIndex = 0;
             // 
             // assignTasksAdmin
             // 
@@ -189,6 +207,8 @@
             this.Text = "assignTasksAdmin";
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -205,6 +225,7 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

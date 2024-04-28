@@ -280,6 +280,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\WindowsFormsApp1.AllForms.Admin.manageTrainAdmin.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -592,6 +593,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-back-25.png" />
+    <Content Include="Passenger.sql" />
     <Content Include="Resources\icons8-cross.gif" />
     <None Include="Resources\icons8-verified-account1.gif" />
     <None Include="Resources\icons8-cross1.gif" />

@@ -30,24 +30,24 @@
         {
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.trainAnnoucementBox = new System.Windows.Forms.TextBox();
+            this.trainEndTimeBox = new System.Windows.Forms.TextBox();
+            this.trainStartTimeBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.traintypeBox = new System.Windows.Forms.TextBox();
+            this.searchtrainButton = new System.Windows.Forms.Button();
+            this.trainImageBox = new System.Windows.Forms.PictureBox();
+            this.trainArrivalBox = new System.Windows.Forms.TextBox();
+            this.trainNamebox = new System.Windows.Forms.TextBox();
+            this.trainDestinationBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchIdBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainImageBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -70,27 +70,27 @@
             this.label10.TabIndex = 45;
             this.label10.Text = "Announcements:";
             // 
-            // textBox7
+            // trainAnnoucementBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(304, 298);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(254, 76);
-            this.textBox7.TabIndex = 44;
+            this.trainAnnoucementBox.Location = new System.Drawing.Point(304, 298);
+            this.trainAnnoucementBox.Multiline = true;
+            this.trainAnnoucementBox.Name = "trainAnnoucementBox";
+            this.trainAnnoucementBox.Size = new System.Drawing.Size(254, 76);
+            this.trainAnnoucementBox.TabIndex = 44;
             // 
-            // textBox8
+            // trainEndTimeBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(400, 182);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(158, 20);
-            this.textBox8.TabIndex = 43;
+            this.trainEndTimeBox.Location = new System.Drawing.Point(400, 182);
+            this.trainEndTimeBox.Name = "trainEndTimeBox";
+            this.trainEndTimeBox.Size = new System.Drawing.Size(158, 20);
+            this.trainEndTimeBox.TabIndex = 43;
             // 
-            // textBox9
+            // trainStartTimeBox
             // 
-            this.textBox9.Location = new System.Drawing.Point(400, 230);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(158, 20);
-            this.textBox9.TabIndex = 42;
+            this.trainStartTimeBox.Location = new System.Drawing.Point(400, 230);
+            this.trainStartTimeBox.Name = "trainStartTimeBox";
+            this.trainStartTimeBox.Size = new System.Drawing.Size(158, 20);
+            this.trainStartTimeBox.TabIndex = 42;
             // 
             // label12
             // 
@@ -132,57 +132,59 @@
             this.label6.TabIndex = 38;
             this.label6.Text = "Type:";
             // 
-            // textBox5
+            // traintypeBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(115, 327);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(158, 20);
-            this.textBox5.TabIndex = 35;
+            this.traintypeBox.Location = new System.Drawing.Point(115, 327);
+            this.traintypeBox.Name = "traintypeBox";
+            this.traintypeBox.Size = new System.Drawing.Size(158, 20);
+            this.traintypeBox.TabIndex = 35;
             // 
-            // button12
+            // searchtrainButton
             // 
-            this.button12.BackColor = System.Drawing.Color.Orange;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Image = global::WindowsFormsApp1.Properties.Resources.icons8_search_25;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(361, 128);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(94, 25);
-            this.button12.TabIndex = 37;
-            this.button12.Text = "     Search";
-            this.button12.UseVisualStyleBackColor = false;
+            this.searchtrainButton.BackColor = System.Drawing.Color.Orange;
+            this.searchtrainButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.searchtrainButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchtrainButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_search_25;
+            this.searchtrainButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.searchtrainButton.Location = new System.Drawing.Point(361, 128);
+            this.searchtrainButton.Name = "searchtrainButton";
+            this.searchtrainButton.Size = new System.Drawing.Size(94, 25);
+            this.searchtrainButton.TabIndex = 37;
+            this.searchtrainButton.Text = "     Search";
+            this.searchtrainButton.UseVisualStyleBackColor = false;
+            this.searchtrainButton.Click += new System.EventHandler(this.searchtrainButton_Click);
             // 
-            // pictureBox2
+            // trainImageBox
             // 
-            this.pictureBox2.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_train_64;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(581, 181);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(165, 153);
-            this.pictureBox2.TabIndex = 36;
-            this.pictureBox2.TabStop = false;
+            this.trainImageBox.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.icons8_train_64;
+            this.trainImageBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.trainImageBox.Location = new System.Drawing.Point(581, 181);
+            this.trainImageBox.Name = "trainImageBox";
+            this.trainImageBox.Size = new System.Drawing.Size(165, 153);
+            this.trainImageBox.TabIndex = 36;
+            this.trainImageBox.TabStop = false;
+            this.trainImageBox.Click += new System.EventHandler(this.trainImageBox_Click);
             // 
-            // textBox4
+            // trainArrivalBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(115, 278);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(158, 20);
-            this.textBox4.TabIndex = 34;
+            this.trainArrivalBox.Location = new System.Drawing.Point(115, 278);
+            this.trainArrivalBox.Name = "trainArrivalBox";
+            this.trainArrivalBox.Size = new System.Drawing.Size(158, 20);
+            this.trainArrivalBox.TabIndex = 34;
             // 
-            // textBox3
+            // trainNamebox
             // 
-            this.textBox3.Location = new System.Drawing.Point(115, 183);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 20);
-            this.textBox3.TabIndex = 33;
+            this.trainNamebox.Location = new System.Drawing.Point(115, 183);
+            this.trainNamebox.Name = "trainNamebox";
+            this.trainNamebox.Size = new System.Drawing.Size(158, 20);
+            this.trainNamebox.TabIndex = 33;
             // 
-            // textBox2
+            // trainDestinationBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(115, 231);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 20);
-            this.textBox2.TabIndex = 32;
+            this.trainDestinationBox.Location = new System.Drawing.Point(115, 231);
+            this.trainDestinationBox.Name = "trainDestinationBox";
+            this.trainDestinationBox.Size = new System.Drawing.Size(158, 20);
+            this.trainDestinationBox.TabIndex = 32;
             // 
             // label5
             // 
@@ -204,12 +206,12 @@
             this.label4.TabIndex = 30;
             this.label4.Text = "Enter Train ID";
             // 
-            // textBox1
+            // searchIdBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(328, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 20);
-            this.textBox1.TabIndex = 29;
+            this.searchIdBox.Location = new System.Drawing.Point(328, 97);
+            this.searchIdBox.Name = "searchIdBox";
+            this.searchIdBox.Size = new System.Drawing.Size(158, 20);
+            this.searchIdBox.TabIndex = 29;
             // 
             // label3
             // 
@@ -228,27 +230,27 @@
             this.ClientSize = new System.Drawing.Size(788, 397);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.trainAnnoucementBox);
+            this.Controls.Add(this.trainEndTimeBox);
+            this.Controls.Add(this.trainStartTimeBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.traintypeBox);
+            this.Controls.Add(this.searchtrainButton);
+            this.Controls.Add(this.trainImageBox);
+            this.Controls.Add(this.trainArrivalBox);
+            this.Controls.Add(this.trainNamebox);
+            this.Controls.Add(this.trainDestinationBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.searchIdBox);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "viewTrainAdmin";
             this.Text = "viewTrainAdmin";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trainImageBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,22 +259,22 @@
         #endregion
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox trainAnnoucementBox;
+        private System.Windows.Forms.TextBox trainEndTimeBox;
+        private System.Windows.Forms.TextBox trainStartTimeBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox traintypeBox;
+        private System.Windows.Forms.Button searchtrainButton;
+        private System.Windows.Forms.PictureBox trainImageBox;
+        private System.Windows.Forms.TextBox trainArrivalBox;
+        private System.Windows.Forms.TextBox trainNamebox;
+        private System.Windows.Forms.TextBox trainDestinationBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchIdBox;
         private System.Windows.Forms.Label label3;
     }
 }

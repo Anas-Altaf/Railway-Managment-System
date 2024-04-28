@@ -34,6 +34,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.backButton = new System.Windows.Forms.Button();
             this.mainTitle = new System.Windows.Forms.Label();
+            this.tempInfo = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.tempLabel = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.PictureBox();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
-            this.tempInfo = new System.Windows.Forms.TextBox();
             this.centralPanel = new System.Windows.Forms.Panel();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -130,6 +130,22 @@
             this.mainTitle.Size = new System.Drawing.Size(210, 32);
             this.mainTitle.TabIndex = 0;
             this.mainTitle.Text = "Admin Dashboard";
+            // 
+            // tempInfo
+            // 
+            this.tempInfo.BackColor = System.Drawing.Color.Black;
+            this.tempInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tempInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tempInfo.ForeColor = System.Drawing.Color.White;
+            this.tempInfo.Location = new System.Drawing.Point(301, 18);
+            this.tempInfo.Multiline = true;
+            this.tempInfo.Name = "tempInfo";
+            this.tempInfo.ReadOnly = true;
+            this.tempInfo.Size = new System.Drawing.Size(378, 21);
+            this.tempInfo.TabIndex = 101;
+            this.tempInfo.Text = "Login action declined";
+            this.tempInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tempInfo.Visible = false;
             // 
             // button7
             // 
@@ -439,22 +455,6 @@
             this.sideBar.Name = "sideBar";
             this.sideBar.Size = new System.Drawing.Size(194, 450);
             this.sideBar.TabIndex = 0;
-            // 
-            // tempInfo
-            // 
-            this.tempInfo.BackColor = System.Drawing.Color.Black;
-            this.tempInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tempInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tempInfo.ForeColor = System.Drawing.Color.White;
-            this.tempInfo.Location = new System.Drawing.Point(301, 18);
-            this.tempInfo.Multiline = true;
-            this.tempInfo.Name = "tempInfo";
-            this.tempInfo.ReadOnly = true;
-            this.tempInfo.Size = new System.Drawing.Size(378, 21);
-            this.tempInfo.TabIndex = 101;
-            this.tempInfo.Text = "Login action declined";
-            this.tempInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tempInfo.Visible = false;
             // 
             // centralPanel
             // 
