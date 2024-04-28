@@ -194,6 +194,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_back_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-back-25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_clock_25 {
             get {
                 object obj = ResourceManager.GetObject("icons8-clock-25", resourceCulture);

@@ -591,6 +591,7 @@
     <None Include="Resources\icons8-verified-account.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-back-25.png" />
     <Content Include="Resources\icons8-cross.gif" />
     <None Include="Resources\icons8-verified-account1.gif" />
     <None Include="Resources\icons8-cross1.gif" />
