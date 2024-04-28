@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(Dashboard.getDashboard());
-            Application.Run(new SignUpPassenger());
+            Application.Run(new LoginPassenger());
             
      }
     }

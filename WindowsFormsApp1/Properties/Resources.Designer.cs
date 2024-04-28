@@ -224,6 +224,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_cross {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cross", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_dashboard_25 {
             get {
                 object obj = ResourceManager.GetObject("icons8-dashboard-25", resourceCulture);
@@ -707,6 +717,26 @@ namespace WindowsFormsApp1.Properties {
         public static System.Drawing.Bitmap icons8_train_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-train-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icons8_verified_account {
+            get {
+                object obj = ResourceManager.GetObject("icons8-verified-account", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icons8_verified_account1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-verified-account1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

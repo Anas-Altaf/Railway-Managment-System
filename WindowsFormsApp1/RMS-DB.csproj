@@ -578,6 +578,14 @@
   <ItemGroup>
     <None Include="Resources\pngwing.com %286%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-verified-account.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\icons8-cross.gif" />
+    <None Include="Resources\icons8-verified-account1.gif" />
+    <None Include="Resources\icons8-cross1.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

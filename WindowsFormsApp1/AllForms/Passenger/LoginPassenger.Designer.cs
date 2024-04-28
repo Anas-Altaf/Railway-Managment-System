@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPassenger));
-            this.button1 = new System.Windows.Forms.Button();
+            this.passengerLoginBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.forgotPassword = new System.Windows.Forms.Label();
             this.createAccountButton = new System.Windows.Forms.Label();
@@ -47,20 +47,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // passengerLoginBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.Crimson;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 333);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(473, 31);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
+            this.passengerLoginBtn.BackColor = System.Drawing.Color.Crimson;
+            this.passengerLoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.passengerLoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passengerLoginBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passengerLoginBtn.ForeColor = System.Drawing.Color.White;
+            this.passengerLoginBtn.Location = new System.Drawing.Point(56, 297);
+            this.passengerLoginBtn.Name = "passengerLoginBtn";
+            this.passengerLoginBtn.Size = new System.Drawing.Size(310, 31);
+            this.passengerLoginBtn.TabIndex = 3;
+            this.passengerLoginBtn.Text = "Login";
+            this.passengerLoginBtn.UseVisualStyleBackColor = false;
+            this.passengerLoginBtn.Click += new System.EventHandler(this.passengerLoginBtn_Click);
             // 
             // panel1
             // 
@@ -74,10 +74,10 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.emailBox);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(164, 43);
+            this.panel1.Controls.Add(this.passengerLoginBtn);
+            this.panel1.Location = new System.Drawing.Point(385, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(473, 364);
+            this.panel1.Size = new System.Drawing.Size(415, 438);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -87,7 +87,7 @@
             this.forgotPassword.BackColor = System.Drawing.Color.Transparent;
             this.forgotPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.forgotPassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgotPassword.ForeColor = System.Drawing.Color.DarkKhaki;
+            this.forgotPassword.ForeColor = System.Drawing.Color.Gold;
             this.forgotPassword.Location = new System.Drawing.Point(52, 248);
             this.forgotPassword.Name = "forgotPassword";
             this.forgotPassword.Size = new System.Drawing.Size(125, 20);
@@ -102,7 +102,7 @@
             this.createAccountButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.createAccountButton.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createAccountButton.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.createAccountButton.Location = new System.Drawing.Point(311, 247);
+            this.createAccountButton.Location = new System.Drawing.Point(253, 247);
             this.createAccountButton.Name = "createAccountButton";
             this.createAccountButton.Size = new System.Drawing.Size(113, 20);
             this.createAccountButton.TabIndex = 26;
@@ -115,8 +115,8 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Crimson;
-            this.label9.Location = new System.Drawing.Point(211, 24);
+            this.label9.ForeColor = System.Drawing.Color.Gold;
+            this.label9.Location = new System.Drawing.Point(137, 33);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(74, 20);
             this.label9.TabIndex = 29;
@@ -131,7 +131,7 @@
             this.customPictureBox1.BorderSize = 2;
             this.customPictureBox1.GradientAngle = 50F;
             this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
-            this.customPictureBox1.Location = new System.Drawing.Point(132, 24);
+            this.customPictureBox1.Location = new System.Drawing.Point(56, 24);
             this.customPictureBox1.Name = "customPictureBox1";
             this.customPictureBox1.Size = new System.Drawing.Size(69, 69);
             this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,7 +144,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(207, 36);
+            this.label1.Location = new System.Drawing.Point(131, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 47);
             this.label1.TabIndex = 27;
@@ -159,8 +159,8 @@
             this.passwordBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.Location = new System.Drawing.Point(56, 217);
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.PasswordChar = '*';
-            this.passwordBox.Size = new System.Drawing.Size(365, 27);
+            this.passwordBox.PasswordChar = '⚫';
+            this.passwordBox.Size = new System.Drawing.Size(310, 27);
             this.passwordBox.TabIndex = 18;
             // 
             // label4
@@ -184,7 +184,7 @@
             this.emailBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailBox.Location = new System.Drawing.Point(56, 141);
             this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(365, 27);
+            this.emailBox.Size = new System.Drawing.Size(310, 27);
             this.emailBox.TabIndex = 15;
             // 
             // label3
@@ -212,7 +212,7 @@
             // 
             this.backButton.BackColor = System.Drawing.Color.Transparent;
             this.backButton.Cursor = System.Windows.Forms.Cursors.Hand;
-//            this.backButton.Image = global::WindowsFormsApp1.Properties.Resources.angle_circle_arrow_left_icon;
+            this.backButton.Image = global::WindowsFormsApp1.Properties.Resources.angle_circle_arrow_left_icon;
             this.backButton.Location = new System.Drawing.Point(12, 12);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(56, 50);
@@ -245,7 +245,7 @@
         #endregion
 
         private Static_Resources.CustomPictureBox customPictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button passengerLoginBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label1;

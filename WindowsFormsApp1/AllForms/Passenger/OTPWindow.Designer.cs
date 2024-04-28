@@ -33,9 +33,11 @@
             this.OTPVerifyButton = new System.Windows.Forms.Button();
             this.resendOTPLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
             this.enterOTPLabel = new System.Windows.Forms.Label();
             this.OTPBox = new System.Windows.Forms.TextBox();
+            this.otpStatusBoxIcon = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
+            this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.otpStatusBoxIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,6 +84,7 @@
             this.resendOTPLabel.Size = new System.Drawing.Size(84, 17);
             this.resendOTPLabel.TabIndex = 30;
             this.resendOTPLabel.Text = "Resend OTP?";
+            this.resendOTPLabel.Click += new System.EventHandler(this.resendOTPLabel_Click);
             // 
             // label1
             // 
@@ -94,22 +97,6 @@
             this.label1.Size = new System.Drawing.Size(140, 47);
             this.label1.TabIndex = 28;
             this.label1.Text = "SignUp";
-            // 
-            // customPictureBox1
-            // 
-            this.customPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Round;
-            this.customPictureBox1.BorderColor = System.Drawing.Color.Crimson;
-            this.customPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.customPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.customPictureBox1.BorderSize = 2;
-            this.customPictureBox1.GradientAngle = 50F;
-            this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
-            this.customPictureBox1.Location = new System.Drawing.Point(43, 28);
-            this.customPictureBox1.Name = "customPictureBox1";
-            this.customPictureBox1.Size = new System.Drawing.Size(58, 58);
-            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.customPictureBox1.TabIndex = 29;
-            this.customPictureBox1.TabStop = false;
             // 
             // enterOTPLabel
             // 
@@ -138,6 +125,39 @@
             this.OTPBox.TabIndex = 0;
             this.OTPBox.WordWrap = false;
             // 
+            // otpStatusBoxIcon
+            // 
+            this.otpStatusBoxIcon.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat;
+            this.otpStatusBoxIcon.BorderColor = System.Drawing.Color.Red;
+            this.otpStatusBoxIcon.BorderColor2 = System.Drawing.Color.HotPink;
+            this.otpStatusBoxIcon.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            this.otpStatusBoxIcon.BorderSize = 0;
+            this.otpStatusBoxIcon.GradientAngle = 50F;
+            this.otpStatusBoxIcon.Image = global::WindowsFormsApp1.Properties.Resources.icons8_verified_account;
+            this.otpStatusBoxIcon.Location = new System.Drawing.Point(262, 54);
+            this.otpStatusBoxIcon.Name = "otpStatusBoxIcon";
+            this.otpStatusBoxIcon.Size = new System.Drawing.Size(33, 33);
+            this.otpStatusBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.otpStatusBoxIcon.TabIndex = 34;
+            this.otpStatusBoxIcon.TabStop = false;
+            this.otpStatusBoxIcon.Visible = false;
+            // 
+            // customPictureBox1
+            // 
+            this.customPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Round;
+            this.customPictureBox1.BorderColor = System.Drawing.Color.Crimson;
+            this.customPictureBox1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.customPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.customPictureBox1.BorderSize = 2;
+            this.customPictureBox1.GradientAngle = 50F;
+            this.customPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("customPictureBox1.Image")));
+            this.customPictureBox1.Location = new System.Drawing.Point(43, 28);
+            this.customPictureBox1.Name = "customPictureBox1";
+            this.customPictureBox1.Size = new System.Drawing.Size(58, 58);
+            this.customPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.customPictureBox1.TabIndex = 29;
+            this.customPictureBox1.TabStop = false;
+            // 
             // OTPWindow
             // 
             this.AcceptButton = this.OTPVerifyButton;
@@ -146,6 +166,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(367, 166);
+            this.Controls.Add(this.otpStatusBoxIcon);
             this.Controls.Add(this.OTPBox);
             this.Controls.Add(this.enterOTPLabel);
             this.Controls.Add(this.label9);
@@ -164,6 +185,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OTPWindow";
             this.TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)(this.otpStatusBoxIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,5 +201,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label enterOTPLabel;
         private System.Windows.Forms.TextBox OTPBox;
+        private Static_Resources.CustomPictureBox otpStatusBoxIcon;
     }
 }

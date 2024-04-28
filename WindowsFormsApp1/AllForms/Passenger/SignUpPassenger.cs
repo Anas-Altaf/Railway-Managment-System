@@ -60,44 +60,45 @@ namespace WindowsFormsApp1
             passengerPass = passwordBox.Text.Trim();
             bool signUpInputStatus = UserFunctions.ValidateUserInput(passengerEmail, passengerPhoneNumber, passengerCNIC, passengerName, this);
 
-            // Basic validation (optional, enhance as needed)
-            //if (string.IsNullOrEmpty(passengerEmail) || string.IsNullOrEmpty(passengerName) ||
-            //    string.IsNullOrEmpty(passengerPhoneNumber) || string.IsNullOrEmpty(passengerCNIC) ||
-            //    string.IsNullOrEmpty(passengerPass) || !signUpInputStatus)
-            //{
-            //    MessageBox.Show("Please fill in all required fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
+           // Basic validation(optional, enhance as needed)
+            if (string.IsNullOrEmpty(passengerEmail) || string.IsNullOrEmpty(passengerName) ||
+                string.IsNullOrEmpty(passengerPhoneNumber) || string.IsNullOrEmpty(passengerCNIC) ||
+                string.IsNullOrEmpty(passengerPass) || !signUpInputStatus)
+            {
+                MessageBox.Show("Please fill in all required fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             OracleConnection connection = null;
             try
             {
-                //connection = new OracleConnection(conStr);
-                //connection.Open(); // Open the connection
+                connection = new OracleConnection(conStr);
+                connection.Open(); // Open the connection
 
-                //// Check for existing user with phone, email, or CNIC (assuming these are unique for passengers)
-                //string checkExistingUserSql = "SELECT * FROM Passenger WHERE p_phone_number = :phoneNumber OR p_email_id = :email OR p_cnic = :cnic";
-                //using (OracleCommand checkUserCmd = new OracleCommand(checkExistingUserSql, connection))
-                //{
-                //    checkUserCmd.Parameters.Add(new OracleParameter(":phoneNumber", passengerPhoneNumber));
-                //    checkUserCmd.Parameters.Add(new OracleParameter(":email", passengerEmail));
-                //    checkUserCmd.Parameters.Add(new OracleParameter(":cnic", passengerCNIC));
+                // Check for existing user with phone, email, or CNIC (assuming these are unique for passengers)
+                string checkExistingUserSql = "SELECT * FROM Passenger WHERE p_phone_number = :phoneNumber OR p_email_id = :email OR p_cnic = :cnic";
+                using (OracleCommand checkUserCmd = new OracleCommand(checkExistingUserSql, connection))
+                {
+                    checkUserCmd.Parameters.Add(new OracleParameter(":phoneNumber", passengerPhoneNumber));
+                    checkUserCmd.Parameters.Add(new OracleParameter(":email", passengerEmail));
+                    checkUserCmd.Parameters.Add(new OracleParameter(":cnic", passengerCNIC));
 
-                //    using (OracleDataReader reader = checkUserCmd.ExecuteReader())
-                //    {
-                //        if (reader.Read())
-                //        {
-                //            // Existing user found, prevent signup
-                //            MessageBox.Show("A user with this phone number, email, or CNIC already exists. Please try a different combination.", "Signup Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //            return;
-                //        }
-                //    }
-                //}
+                    using (OracleDataReader reader = checkUserCmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Existing user found, prevent signup
+                            MessageBox.Show("A user with this phone number, email, or CNIC already exists. Please try a different combination.", "Signup Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                    }
+                }
                 //Starting OTP Verification
                 var otpObj = new OTPWindow(passengerEmail);
                 otpObj.ShowDialog();
-                var otpStatus = false;
-                statusBarTextBox.Text = @"OTP window Display Donw";
+                bool otpStatus = otpObj.OTPStatusInfo1;
+               
+                statusBarTextBox.Text = @"OTP saved Bro, Now save the passenger data";
                 if (otpStatus)
                 {
                     // Insert passenger data
@@ -112,15 +113,21 @@ namespace WindowsFormsApp1
 
                         insertPassengerCmd.ExecuteNonQuery();
                         MessageBox.Show("Signup successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // ... (Rest of your logic, e.g., clear input fields, show success message)
+                        this.Hide();
+                        var passengerlogin = new LoginPassenger();
+                        passengerlogin.Show();
                     }
+                }
+                else
+                {
+                    MessageBox.Show("OTP verification Error❌...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (OracleException ex)
             {
                 MessageBox.Show("An error occurred while connecting to the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex) // Catch more general exceptions
+            catch (Exception ex) 
             {
                 MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

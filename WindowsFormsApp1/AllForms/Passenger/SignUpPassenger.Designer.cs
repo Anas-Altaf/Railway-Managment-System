@@ -109,7 +109,7 @@
             this.passwordBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.Location = new System.Drawing.Point(60, 319);
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.PasswordChar = '*';
+            this.passwordBox.PasswordChar = '⚫';
             this.passwordBox.Size = new System.Drawing.Size(354, 27);
             this.passwordBox.TabIndex = 5;
             // 
@@ -225,7 +225,6 @@
             this.cnicBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cnicBox.Location = new System.Drawing.Point(60, 267);
             this.cnicBox.Name = "cnicBox";
-            this.cnicBox.PasswordChar = '*';
             this.cnicBox.Size = new System.Drawing.Size(354, 27);
             this.cnicBox.TabIndex = 4;
             // 

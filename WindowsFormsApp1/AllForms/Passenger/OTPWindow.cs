@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,27 +9,33 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Static_Resources;
 using WindowsFormsApp1.Utilities;
+using static System.Net.WebRequestMethods;
 
 namespace WindowsFormsApp1.AllForms.Passenger
 {
     public partial class OTPWindow : Form
     {
          EmailManager emailManager = new EmailManager();
+        string conStr = UserFunctions.connectionString;
 
-        int OTP= GenerateOtp();
-        public bool OTPStatusInfo = false;
-        string recipientAddressinOTP;
+       int OTP;
+        bool OTPStatusInfo = false;
+        string _recipientAddress = "f223639@cfd.nu.edu.pk";
         bool emailStatus = false;
+        public bool OTPStatusInfo1 { get => OTPStatusInfo; set => OTPStatusInfo = value; }
+
         public OTPWindow(string recipientAddress)
         {
 
+            OTP = GenerateOtp();
             emailStatus = emailManager.SendEmail(recipientAddress, OTP);
-            recipientAddressinOTP = recipientAddress;
+            _recipientAddress = recipientAddress;
             InitializeComponent();
         }
         //OTP generation 
-        public static int GenerateOtp()
+        public int GenerateOtp()
         {
             // Use a Random class instance
             var random = new Random();
@@ -38,55 +45,68 @@ namespace WindowsFormsApp1.AllForms.Passenger
 
             return randomNumber;
         }
-        //public bool verifyOTPStatus(string recipientAddress)
-        //{
-        //   if(OTP >= 100000 && emailStatus == true)
-        //    {
-
-        //    }
-
-        //    try
-        //    {
-               
-        //        if (emailStatus)
-        //        {
-
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // Handle exceptions (refer to previous explanation)
-        //        MessageBox.Show("Error sending Email OTP: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    finally
-        //    {
-        //        this.Close();
-        //    }
-        //}
+       
         private void OTPVerifyButton_Click(object sender, EventArgs e)
         {
-            OTP = GenerateOtp();
-
-            //string subject = "Your Email Subject";
-            //string body = "Your Email Message";
-
             try
             {
-                //var emailStatus = emailManager.SendEmail(recipientAddress, OTP);
-                //if(emailStatus)
-                //{
-                   
-                //}
+                if (emailStatus)
+                {
+                    if(OTPBox.Text.ToString().Trim() == OTP.ToString().Trim())
+                    {
+                        OTPStatusInfo = true;
+                        otpStatusBoxIcon.Visible = true;
+                        //Saving Correct OTP
+                        string sql = "INSERT INTO emailotp (p_email_id, p_otp_code) VALUES (:email, :otp)";
+
+                        try
+                        {
+                            using (OracleConnection connection = new OracleConnection(conStr))
+                            {
+                                connection.Open();
+
+                                using (OracleCommand cmd = new OracleCommand(sql, connection))
+                                {
+                                    cmd.Parameters.Add(new OracleParameter(":email", _recipientAddress));
+                                    cmd.Parameters.Add(new OracleParameter(":otp", OTP)); 
+
+                                    cmd.ExecuteNonQuery();
+                                   // Console.WriteLine("OTP saved successfully for: " + _recipientAddress); 
+                                }
+                            }
+                        }
+                        catch (OracleException ex)
+                        {
+                            //Console.WriteLine("An error occurred while saving OTP to the database: " + ex.Message);
+                            MessageBox.Show("An error occurred while saving OTP to the database: "+ ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        otpStatusBoxIcon.Image = Properties.Resources.icons8_cross;
+                        otpStatusBoxIcon.Visible = true;
+                        MessageBox.Show(@"❌Invalid OTP...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Email verification error: " + "Sorry, Check your email! Email could not be sent, Try again!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception ex)
             {
-                // Handle exceptions (refer to previous explanation)
-                MessageBox.Show("Error sending email: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+       
+                MessageBox.Show("Error verifying email: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 this.Close();
             }
+        }
+
+        private void resendOTPLabel_Click(object sender, EventArgs e)
+        {
+            emailStatus = emailManager.SendEmail(_recipientAddress, OTP);
         }
     }
 }

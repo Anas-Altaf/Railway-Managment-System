@@ -51,10 +51,9 @@ namespace WindowsFormsApp1.Utilities
 
             //// Set alternative plain text body (optional, but good practice)
             //bodyBuilder.TextBody = $"Your One Time Password (OTP) is: {OTP}";
-
             // Attach the BodyBuilder instance to the message body
             message.Body = bodyBuilder.ToMessageBody();
-
+            
             try
             {
                 var client = new SmtpClient();
@@ -78,7 +77,7 @@ namespace WindowsFormsApp1.Utilities
                 if (ex is SmtpCommandException smtpEx)
                 {
                     errorMessage += "\nSMTP Error: " + smtpEx.StatusCode;
-                    errorMessage += $"|{ex}";
+                    errorMessage += $"|{ex.Message}";
                 }
 
                 MessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

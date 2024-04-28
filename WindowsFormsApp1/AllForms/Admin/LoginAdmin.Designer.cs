@@ -90,7 +90,7 @@
             this.emailBox.Location = new System.Drawing.Point(56, 141);
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(310, 27);
-            this.emailBox.TabIndex = 15;
+            this.emailBox.TabIndex = 0;
             // 
             // label4
             // 
@@ -115,7 +115,7 @@
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
             this.passwordBox.Size = new System.Drawing.Size(310, 27);
-            this.passwordBox.TabIndex = 18;
+            this.passwordBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -187,7 +187,7 @@
             this.panel1.Location = new System.Drawing.Point(385, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(415, 438);
-            this.panel1.TabIndex = 9;
+            this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // loginButton
