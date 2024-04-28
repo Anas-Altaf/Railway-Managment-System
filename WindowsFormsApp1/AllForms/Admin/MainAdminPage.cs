@@ -12,9 +12,68 @@ namespace WindowsFormsApp1.AllForms.Admin
 {
     public partial class MainAdminPage : Form
     {
+        Form pageForm;
+        Label mainTitle= new Label() ;
+        private AdminDashboard updateForm; // Reference to the form with the label (optional)
+        public void LoadPage(Form _pageForm)
+        {
+
+            centralPanel.Controls.Clear();
+            pageForm = _pageForm;
+            pageForm.Dock = DockStyle.Fill;
+            pageForm.TopLevel = false;
+            centralPanel.Controls.Add(pageForm);
+            pageForm.Show();
+        }
         public MainAdminPage()
         {
             InitializeComponent();
+            updateForm = new AdminDashboard();
+        }
+
+        private void adminCheckProfileBtn_Click(object sender, EventArgs e)
+        {
+            //LoadPage(new checkProfileAdmin());
+           
+
+        }
+
+
+
+        private void adminManageProfileBtn_Click(object sender, EventArgs e)
+        {
+            //LoadPage(new manageProfileAdmin());
+
+        }
+
+        private void adminManageScheduleBtn_Click(object sender, EventArgs e)
+        {
+            //LoadPage(new manageTrainAdmin());
+
+        }
+
+        private void adminRevenueBtn_Click(object sender, EventArgs e)
+        {
+           // LoadPage(new revenuePdfAdmin());
+
+        }
+
+        private void adminViewTrainsBtn_Click(object sender, EventArgs e)
+        {
+            //LoadPage(new viewTrainAdmin());
+
+        }
+
+        private void adminTasksBtn_Click(object sender, EventArgs e)
+        {
+            //LoadPage(new assignTasksAdmin());
+
+        }
+
+        private void adminViewFeedbackBtn_Click(object sender, EventArgs e)
+        {
+           // LoadPage(new viewFeedbacksAAdmin());
+
         }
     }
 }

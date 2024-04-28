@@ -15,8 +15,9 @@ namespace WindowsFormsApp1
     {
         Form pageForm;
         bool sideBarExpand;
-
-        public void LoadPage(Form _pageForm )
+        Timer timer = null;
+        
+        public void LoadPage(Form _pageForm)
         {
 
             centralPanel.Controls.Clear();
@@ -55,18 +56,16 @@ namespace WindowsFormsApp1
             }
         }
 
-        //
-        private void AdminDashboard_Activated(object sender, EventArgs e)
-        {
-            LoadPage(new MainAdminPage());
-        }
+
         //Back button
         private void backButton_Click(object sender, EventArgs e)
         {
+            mainTitle.Text = "Admin Dashboard";
             LoadPage(new MainAdminPage());
         }
         private void menuButton_Click(object sender, EventArgs e)
         {
+
             sideBarTimer.Start();
         }
 
@@ -74,45 +73,86 @@ namespace WindowsFormsApp1
         private void adminCheckProfileBtn_Click(object sender, EventArgs e)
         {
             LoadPage(new checkProfileAdmin());
+            mainTitle.Text = "Search Employees";
         }
 
- 
+
 
         private void adminManageProfileBtn_Click(object sender, EventArgs e)
         {
             LoadPage(new manageProfileAdmin());
+            mainTitle.Text = "Manage Employees ";
         }
 
         private void adminManageScheduleBtn_Click(object sender, EventArgs e)
         {
             LoadPage(new manageTrainAdmin());
+            mainTitle.Text = "Manage Train Schedule";
         }
 
         private void adminRevenueBtn_Click(object sender, EventArgs e)
         {
-            LoadPage(new viewTrainAdmin());
+            LoadPage(new revenuePdfAdmin());
+            mainTitle.Text = "Revenue";
         }
 
         private void adminViewTrainsBtn_Click(object sender, EventArgs e)
         {
             LoadPage(new viewTrainAdmin());
+            mainTitle.Text = "View Train Details";
         }
 
         private void adminTasksBtn_Click(object sender, EventArgs e)
         {
             LoadPage(new assignTasksAdmin());
-
+            mainTitle.Text = "Manage Employee Tasks";
         }
 
         private void adminViewFeedbackBtn_Click(object sender, EventArgs e)
         {
             LoadPage(new viewFeedbacksAAdmin());
+            mainTitle.Text = "Passengers Feedback";
         }
 
         private void adminLogoutBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Dashboard.getDashboard().Show();
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Logout Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Dashboard.getDashboard().Show();
+            }
+            else
+            {
+                ShowTempText("Login action declined!", 4);
+
+            }
+        }
+        private void ShowTempText(string text, int durationSeconds) // Add location parameter
+        {
+
+            tempInfo.Text = text;
+
+            tempInfo.Visible = true; 
+
+            if (timer == null)
+            {
+                timer = new Timer();
+                timer.Interval = durationSeconds * 1000; // Convert seconds to milliseconds
+                timer.Tick += OnTimerElapsed;
+            }
+            timer.Start();
+        }
+
+        private void OnTimerElapsed(object sender, EventArgs e)
+        {
+            tempInfo.Visible = false;
+            timer.Stop(); // Stop the timer
+        }
+        //Loading Main Page
+        private void AdminDashboard_Load(object sender, EventArgs e)
+        {
+            LoadPage(new MainAdminPage());
         }
     }
 }
