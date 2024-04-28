@@ -32,7 +32,7 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -52,9 +52,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.trainAnnoucementBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.manageTrainAdminBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.trainIdBox = new System.Windows.Forms.TextBox();
+            this.manageTrainAdminBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainImageBox)).BeginInit();
@@ -71,7 +71,6 @@
             this.button15.TabIndex = 34;
             this.button15.Text = "Update";
             this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button14
             // 
@@ -95,16 +94,17 @@
             this.button13.Text = "Clear";
             this.button13.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // AddButton
             // 
-            this.button12.BackColor = System.Drawing.Color.Orange;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Location = new System.Drawing.Point(181, 160);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(60, 23);
-            this.button12.TabIndex = 31;
-            this.button12.Text = "Add";
-            this.button12.UseVisualStyleBackColor = false;
+            this.AddButton.BackColor = System.Drawing.Color.Orange;
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.Location = new System.Drawing.Point(181, 160);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(60, 23);
+            this.AddButton.TabIndex = 31;
+            this.AddButton.Text = "Add";
+            this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // panel13
             // 
@@ -129,7 +129,7 @@
             this.panel13.Controls.Add(this.button15);
             this.panel13.Controls.Add(this.button14);
             this.panel13.Controls.Add(this.button13);
-            this.panel13.Controls.Add(this.button12);
+            this.panel13.Controls.Add(this.AddButton);
             this.panel13.Controls.Add(this.label3);
             this.panel13.Location = new System.Drawing.Point(26, 155);
             this.panel13.Name = "panel13";
@@ -245,6 +245,7 @@
             this.trainImageBox.Size = new System.Drawing.Size(114, 101);
             this.trainImageBox.TabIndex = 52;
             this.trainImageBox.TabStop = false;
+            this.trainImageBox.Click += new System.EventHandler(this.trainImageBox_Click);
             // 
             // trainArrivalBox
             // 
@@ -295,10 +296,6 @@
             this.label1.TabIndex = 62;
             this.label1.Text = "Trains Data";
             // 
-            // manageTrainAdminBindingSource
-            // 
-            this.manageTrainAdminBindingSource.DataSource = typeof(WindowsFormsApp1.AllForms.Admin.manageTrainAdmin);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -315,6 +312,10 @@
             this.trainIdBox.Name = "trainIdBox";
             this.trainIdBox.Size = new System.Drawing.Size(158, 20);
             this.trainIdBox.TabIndex = 63;
+            // 
+            // manageTrainAdminBindingSource
+            // 
+            this.manageTrainAdminBindingSource.DataSource = typeof(WindowsFormsApp1.AllForms.Admin.manageTrainAdmin);
             // 
             // manageTrainAdmin
             // 
@@ -342,7 +343,7 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;

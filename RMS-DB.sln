@@ -8,9 +8,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DB-Queries", "DB-Queries", "{654A800D-2F37-4E98-91D1-50224B5862F4}"
 	ProjectSection(SolutionItems) = preProject
 		Administrator.sql = Administrator.sql
-		Employee.sql = Employee.sql
 		EmailOTP.sql = EmailOTP.sql
+		Employee.sql = Employee.sql
 		Passenger.sql = Passenger.sql
+		TrainSchedule.sql = TrainSchedule.sql
 	EndProjectSection
 EndProject
 Global

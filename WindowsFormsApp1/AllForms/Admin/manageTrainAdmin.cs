@@ -84,6 +84,14 @@ namespace WindowsFormsApp1.AllForms.Admin
             {
                 DataRow selectedRow = selectedRowView.Row;
 
+                trainIdBox.Text = selectedRow["Train_Id"].ToString(); // Assuming a "TrainId" column
+                trainNamebox.Text = selectedRow["Train_Name"].ToString(); // Assuming a "TrainName" column
+                trainDestinationBox.Text = selectedRow["Destination"].ToString(); // Assuming a "Destination" column
+                traintypeBox.Text = selectedRow["Type"].ToString(); // Assuming a "Type" column
+                trainArrivalBox.Text = selectedRow["Arrival"].ToString(); // Assuming an "Arrival" column
+                trainEndTimeBox.Text = selectedRow["Dest_Time"].ToString(); // Assuming a "DestTime" column
+                trainStartTimeBox.Text = selectedRow["Arrival_Time"].ToString(); // Assuming an "ArrivalTime" column
+                trainAnnoucementBox.Text = selectedRow["Announcements"].ToString(); // Assuming an "Announcements" column
                 // Set train image (assuming an "Image" column holding image data or path)
                 if (selectedRow["train_picture"] != null)
                 {
@@ -119,11 +127,12 @@ namespace WindowsFormsApp1.AllForms.Admin
             }
         }
 
-        private void button15_Click(object sender, EventArgs e)
+
+
+        private void AddButton_Click(object sender, EventArgs e)
         {
             // Validate input (except Announcement and Image)
-            if (string.IsNullOrEmpty(trainIdBox.Text) ||
-                string.IsNullOrEmpty(trainNamebox.Text) ||
+            if (string.IsNullOrEmpty(trainNamebox.Text) ||
                 string.IsNullOrEmpty(trainDestinationBox.Text) ||
                 string.IsNullOrEmpty(traintypeBox.Text) ||
                 string.IsNullOrEmpty(trainArrivalBox.Text) ||
@@ -135,14 +144,15 @@ namespace WindowsFormsApp1.AllForms.Admin
             }
 
             // Prepare SQL statement
-            string sql = "INSERT INTO TrainSchedule ( Train_Name, Destination, Type, Arrival, Arrival_Time, Dest_Time, Announcements, Train_Id, train_picture) " +
-                         "VALUES (:TrainName, :Destination, :Type, :Arrival, :ArrivalTime, :DestTime, :Announcements, :TrainId, :Image)";
+            string sql = "INSERT INTO TrainSchedule (Train_Id, Train_Name, Destination, Type, Arrival, Arrival_Time, Dest_Time, Announcements, train_picture) " +
+                         "VALUES (:train_id, :TrainName, :Destination, :Type, :Arrival, :ArrivalTime, :DestTime, :Announcements, :Image)";
 
             // Create Oracle command
-            using (OracleCommand cmd = new OracleCommand(sql, new OracleConnection(conStr)))
+            using (OracleConnection connection = new OracleConnection(conStr))
+            using (OracleCommand cmd = new OracleCommand(sql, connection))
             {
                 // Add parameters
-                cmd.Parameters.Add(":TrainId", OracleDbType.Decimal).Value = Convert.ToDecimal(trainIdBox.Text);
+                cmd.Parameters.Add(":train_id", OracleDbType.Varchar2).Value = trainIdBox.Text;
                 cmd.Parameters.Add(":TrainName", OracleDbType.Varchar2).Value = trainNamebox.Text;
                 cmd.Parameters.Add(":Destination", OracleDbType.Varchar2).Value = trainDestinationBox.Text;
                 cmd.Parameters.Add(":Type", OracleDbType.Varchar2).Value = traintypeBox.Text;
@@ -150,7 +160,6 @@ namespace WindowsFormsApp1.AllForms.Admin
                 cmd.Parameters.Add(":ArrivalTime", OracleDbType.Varchar2).Value = trainStartTimeBox.Text;
                 cmd.Parameters.Add(":DestTime", OracleDbType.Varchar2).Value = trainEndTimeBox.Text;
                 cmd.Parameters.Add(":Announcements", OracleDbType.Varchar2).Value = trainAnnoucementBox.Text;
-
 
                 // Handle image (optional)
                 if (trainImageBox.Image != null)
@@ -162,7 +171,7 @@ namespace WindowsFormsApp1.AllForms.Admin
                         {
                             trainImageBox.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg); // Adjust format as needed
                             byte[] imageByteArray = ms.ToArray();
-                            cmd.Parameters.Add(":Image", OracleDbType.Blob);
+                            cmd.Parameters.Add(":Image", OracleDbType.Blob).Value = imageByteArray;
                         }
                     }
                     catch (Exception ex)
@@ -173,28 +182,26 @@ namespace WindowsFormsApp1.AllForms.Admin
                 }
                 else
                 {
-                    cmd.Parameters.Add(":Image", OracleDbType.Blob).Value = null; // Set null for no image
+                    cmd.Parameters.Add(":Image", OracleDbType.Blob).Value = DBNull.Value; // Set null for no image
                 }
 
                 // Open connection and execute command
                 try
                 {
-                    using (OracleConnection connection = new OracleConnection(conStr))
-                    {
-                        connection.Open();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Train schedule added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Train schedule added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    populateDataGridView();
 
-                        trainIdBox.Text =
-                        trainDestinationBox.Text = "";
-                        traintypeBox.Text = "";
-                        trainArrivalBox.Text = "";
-                        trainEndTimeBox.Text = "";
-                        trainStartTimeBox.Text = "";
-                        trainAnnoucementBox.Text = "";
-
-                        trainImageBox.Image = null; // Clear image (optional)
-                    }
+                    // Clear input fields and image
+                    trainNamebox.Text = "";
+                    trainDestinationBox.Text = "";
+                    traintypeBox.Text = "";
+                    trainArrivalBox.Text = "";
+                    trainEndTimeBox.Text = "";
+                    trainStartTimeBox.Text = "";
+                    trainAnnoucementBox.Text = "";
+                    trainImageBox.Image = null; // Clear image (optional)
                 }
                 catch (OracleException ex)
                 {
@@ -202,5 +209,35 @@ namespace WindowsFormsApp1.AllForms.Admin
                 }
             }
         }
+
+        private void trainImageBox_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            // Set the file dialog properties
+            openFileDialog1.Title = "Select Image";
+            openFileDialog1.Filter = "All Files (*.*)|*.*|Image Files (.bmp;.jpg;.jpeg,.png)|.BMP;.JPG;.JPEG;.PNG";
+            openFileDialog1.FilterIndex = 0; // Set "All Files" as default filter
+
+            // Show the file dialog
+            DialogResult result = openFileDialog1.ShowDialog();
+
+            // Check if the user selected a file
+            if (result == DialogResult.OK)
+            {
+                try
+                {
+                    // Get the selected file name and display in PictureBox
+                    string imagePath = openFileDialog1.FileName;
+                    trainImageBox.Image = Image.FromFile(imagePath);
+                    trainImageBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
     }
 }
