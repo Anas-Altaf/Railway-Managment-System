@@ -77,6 +77,7 @@
             this.button15.TabIndex = 12;
             this.button15.Text = "Assign";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.assignButton_click);
             // 
             // textBox2
             // 
@@ -97,6 +98,7 @@
             this.button12.TabIndex = 10;
             this.button12.Text = "Search";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.searchID_click);
             // 
             // textBox1
             // 
@@ -154,6 +156,7 @@
             this.button14.TabIndex = 3;
             this.button14.Text = "Completed Tasks";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.completeTasks_click);
             // 
             // button13
             // 
@@ -166,6 +169,7 @@
             this.button13.TabIndex = 2;
             this.button13.Text = "Assigned Tasks";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.assignTasks_click);
             // 
             // label4
             // 

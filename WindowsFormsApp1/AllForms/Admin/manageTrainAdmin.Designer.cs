@@ -34,10 +34,11 @@
             this.button13 = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.trainIdBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.trainAnnoucementBox = new System.Windows.Forms.TextBox();
             this.trainEndTimeBox = new System.Windows.Forms.TextBox();
             this.trainStartTimeBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -50,14 +51,13 @@
             this.trainNamebox = new System.Windows.Forms.TextBox();
             this.trainDestinationBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.trainAnnoucementBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.trainIdBox = new System.Windows.Forms.TextBox();
             this.manageTrainAdminBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainImageBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageTrainAdminBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +71,7 @@
             this.button15.TabIndex = 34;
             this.button15.Text = "Update";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // button14
             // 
@@ -82,6 +83,7 @@
             this.button14.TabIndex = 33;
             this.button14.Text = "Delete";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // button13
             // 
@@ -93,6 +95,7 @@
             this.button13.TabIndex = 32;
             this.button13.Text = "Clear";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // AddButton
             // 
@@ -136,24 +139,22 @@
             this.panel13.Size = new System.Drawing.Size(720, 191);
             this.panel13.TabIndex = 15;
             // 
-            // label3
+            // trainIdBox
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(325, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 23);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Train\'s Data:";
+            this.trainIdBox.Location = new System.Drawing.Point(112, 30);
+            this.trainIdBox.Name = "trainIdBox";
+            this.trainIdBox.Size = new System.Drawing.Size(158, 20);
+            this.trainIdBox.TabIndex = 63;
             // 
-            // dataGridView1
+            // label2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(720, 105);
-            this.dataGridView1.TabIndex = 16;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 21);
+            this.label2.TabIndex = 62;
+            this.label2.Text = "Train ID:";
             // 
             // label9
             // 
@@ -174,6 +175,14 @@
             this.label10.Size = new System.Drawing.Size(133, 21);
             this.label10.TabIndex = 60;
             this.label10.Text = "Announcements:";
+            // 
+            // trainAnnoucementBox
+            // 
+            this.trainAnnoucementBox.Location = new System.Drawing.Point(297, 119);
+            this.trainAnnoucementBox.Multiline = true;
+            this.trainAnnoucementBox.Name = "trainAnnoucementBox";
+            this.trainAnnoucementBox.Size = new System.Drawing.Size(276, 35);
+            this.trainAnnoucementBox.TabIndex = 59;
             // 
             // trainEndTimeBox
             // 
@@ -278,13 +287,24 @@
             this.label5.TabIndex = 47;
             this.label5.Text = "Train Name:";
             // 
-            // trainAnnoucementBox
+            // label3
             // 
-            this.trainAnnoucementBox.Location = new System.Drawing.Point(297, 119);
-            this.trainAnnoucementBox.Multiline = true;
-            this.trainAnnoucementBox.Name = "trainAnnoucementBox";
-            this.trainAnnoucementBox.Size = new System.Drawing.Size(276, 35);
-            this.trainAnnoucementBox.TabIndex = 59;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(325, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 23);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Train\'s Data:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(26, 44);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(720, 105);
+            this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label1
             // 
@@ -295,23 +315,6 @@
             this.label1.Size = new System.Drawing.Size(121, 30);
             this.label1.TabIndex = 62;
             this.label1.Text = "Trains Data";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 21);
-            this.label2.TabIndex = 62;
-            this.label2.Text = "Train ID:";
-            // 
-            // trainIdBox
-            // 
-            this.trainIdBox.Location = new System.Drawing.Point(112, 30);
-            this.trainIdBox.Name = "trainIdBox";
-            this.trainIdBox.Size = new System.Drawing.Size(158, 20);
-            this.trainIdBox.TabIndex = 63;
             // 
             // manageTrainAdminBindingSource
             // 
@@ -330,8 +333,8 @@
             this.Text = "manageTrainAdmin";
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainImageBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manageTrainAdminBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

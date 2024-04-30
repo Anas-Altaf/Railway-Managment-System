@@ -135,6 +135,7 @@
             this.button12.Text = "Download PDF";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.DownloadPDFButton_Click);
             // 
             // revenuePdfAdmin
             // 
