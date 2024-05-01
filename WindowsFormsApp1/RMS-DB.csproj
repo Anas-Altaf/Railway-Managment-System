@@ -187,6 +187,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllForms\Admin\adminProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Admin\adminProfile.Designer.cs">
+      <DependentUpon>adminProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllForms\Admin\assignTasksAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +290,9 @@
     </Compile>
     <Compile Include="Static Resources\UserFunctions.cs" />
     <Compile Include="Utilities\EmailManager\EmailManager.cs" />
+    <EmbeddedResource Include="AllForms\Admin\adminProfile.resx">
+      <DependentUpon>adminProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Admin\assignTasksAdmin.resx">
       <DependentUpon>assignTasksAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -660,6 +669,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-back-25.png" />
     <Content Include="Passenger.sql" />
+    <None Include="Resources\icons8-admin-100.png" />
     <Content Include="Resources\icons8-cross.gif" />
     <None Include="Resources\icons8-verified-account1.gif" />
     <None Include="Resources\icons8-cross1.gif" />

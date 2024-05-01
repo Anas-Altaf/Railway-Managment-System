@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
         }
 
 
-                private void backButton_Click(object sender, EventArgs e)
+        private void backButton_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Admin Dashboard";
             LoadPage(new MainAdminPage());
@@ -148,6 +148,11 @@ namespace WindowsFormsApp1
                 private void AdminDashboard_Load(object sender, EventArgs e)
         {
             LoadPage(new MainAdminPage());
+        }
+
+        private void adminProfileButton_Click(object sender, EventArgs e)
+        {
+            LoadPage(new adminProfile());
         }
     }
 }
