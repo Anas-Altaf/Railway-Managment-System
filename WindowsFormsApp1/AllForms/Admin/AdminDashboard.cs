@@ -16,7 +16,8 @@ namespace WindowsFormsApp1
         Form pageForm;
         bool sideBarExpand;
         Timer timer = null;
-        
+
+        string _email = "umair@rmsdb.com";
         public void LoadPage(Form _pageForm)
         {
 
@@ -32,6 +33,12 @@ namespace WindowsFormsApp1
         {
 
             InitializeComponent();
+        }
+        public AdminDashboard( string email)
+        {
+
+            InitializeComponent();
+            _email = email;
         }
 
         private void sideBarTimer_Tick(object sender, EventArgs e)
@@ -152,7 +159,7 @@ namespace WindowsFormsApp1
 
         private void adminProfileButton_Click(object sender, EventArgs e)
         {
-            LoadPage(new adminProfile());
+            LoadPage(new adminProfile(_email));
         }
     }
 }

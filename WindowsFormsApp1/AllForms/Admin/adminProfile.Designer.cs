@@ -83,7 +83,6 @@
             this.adminName.Size = new System.Drawing.Size(305, 31);
             this.adminName.TabIndex = 31;
             this.adminName.Text = "Mr Admin";
-            this.adminName.TextChanged += new System.EventHandler(this.adminName_TextChanged);
             // 
             // label5
             // 
@@ -171,6 +170,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "adminProfile";
             this.Text = "adminCheckProfile";
+            this.Load += new System.EventHandler(this.adminProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

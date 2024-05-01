@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
 {
     public partial class LoginAdmin : Form
     {
-                string conStr = UserFunctions.connectionString;
+        string conStr = UserFunctions.connectionString;
         public LoginAdmin()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
         }
 
 
-        
+
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
             try
             {
                 connection = new OracleConnection(conStr);
-                connection.Open(); 
+                connection.Open();
                 OracleCommand userId = connection.CreateCommand();
                 userId.CommandText = "SELECT a_email_id FROM ADMINISTRATOR WHERE  a_email_id = :email AND a_password = :password";
                 userId.Parameters.Add(new OracleParameter(":email", email));
@@ -62,31 +62,32 @@ namespace WindowsFormsApp1
 
                 if (userDR.Read())
                 {
-                                        string a_email_id = userDR.GetString(0);
+                    string a_email_id = userDR.GetString(0);
 
                     MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     this.Close();
-                    AdminDashboard adminDash = new AdminDashboard();
-                                        adminDash.ShowDialog();
+                    AdminDashboard adminDash = new AdminDashboard(a_email_id);
+                    adminDash.Show();
                 }
                 else
                 {
-                                        MessageBox.Show("Invalid email or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid email or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                userDR.Close();                 connection.Close();
+                userDR.Close(); connection.Close();
             }
             catch (OracleException ex)
             {
-                                MessageBox.Show("An error occurred while connecting to the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred while connecting to the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)             {
-                                MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception ex)
+            {
+                MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                                if (connection != null && connection.State == ConnectionState.Open)
+                if (connection != null && connection.State == ConnectionState.Open)
                 {
                     connection.Close();
                 }

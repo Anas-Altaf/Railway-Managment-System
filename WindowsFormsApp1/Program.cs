@@ -18,8 +18,8 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(Dashboard.getDashboard());
-            Application.Run(new AdminDashboard());
+            Application.Run(Dashboard.getDashboard());
+            //Application.Run(new AdminDashboard());
      }
     }
 }
