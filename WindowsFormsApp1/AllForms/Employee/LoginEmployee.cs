@@ -14,8 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class LoginEmployee : Form
     {
-        //Establishing Oracle Connection
-        string conStr = UserFunctions.connectionString;
+                string conStr = UserFunctions.connectionString;
         public LoginEmployee()
         {
             InitializeComponent();
@@ -44,8 +43,7 @@ namespace WindowsFormsApp1
             try
             {
                 connection = new OracleConnection(conStr);
-                connection.Open(); // Open the connection
-
+                connection.Open(); 
                 OracleCommand userId = connection.CreateCommand();
                 userId.CommandText = "SELECT e_email_id FROM EMPLOYEE WHERE e_email_id = :email AND e_password = :password";
                 userId.Parameters.Add(new OracleParameter(":email", email));
@@ -56,39 +54,31 @@ namespace WindowsFormsApp1
 
                 if (userDR.Read())
                 {
-                    // Login successful!
-                    string e_email_id = userDR.GetString(0);
+                                        string e_email_id = userDR.GetString(0);
 
                     MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     this.Close();
                     AdminDashboard adminDash = new AdminDashboard();
-                    //Going to show admin dashboard
-                    adminDash.ShowDialog();
+                                        adminDash.ShowDialog();
                 }
                 else
                 {
-                    // Login failed (invalid email or password)
-                    MessageBox.Show("Invalid email or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("Invalid email or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                userDR.Close(); // Manually close DataReader
-                connection.Close();
+                userDR.Close();                 connection.Close();
             }
             catch (OracleException ex)
             {
-                // Handle database-related exceptions gracefully
-                MessageBox.Show("An error occurred while connecting to the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("An error occurred while connecting to the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex) // Catch more general exceptions
-            {
-                // Handle unexpected errors
-                MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception ex)             {
+                                MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                // Ensure the connection is closed regardless of success or failure
-                if (connection != null && connection.State == ConnectionState.Open)
+                                if (connection != null && connection.State == ConnectionState.Open)
                 {
                     connection.Close();
                 }

@@ -37,8 +37,7 @@ namespace WindowsFormsApp1.AllForms.Admin
                 connection = new OracleConnection(conStr);
                 connection.Open();
 
-                // Search by train_id only
-                string sql = "SELECT * FROM TRAINSCHEDULE WHERE train_id = :trainId";
+                                string sql = "SELECT * FROM TRAINSCHEDULE WHERE train_id = :trainId";
                 using (OracleCommand cmd = new OracleCommand(sql, connection))
                 {
                     cmd.Parameters.Add(new OracleParameter(":trainId", trainId));
@@ -47,21 +46,12 @@ namespace WindowsFormsApp1.AllForms.Admin
                     {
                         if (reader.Read())
                         {
-                            // Train schedule found, populate text boxes
-                            trainNamebox.Text = reader.GetString(0);  // train_name
-                            trainDestinationBox.Text = reader.GetString(1);  // destination
-                            trainArrivalBox.Text = reader.GetString(2);   // arrival
-                            traintypeBox.Text = reader.GetString(3);   // type
-                            trainEndTimeBox.Text = reader.GetString(4);  // dest_time
-                            trainStartTimeBox.Text = reader.GetString(5); // arrival_time
-                            trainAnnoucementBox.Text = reader.GetString(6); // announcements
-
+                                                        trainNamebox.Text = reader.GetString(0);                              trainDestinationBox.Text = reader.GetString(1);                              trainArrivalBox.Text = reader.GetString(2);                               traintypeBox.Text = reader.GetString(3);                               trainEndTimeBox.Text = reader.GetString(4);                              trainStartTimeBox.Text = reader.GetString(5);                             trainAnnoucementBox.Text = reader.GetString(6); 
                             
                         }
                         else
                         {
-                            // Train schedule not found, clear text boxes
-                            trainNamebox.Text = "";
+                                                        trainNamebox.Text = "";
                             trainDestinationBox.Text = "";
                             traintypeBox.Text = "";
                             trainArrivalBox.Text = "";
@@ -78,8 +68,7 @@ namespace WindowsFormsApp1.AllForms.Admin
             {
                 MessageBox.Show("An error occurred while connecting to the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex) // Catch more general exceptions
-            {
+            catch (Exception ex)             {
                 MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -96,26 +85,19 @@ namespace WindowsFormsApp1.AllForms.Admin
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            // Set the file dialog properties
-            openFileDialog1.Title = "Select Image";
+                        openFileDialog1.Title = "Select Image";
 
-            // Add "All Files" filter
-            openFileDialog1.Filter = "All Files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 0; // Set "All Files" as default filter
+                        openFileDialog1.Filter = "All Files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 0; 
+                        openFileDialog1.Filter += "|Image Files (.bmp;.jpg;.jpeg,.png)|.BMP;.JPG;.JPEG;.PNG";
 
-            // Add image filters (optional)
-            openFileDialog1.Filter += "|Image Files (.bmp;.jpg;.jpeg,.png)|.BMP;.JPG;.JPEG;.PNG";
+                        DialogResult result = openFileDialog1.ShowDialog();
 
-            // Show the file dialog
-            DialogResult result = openFileDialog1.ShowDialog();
-
-            // Check if the user selected a file
-            if (result == DialogResult.OK)
+                        if (result == DialogResult.OK)
             {
                 try
                 {
-                    // Get the selected file name and display in PictureBox
-                    string imagePath = openFileDialog1.FileName;
+                                        string imagePath = openFileDialog1.FileName;
                     trainImageBox.Image = Image.FromFile(imagePath);
                     trainImageBox.SizeMode = PictureBoxSizeMode.StretchImage;
 

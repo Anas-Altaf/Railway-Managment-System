@@ -24,35 +24,27 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void DownloadPDFButton_Click(object sender, EventArgs e)
         {
-            // Calculate total revenue, total employees, and total passengers
-            decimal totalRevenue = CalculateTotalRevenue();
+                        decimal totalRevenue = CalculateTotalRevenue();
             int totalEmployees = GetTotalEmployees();
             int totalPassengers = GetTotalPassengers();
 
-            // Create PDF document
-            Document document = new Document();
+                        Document document = new Document();
             try
             {
-                // Define output file path
-                string outputPath = "TotalRevenueReport.pdf";
+                                string outputPath = "TotalRevenueReport.pdf";
 
-                // Create PDF writer
-                PdfWriter.GetInstance(document, new FileStream(outputPath, FileMode.Create));
+                                PdfWriter.GetInstance(document, new FileStream(outputPath, FileMode.Create));
 
-                // Open document for writing
-                document.Open();
+                                document.Open();
 
-                // Add content to the document
-                document.Add(new Paragraph("Total Revenue Report"));
+                                document.Add(new Paragraph("Total Revenue Report"));
                 document.Add(new Paragraph($"Total Revenue: ${totalRevenue}"));
                 document.Add(new Paragraph($"Total Employees: {totalEmployees}"));
                 document.Add(new Paragraph($"Total Passengers: {totalPassengers}"));
 
-                // Show success message
-                MessageBox.Show("PDF report generated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("PDF report generated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Open the PDF file after generation
-                System.Diagnostics.Process.Start(outputPath);
+                                System.Diagnostics.Process.Start(outputPath);
             }
             catch (Exception ex)
             {
@@ -60,8 +52,7 @@ namespace WindowsFormsApp1.AllForms.Admin
             }
             finally
             {
-                // Close the document
-                document.Close();
+                                document.Close();
             }
         }
 
@@ -70,25 +61,19 @@ namespace WindowsFormsApp1.AllForms.Admin
             decimal totalTicketPrice = 0;
             decimal totalEmployeeSalary = 0;
 
-            // Query to sum ticket prices from the passenger table
-            string ticketPriceQuery = "SELECT SUM(ticket_price) FROM Passenger";
+                        string ticketPriceQuery = "SELECT SUM(ticket_price) FROM Passenger";
 
-            // Query to sum employee salaries from the employee table
-            string employeeSalaryQuery = "SELECT SUM(e_salary) FROM Employee";
+                        string employeeSalaryQuery = "SELECT SUM(e_salary) FROM Employee";
 
-            // Connection string
-            string conStr = UserFunctions.connectionString;
+                        string conStr = UserFunctions.connectionString;
 
             try
             {
-                // Connect to the database
-                using (OracleConnection connection = new OracleConnection(conStr))
+                                using (OracleConnection connection = new OracleConnection(conStr))
                 {
-                    // Open the connection
-                    connection.Open();
+                                        connection.Open();
 
-                    // Calculate total ticket price
-                    using (OracleCommand cmd = new OracleCommand(ticketPriceQuery, connection))
+                                        using (OracleCommand cmd = new OracleCommand(ticketPriceQuery, connection))
                     {
                         object result = cmd.ExecuteScalar();
                         if (result != DBNull.Value)
@@ -97,8 +82,7 @@ namespace WindowsFormsApp1.AllForms.Admin
                         }
                     }
 
-                    // Calculate total employee salary
-                    using (OracleCommand cmd = new OracleCommand(employeeSalaryQuery, connection))
+                                        using (OracleCommand cmd = new OracleCommand(employeeSalaryQuery, connection))
                     {
                         object result = cmd.ExecuteScalar();
                         if (result != DBNull.Value)
@@ -113,30 +97,24 @@ namespace WindowsFormsApp1.AllForms.Admin
                 MessageBox.Show("Error calculating total revenue: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            // Calculate and return total revenue
-            return totalTicketPrice - totalEmployeeSalary;
+                        return totalTicketPrice - totalEmployeeSalary;
         }
 
         private int GetTotalEmployees()
         {
             int totalEmployees = 0;
 
-            // Query to count total employees
-            string employeeCountQuery = "SELECT COUNT(*) FROM Employee";
+                        string employeeCountQuery = "SELECT COUNT(*) FROM Employee";
 
-            // Connection string
-            string conStr = UserFunctions.connectionString;
+                        string conStr = UserFunctions.connectionString;
 
             try
             {
-                // Connect to the database
-                using (OracleConnection connection = new OracleConnection(conStr))
+                                using (OracleConnection connection = new OracleConnection(conStr))
                 {
-                    // Open the connection
-                    connection.Open();
+                                        connection.Open();
 
-                    // Execute query to get total employees
-                    using (OracleCommand cmd = new OracleCommand(employeeCountQuery, connection))
+                                        using (OracleCommand cmd = new OracleCommand(employeeCountQuery, connection))
                     {
                         totalEmployees = Convert.ToInt32(cmd.ExecuteScalar());
                     }
@@ -154,22 +132,17 @@ namespace WindowsFormsApp1.AllForms.Admin
         {
             int totalPassengers = 0;
 
-            // Query to count total passengers
-            string passengerCountQuery = "SELECT COUNT(*) FROM Passenger";
+                        string passengerCountQuery = "SELECT COUNT(*) FROM Passenger";
 
-            // Connection string
-            string conStr = UserFunctions.connectionString;
+                        string conStr = UserFunctions.connectionString;
 
             try
             {
-                // Connect to the database
-                using (OracleConnection connection = new OracleConnection(conStr))
+                                using (OracleConnection connection = new OracleConnection(conStr))
                 {
-                    // Open the connection
-                    connection.Open();
+                                        connection.Open();
 
-                    // Execute query to get total passengers
-                    using (OracleCommand cmd = new OracleCommand(passengerCountQuery, connection))
+                                        using (OracleCommand cmd = new OracleCommand(passengerCountQuery, connection))
                     {
                         totalPassengers = Convert.ToInt32(cmd.ExecuteScalar());
                     }

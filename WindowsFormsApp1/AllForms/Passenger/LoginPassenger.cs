@@ -14,8 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class LoginPassenger : Form
     {
-        //Establishing Oracle Connection
-        string conStr = UserFunctions.connectionString;
+                string conStr = UserFunctions.connectionString;
         public LoginPassenger()
         {
             InitializeComponent();
@@ -59,8 +58,7 @@ namespace WindowsFormsApp1
             string email = emailBox.Text.Trim();
             string password = passwordBox.Text.Trim();
 
-            // Basic validation (optional)
-            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+                        if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Please enter your email address and password.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -70,8 +68,7 @@ namespace WindowsFormsApp1
             try
             {
                 connection = new OracleConnection(conStr);
-                connection.Open(); // Open the connection
-
+                connection.Open(); 
                 string sql = "SELECT * FROM Passenger WHERE p_email_id = :email AND p_password = :password";
                 using (OracleCommand cmd = new OracleCommand(sql, connection))
                 {
@@ -82,23 +79,20 @@ namespace WindowsFormsApp1
                     {
                         if (reader.Read())
                         {
-                            // Login successful!
-                            MessageBox.Show("Login successful!, Passenger Interface is not ready!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                        MessageBox.Show("Login successful!, Passenger Interface is not ready!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             
                             return;
                         }
                     }
 
-                    // Login failed (invalid email or password)
-                    MessageBox.Show("Invalid email address or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        MessageBox.Show("Invalid email address or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (OracleException ex)
             {
                 MessageBox.Show("An error occurred while connecting to the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex) // Catch more general exceptions
-            {
+            catch (Exception ex)             {
                 MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally

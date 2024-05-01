@@ -34,14 +34,11 @@ namespace WindowsFormsApp1.AllForms.Passenger
             _recipientAddress = recipientAddress;
             InitializeComponent();
         }
-        //OTP generation 
-        public int GenerateOtp()
+                public int GenerateOtp()
         {
-            // Use a Random class instance
-            var random = new Random();
+                        var random = new Random();
 
-            // Alternative approach: Generate a random number between 100000 and 999999 (inclusive)
-            int randomNumber = random.Next(100000, 1000000);
+                        int randomNumber = random.Next(100000, 1000000);
 
             return randomNumber;
         }
@@ -56,8 +53,7 @@ namespace WindowsFormsApp1.AllForms.Passenger
                     {
                         OTPStatusInfo = true;
                         otpStatusBoxIcon.Visible = true;
-                        //Saving Correct OTP
-                        string sql = "INSERT INTO emailotp (p_email_id, p_otp_code) VALUES (:email, :otp)";
+                                                string sql = "INSERT INTO emailotp (p_email_id, p_otp_code) VALUES (:email, :otp)";
 
                         try
                         {
@@ -71,14 +67,12 @@ namespace WindowsFormsApp1.AllForms.Passenger
                                     cmd.Parameters.Add(new OracleParameter(":otp", OTP)); 
 
                                     cmd.ExecuteNonQuery();
-                                   // Console.WriteLine("OTP saved successfully for: " + _recipientAddress); 
-                                }
+                                                                   }
                             }
                         }
                         catch (OracleException ex)
                         {
-                            //Console.WriteLine("An error occurred while saving OTP to the database: " + ex.Message);
-                            MessageBox.Show("An error occurred while saving OTP to the database: "+ ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                        MessageBox.Show("An error occurred while saving OTP to the database: "+ ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else

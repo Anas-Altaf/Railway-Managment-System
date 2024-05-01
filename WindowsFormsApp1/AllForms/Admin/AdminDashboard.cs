@@ -57,8 +57,7 @@ namespace WindowsFormsApp1
         }
 
 
-        //Back button
-        private void backButton_Click(object sender, EventArgs e)
+                private void backButton_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Admin Dashboard";
             LoadPage(new MainAdminPage());
@@ -128,8 +127,7 @@ namespace WindowsFormsApp1
 
             }
         }
-        private void ShowTempText(string text, int durationSeconds) // Add location parameter
-        {
+        private void ShowTempText(string text, int durationSeconds)         {
 
             tempInfo.Text = text;
 
@@ -138,8 +136,7 @@ namespace WindowsFormsApp1
             if (timer == null)
             {
                 timer = new Timer();
-                timer.Interval = durationSeconds * 1000; // Convert seconds to milliseconds
-                timer.Tick += OnTimerElapsed;
+                timer.Interval = durationSeconds * 1000;                 timer.Tick += OnTimerElapsed;
             }
             timer.Start();
         }
@@ -147,10 +144,8 @@ namespace WindowsFormsApp1
         private void OnTimerElapsed(object sender, EventArgs e)
         {
             tempInfo.Visible = false;
-            timer.Stop(); // Stop the timer
-        }
-        //Loading Main Page
-        private void AdminDashboard_Load(object sender, EventArgs e)
+            timer.Stop();         }
+                private void AdminDashboard_Load(object sender, EventArgs e)
         {
             LoadPage(new MainAdminPage());
         }

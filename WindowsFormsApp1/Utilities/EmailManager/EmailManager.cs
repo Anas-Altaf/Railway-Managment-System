@@ -19,20 +19,15 @@ namespace WindowsFormsApp1.Utilities
         {
             var message = new MimeMessage();
 
-            // Set sender information
-            message.From.Add(new MailboxAddress("RMS - Railway Mnagament System", "f223639@cfd.nu.edu.pk"));
+                        message.From.Add(new MailboxAddress("RMS - Railway Mnagament System", "f223639@cfd.nu.edu.pk"));
 
-            // Set recipient address
-            message.To.Add(new MailboxAddress("", recipientAddress));
+                        message.To.Add(new MailboxAddress("", recipientAddress));
 
-            // Set subject
-            message.Subject = "RMS - One Time OTP";
+                        message.Subject = "RMS - One Time OTP";
 
-            // Create a BodyBuilder instance to construct HTML content
-            var bodyBuilder = new BodyBuilder();
+                        var bodyBuilder = new BodyBuilder();
 
-            // Set HTML content (replace with your desired HTML template)
-            bodyBuilder.HtmlBody = $@"
+                        bodyBuilder.HtmlBody = $@"
     <!DOCTYPE html>
     <html>
     <head>
@@ -49,32 +44,24 @@ namespace WindowsFormsApp1.Utilities
     </html>
   ";
 
-            //// Set alternative plain text body (optional, but good practice)
-            //bodyBuilder.TextBody = $"Your One Time Password (OTP) is: {OTP}";
-            // Attach the BodyBuilder instance to the message body
-            message.Body = bodyBuilder.ToMessageBody();
+                                                message.Body = bodyBuilder.ToMessageBody();
             
             try
             {
                 var client = new SmtpClient();
 
-                // Replace with your SMTP server details (consult your email provider)
-                client.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls); // Use SSL
-
-                // Replace with your username and password (if required)
-                client.Authenticate(UserFunctions.testEmail, UserFunctions.testEmailPass);
+                                client.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls); 
+                                client.Authenticate(UserFunctions.testEmail, UserFunctions.testEmailPass);
 
                 client.Send(message);
-                client.Disconnect(true); // Disconnect cleanly
-
+                client.Disconnect(true); 
                 MessageBox.Show("Email sent successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (Exception ex)
             {
                 string errorMessage = "An error occurred while sending the email: ";
-                // Provide more specific error messages based on exception type (optional)
-                if (ex is SmtpCommandException smtpEx)
+                                if (ex is SmtpCommandException smtpEx)
                 {
                     errorMessage += "\nSMTP Error: " + smtpEx.StatusCode;
                     errorMessage += $"|{ex.Message}";

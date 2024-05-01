@@ -26,8 +26,7 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void populateDataGridView()
         {
-            string sql = "SELECT * FROM TrainSchedule"; // Select all columns
-
+            string sql = "SELECT * FROM TrainSchedule"; 
             OracleConnection connection = null;
             try
             {
@@ -38,16 +37,13 @@ namespace WindowsFormsApp1.AllForms.Admin
                 {
                     using (OracleDataReader reader = cmd.ExecuteReader())
                     {
-                        trainScheduleData.Clear(); // Clear existing data before populating
-
-                        // Add columns to DataTable based on reader metadata (optional, already done in constructor)
-                        for (int i = 0; i < reader.FieldCount; i++)
+                        trainScheduleData.Clear(); 
+                                                for (int i = 0; i < reader.FieldCount; i++)
                         {
                             trainScheduleData.Columns.Add(reader.GetName(i));
                         }
 
-                        // Read data rows and add them to DataTable
-                        while (reader.Read())
+                                                while (reader.Read())
                         {
                             DataRow row = trainScheduleData.NewRow();
                             for (int i = 0; i < reader.FieldCount; i++)
@@ -64,8 +60,7 @@ namespace WindowsFormsApp1.AllForms.Admin
             {
                 MessageBox.Show("An error occurred while connecting to the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex) // Catch more general exceptions
-            {
+            catch (Exception ex)             {
                 MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -84,25 +79,14 @@ namespace WindowsFormsApp1.AllForms.Admin
             {
                 DataRow selectedRow = selectedRowView.Row;
 
-                trainIdBox.Text = selectedRow["Train_Id"].ToString(); // Assuming a "TrainId" column
-                trainNamebox.Text = selectedRow["Train_Name"].ToString(); // Assuming a "TrainName" column
-                trainDestinationBox.Text = selectedRow["Destination"].ToString(); // Assuming a "Destination" column
-                traintypeBox.Text = selectedRow["Type"].ToString(); // Assuming a "Type" column
-                trainArrivalBox.Text = selectedRow["Arrival"].ToString(); // Assuming an "Arrival" column
-                trainEndTimeBox.Text = selectedRow["Dest_Time"].ToString(); // Assuming a "DestTime" column
-                trainStartTimeBox.Text = selectedRow["Arrival_Time"].ToString(); // Assuming an "ArrivalTime" column
-                trainAnnoucementBox.Text = selectedRow["Announcements"].ToString(); // Assuming an "Announcements" column
-                // Set train image (assuming an "Image" column holding image data or path)
-                if (selectedRow["train_picture"] != null)
+                trainIdBox.Text = selectedRow["Train_Id"].ToString();                 trainNamebox.Text = selectedRow["Train_Name"].ToString();                 trainDestinationBox.Text = selectedRow["Destination"].ToString();                 traintypeBox.Text = selectedRow["Type"].ToString();                 trainArrivalBox.Text = selectedRow["Arrival"].ToString();                 trainEndTimeBox.Text = selectedRow["Dest_Time"].ToString();                 trainStartTimeBox.Text = selectedRow["Arrival_Time"].ToString();                 trainAnnoucementBox.Text = selectedRow["Announcements"].ToString();                                 if (selectedRow["train_picture"] != null)
                 {
-                    // Option 1: Assuming "Image" column holds the image data (e.g., byte[])
-                    if (selectedRow["train_picture"] is byte[])
+                                        if (selectedRow["train_picture"] is byte[])
                     {
                         trainImageBox.Image = new Bitmap(new MemoryStream((byte[])selectedRow["train_picture"]));
                     }
 
-                    // Option 2: Assuming "Image" column holds a path to the image file
-                    else if (selectedRow["train_picture"] is string)
+                                        else if (selectedRow["train_picture"] is string)
                     {
                         try
                         {
@@ -111,19 +95,15 @@ namespace WindowsFormsApp1.AllForms.Admin
                         catch (Exception ex)
                         {
                             MessageBox.Show("Error loading image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            // Handle potential image loading errors (e.g., file not found)
-                        }
+                                                    }
                     }
                     else
                     {
-                        // Handle unexpected data type in "Image" column
-                    }
+                                            }
                 }
                 else
                 {
-                    // Set a default image or clear the existing image if no image available
-                    trainImageBox.Image = null; // Or set a default image using trainImageBox.Image = Properties.Resources.DefaultTrainImage;
-                }
+                                        trainImageBox.Image = null;                 }
             }
         }
 
@@ -131,8 +111,7 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            // Validate input (except Announcement and Image)
-            if (string.IsNullOrEmpty(trainNamebox.Text) ||
+                        if (string.IsNullOrEmpty(trainNamebox.Text) ||
                 string.IsNullOrEmpty(trainDestinationBox.Text) ||
                 string.IsNullOrEmpty(traintypeBox.Text) ||
                 string.IsNullOrEmpty(trainArrivalBox.Text) ||
@@ -140,19 +119,15 @@ namespace WindowsFormsApp1.AllForms.Admin
                 string.IsNullOrEmpty(trainEndTimeBox.Text))
             {
                 MessageBox.Show("Please fill in all mandatory fields (except Announcement and Image).", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Exit the function if any mandatory field is empty
-            }
+                return;             }
 
-            // Prepare SQL statement
-            string sql = "INSERT INTO TrainSchedule (Train_Id, Train_Name, Destination, Type, Arrival, Arrival_Time, Dest_Time, Announcements, train_picture) " +
+                        string sql = "INSERT INTO TrainSchedule (Train_Id, Train_Name, Destination, Type, Arrival, Arrival_Time, Dest_Time, Announcements, train_picture) " +
                          "VALUES (:train_id, :TrainName, :Destination, :Type, :Arrival, :ArrivalTime, :DestTime, :Announcements, :Image)";
 
-            // Create Oracle command
-            using (OracleConnection connection = new OracleConnection(conStr))
+                        using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(sql, connection))
             {
-                // Add parameters
-                cmd.Parameters.Add(":train_id", OracleDbType.Varchar2).Value = trainIdBox.Text;
+                                cmd.Parameters.Add(":train_id", OracleDbType.Varchar2).Value = trainIdBox.Text;
                 cmd.Parameters.Add(":TrainName", OracleDbType.Varchar2).Value = trainNamebox.Text;
                 cmd.Parameters.Add(":Destination", OracleDbType.Varchar2).Value = trainDestinationBox.Text;
                 cmd.Parameters.Add(":Type", OracleDbType.Varchar2).Value = traintypeBox.Text;
@@ -161,48 +136,39 @@ namespace WindowsFormsApp1.AllForms.Admin
                 cmd.Parameters.Add(":DestTime", OracleDbType.Varchar2).Value = trainEndTimeBox.Text;
                 cmd.Parameters.Add(":Announcements", OracleDbType.Varchar2).Value = trainAnnoucementBox.Text;
 
-                // Handle image (optional)
-                if (trainImageBox.Image != null)
+                                if (trainImageBox.Image != null)
                 {
                     try
                     {
-                        // Convert image to byte array
-                        using (MemoryStream ms = new MemoryStream())
+                                                using (MemoryStream ms = new MemoryStream())
                         {
-                            trainImageBox.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg); // Adjust format as needed
-                            byte[] imageByteArray = ms.ToArray();
+                            trainImageBox.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);                             byte[] imageByteArray = ms.ToArray();
                             cmd.Parameters.Add(":Image", OracleDbType.Blob).Value = imageByteArray;
                         }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error converting image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return; // Exit the function if image conversion fails
-                    }
+                        return;                     }
                 }
                 else
                 {
-                    cmd.Parameters.Add(":Image", OracleDbType.Blob).Value = DBNull.Value; // Set null for no image
-                }
+                    cmd.Parameters.Add(":Image", OracleDbType.Blob).Value = DBNull.Value;                 }
 
-                // Open connection and execute command
-                try
+                                try
                 {
                     connection.Open();
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Train schedule added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    populateDataGridView(); // Call the method to refresh DataGridView
-
-                    // Clear input fields and image
-                    trainNamebox.Text = "";
+                    populateDataGridView(); 
+                                        trainNamebox.Text = "";
                     trainDestinationBox.Text = "";
                     traintypeBox.Text = "";
                     trainArrivalBox.Text = "";
                     trainEndTimeBox.Text = "";
                     trainStartTimeBox.Text = "";
                     trainAnnoucementBox.Text = "";
-                    trainImageBox.Image = null; // Clear image (optional)
-                }
+                    trainImageBox.Image = null;                 }
                 catch (OracleException ex)
                 {
                     MessageBox.Show("Error adding train schedule: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -215,21 +181,16 @@ namespace WindowsFormsApp1.AllForms.Admin
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            // Set the file dialog properties
-            openFileDialog1.Title = "Select Image";
+                        openFileDialog1.Title = "Select Image";
             openFileDialog1.Filter = "All Files (*.*)|*.*|Image Files (.bmp;.jpg;.jpeg,.png)|.BMP;.JPG;.JPEG;.PNG";
-            openFileDialog1.FilterIndex = 0; // Set "All Files" as default filter
+            openFileDialog1.FilterIndex = 0; 
+                        DialogResult result = openFileDialog1.ShowDialog();
 
-            // Show the file dialog
-            DialogResult result = openFileDialog1.ShowDialog();
-
-            // Check if the user selected a file
-            if (result == DialogResult.OK)
+                        if (result == DialogResult.OK)
             {
                 try
                 {
-                    // Get the selected file name and display in PictureBox
-                    string imagePath = openFileDialog1.FileName;
+                                        string imagePath = openFileDialog1.FileName;
                     trainImageBox.Image = Image.FromFile(imagePath);
                     trainImageBox.SizeMode = PictureBoxSizeMode.StretchImage;
                 }
@@ -243,35 +204,29 @@ namespace WindowsFormsApp1.AllForms.Admin
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             
-            // Ensure that a row is selected in the DataGridView
-            if (dataGridView1.SelectedRows.Count == 0)
+                        if (dataGridView1.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Please select a row to update.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Get the selected row
-            DataRowView selectedRowView = dataGridView1.SelectedRows[0].DataBoundItem as DataRowView;
+                        DataRowView selectedRowView = dataGridView1.SelectedRows[0].DataBoundItem as DataRowView;
             if (selectedRowView == null)
             {
                 MessageBox.Show("Failed to get selected row.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Get the DataRow associated with the selected row
-            DataRow selectedRow = selectedRowView.Row;
+                        DataRow selectedRow = selectedRowView.Row;
 
-            // Prepare SQL statement for updating the row
-            string sql = "UPDATE TrainSchedule SET Train_Name = :TrainName, Destination = :Destination, Type = :Type, Arrival = :Arrival, " +
+                        string sql = "UPDATE TrainSchedule SET Train_Name = :TrainName, Destination = :Destination, Type = :Type, Arrival = :Arrival, " +
                          "Arrival_Time = :ArrivalTime, Dest_Time = :DestTime, Announcements = :Announcements, train_picture = :Image " +
                          "WHERE Train_Id = :TrainId";
 
-            // Create OracleCommand
-            using (OracleConnection connection = new OracleConnection(conStr))
+                        using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(sql, connection))
             {
-                // Add parameters
-                cmd.Parameters.Add(":TrainName", OracleDbType.Varchar2).Value = trainNamebox.Text;
+                                cmd.Parameters.Add(":TrainName", OracleDbType.Varchar2).Value = trainNamebox.Text;
                 cmd.Parameters.Add(":Destination", OracleDbType.Varchar2).Value = trainDestinationBox.Text;
                 cmd.Parameters.Add(":Type", OracleDbType.Varchar2).Value = traintypeBox.Text;
                 cmd.Parameters.Add(":Arrival", OracleDbType.Varchar2).Value = trainArrivalBox.Text;
@@ -280,40 +235,33 @@ namespace WindowsFormsApp1.AllForms.Admin
                 cmd.Parameters.Add(":Announcements", OracleDbType.Varchar2).Value = trainAnnoucementBox.Text;
                 cmd.Parameters.Add(":TrainId", OracleDbType.Varchar2).Value = selectedRow["Train_Id"];
 
-                // Handle image (optional)
-                if (trainImageBox.Image != null)
+                                if (trainImageBox.Image != null)
                 {
                     try
                     {
-                        // Convert image to byte array
-                        using (MemoryStream ms = new MemoryStream())
+                                                using (MemoryStream ms = new MemoryStream())
                         {
-                            trainImageBox.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg); // Adjust format as needed
-                            byte[] imageByteArray = ms.ToArray();
+                            trainImageBox.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);                             byte[] imageByteArray = ms.ToArray();
                             cmd.Parameters.Add(":Image", OracleDbType.Blob).Value = imageByteArray;
                         }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error converting image: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return; // Exit the function if image conversion fails
-                    }
+                        return;                     }
                 }
                 else
                 {
-                    cmd.Parameters.Add(":Image", OracleDbType.Blob).Value = DBNull.Value; // Set null for no image
-                }
+                    cmd.Parameters.Add(":Image", OracleDbType.Blob).Value = DBNull.Value;                 }
 
-                // Open connection and execute command
-                try
+                                try
                 {
                     connection.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Train schedule updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        populateDataGridView(); // Refresh DataGridView to reflect changes
-                    }
+                        populateDataGridView();                     }
                     else
                     {
                         MessageBox.Show("No rows were updated.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -328,44 +276,36 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            // Ensure that a row is selected in the DataGridView
-            if (dataGridView1.SelectedRows.Count == 0)
+                        if (dataGridView1.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Please select a row to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Get the selected row
-            DataRowView selectedRowView = dataGridView1.SelectedRows[0].DataBoundItem as DataRowView;
+                        DataRowView selectedRowView = dataGridView1.SelectedRows[0].DataBoundItem as DataRowView;
             if (selectedRowView == null)
             {
                 MessageBox.Show("Failed to get selected row.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Get the DataRow associated with the selected row
-            DataRow selectedRow = selectedRowView.Row;
+                        DataRow selectedRow = selectedRowView.Row;
 
-            // Prepare SQL statement for deleting the row
-            string sql = "DELETE FROM TrainSchedule WHERE Train_Id = :TrainId";
+                        string sql = "DELETE FROM TrainSchedule WHERE Train_Id = :TrainId";
 
-            // Create OracleCommand
-            using (OracleConnection connection = new OracleConnection(conStr))
+                        using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(sql, connection))
             {
-                // Add parameter for TrainId
-                cmd.Parameters.Add(":TrainId", OracleDbType.Varchar2).Value = selectedRow["Train_Id"];
+                                cmd.Parameters.Add(":TrainId", OracleDbType.Varchar2).Value = selectedRow["Train_Id"];
 
-                // Open connection and execute command
-                try
+                                try
                 {
                     connection.Open();
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Train schedule deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        populateDataGridView(); // Refresh DataGridView to reflect changes
-                    }
+                        populateDataGridView();                     }
                     else
                     {
                         MessageBox.Show("No rows were deleted.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -380,8 +320,7 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-            // Clear text of all textboxes
-            trainIdBox.Text = "";
+                        trainIdBox.Text = "";
             trainNamebox.Text = "";
             trainDestinationBox.Text = "";
             traintypeBox.Text = "";
