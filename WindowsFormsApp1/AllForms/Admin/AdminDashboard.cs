@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
 
             InitializeComponent();
         }
-        public AdminDashboard( string email)
+        public AdminDashboard(string email)
         {
 
             InitializeComponent();
@@ -134,16 +134,18 @@ namespace WindowsFormsApp1
 
             }
         }
-        private void ShowTempText(string text, int durationSeconds)         {
+        private void ShowTempText(string text, int durationSeconds)
+        {
 
             tempInfo.Text = text;
 
-            tempInfo.Visible = true; 
+            tempInfo.Visible = true;
 
             if (timer == null)
             {
                 timer = new Timer();
-                timer.Interval = durationSeconds * 1000;                 timer.Tick += OnTimerElapsed;
+                timer.Interval = durationSeconds * 1000; 
+                timer.Tick += OnTimerElapsed;
             }
             timer.Start();
         }
@@ -151,8 +153,9 @@ namespace WindowsFormsApp1
         private void OnTimerElapsed(object sender, EventArgs e)
         {
             tempInfo.Visible = false;
-            timer.Stop();         }
-                private void AdminDashboard_Load(object sender, EventArgs e)
+            timer.Stop();
+        }
+        private void AdminDashboard_Load(object sender, EventArgs e)
         {
             LoadPage(new MainAdminPage());
         }

@@ -241,11 +241,23 @@
     <Compile Include="AllForms\Admin\viewTrainAdmin.Designer.cs">
       <DependentUpon>viewTrainAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllForms\Passenger\checkProfilePassenger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Passenger\checkProfilePassenger.Designer.cs">
+      <DependentUpon>checkProfilePassenger.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllForms\Passenger\OTPWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AllForms\Passenger\OTPWindow.Designer.cs">
       <DependentUpon>OTPWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Passenger\passengerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Passenger\passengerDashboard.Designer.cs">
+      <DependentUpon>passengerDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -317,8 +329,14 @@
     <EmbeddedResource Include="AllForms\Admin\viewTrainAdmin.resx">
       <DependentUpon>viewTrainAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Passenger\checkProfilePassenger.resx">
+      <DependentUpon>checkProfilePassenger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Passenger\OTPWindow.resx">
       <DependentUpon>OTPWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Passenger\passengerDashboard.resx">
+      <DependentUpon>passengerDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -667,6 +685,8 @@
     <None Include="Resources\icons8-verified-account.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-ticket-purchase-25.png" />
+    <None Include="Resources\icons8-seat-25.png" />
     <None Include="Resources\icons8-back-25.png" />
     <Content Include="Passenger.sql" />
     <None Include="Resources\icons8-admin-100.png" />

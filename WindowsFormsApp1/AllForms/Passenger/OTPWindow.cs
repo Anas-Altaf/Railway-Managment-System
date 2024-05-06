@@ -17,10 +17,10 @@ namespace WindowsFormsApp1.AllForms.Passenger
 {
     public partial class OTPWindow : Form
     {
-         EmailManager emailManager = new EmailManager();
+        EmailManager emailManager = new EmailManager();
         string conStr = UserFunctions.connectionString;
 
-       int OTP;
+        int OTP;
         bool OTPStatusInfo = false;
         string _recipientAddress = "f223639@cfd.nu.edu.pk";
         bool emailStatus = false;
@@ -34,27 +34,27 @@ namespace WindowsFormsApp1.AllForms.Passenger
             _recipientAddress = recipientAddress;
             InitializeComponent();
         }
-                public int GenerateOtp()
+        public int GenerateOtp()
         {
-                        var random = new Random();
+            var random = new Random();
 
-                        int randomNumber = random.Next(100000, 1000000);
+            int randomNumber = random.Next(100000, 1000000);
 
             return randomNumber;
         }
-       
+
         private void OTPVerifyButton_Click(object sender, EventArgs e)
         {
             try
             {
                 if (emailStatus)
                 {
-                    if(OTPBox.Text.ToString().Trim() == OTP.ToString().Trim())
+                    if (OTPBox.Text.ToString().Trim() == OTP.ToString().Trim())
                     {
                         OTPStatusInfo = true;
                         otpStatusBoxIcon.Visible = true;
-                                                string sql = "INSERT INTO emailotp (p_email_id, p_otp_code) VALUES (:email, :otp)";
-
+                        string sql = "INSERT INTO emailotp (p_email_id, p_otp_code) VALUES (:email, :otp)";
+                        
                         try
                         {
                             using (OracleConnection connection = new OracleConnection(conStr))
@@ -64,15 +64,15 @@ namespace WindowsFormsApp1.AllForms.Passenger
                                 using (OracleCommand cmd = new OracleCommand(sql, connection))
                                 {
                                     cmd.Parameters.Add(new OracleParameter(":email", _recipientAddress));
-                                    cmd.Parameters.Add(new OracleParameter(":otp", OTP)); 
+                                    cmd.Parameters.Add(new OracleParameter(":otp", OTP));
 
                                     cmd.ExecuteNonQuery();
-                                                                   }
+                                }
                             }
                         }
                         catch (OracleException ex)
                         {
-                                                        MessageBox.Show("An error occurred while saving OTP to the database: "+ ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("An error occurred while saving OTP to the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
@@ -89,7 +89,7 @@ namespace WindowsFormsApp1.AllForms.Passenger
             }
             catch (Exception ex)
             {
-       
+
                 MessageBox.Show("Error verifying email: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally

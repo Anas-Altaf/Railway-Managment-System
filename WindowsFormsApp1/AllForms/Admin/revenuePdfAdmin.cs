@@ -24,27 +24,27 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void DownloadPDFButton_Click(object sender, EventArgs e)
         {
-                        decimal totalRevenue = CalculateTotalRevenue();
+            decimal totalRevenue = CalculateTotalRevenue();
             int totalEmployees = GetTotalEmployees();
             int totalPassengers = GetTotalPassengers();
 
-                        Document document = new Document();
+            Document document = new Document();
             try
             {
-                                string outputPath = "TotalRevenueReport.pdf";
+                string outputPath = "TotalRevenueReport.pdf";
 
-                                PdfWriter.GetInstance(document, new FileStream(outputPath, FileMode.Create));
+                PdfWriter.GetInstance(document, new FileStream(outputPath, FileMode.Create));
 
-                                document.Open();
+                document.Open();
 
-                                document.Add(new Paragraph("Total Revenue Report"));
+                document.Add(new Paragraph("Total Revenue Report"));
                 document.Add(new Paragraph($"Total Revenue: ${totalRevenue}"));
                 document.Add(new Paragraph($"Total Employees: {totalEmployees}"));
                 document.Add(new Paragraph($"Total Passengers: {totalPassengers}"));
 
-                                MessageBox.Show("PDF report generated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("PDF report generated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                System.Diagnostics.Process.Start(outputPath);
+                System.Diagnostics.Process.Start(outputPath);
             }
             catch (Exception ex)
             {
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1.AllForms.Admin
             }
             finally
             {
-                                document.Close();
+                document.Close();
             }
         }
 
@@ -61,19 +61,19 @@ namespace WindowsFormsApp1.AllForms.Admin
             decimal totalTicketPrice = 0;
             decimal totalEmployeeSalary = 0;
 
-                        string ticketPriceQuery = "SELECT SUM(ticket_price) FROM Passenger";
+            string ticketPriceQuery = "SELECT SUM(ticket_price) FROM Passenger";
 
-                        string employeeSalaryQuery = "SELECT SUM(e_salary) FROM Employee";
+            string employeeSalaryQuery = "SELECT SUM(e_salary) FROM Employee";
 
-                        string conStr = UserFunctions.connectionString;
+            string conStr = UserFunctions.connectionString;
 
             try
             {
-                                using (OracleConnection connection = new OracleConnection(conStr))
+                using (OracleConnection connection = new OracleConnection(conStr))
                 {
-                                        connection.Open();
+                    connection.Open();
 
-                                        using (OracleCommand cmd = new OracleCommand(ticketPriceQuery, connection))
+                    using (OracleCommand cmd = new OracleCommand(ticketPriceQuery, connection))
                     {
                         object result = cmd.ExecuteScalar();
                         if (result != DBNull.Value)
@@ -82,7 +82,7 @@ namespace WindowsFormsApp1.AllForms.Admin
                         }
                     }
 
-                                        using (OracleCommand cmd = new OracleCommand(employeeSalaryQuery, connection))
+                    using (OracleCommand cmd = new OracleCommand(employeeSalaryQuery, connection))
                     {
                         object result = cmd.ExecuteScalar();
                         if (result != DBNull.Value)
@@ -97,24 +97,24 @@ namespace WindowsFormsApp1.AllForms.Admin
                 MessageBox.Show("Error calculating total revenue: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-                        return totalTicketPrice - totalEmployeeSalary;
+            return totalTicketPrice - totalEmployeeSalary;
         }
 
         private int GetTotalEmployees()
         {
             int totalEmployees = 0;
 
-                        string employeeCountQuery = "SELECT COUNT(*) FROM Employee";
+            string employeeCountQuery = "SELECT COUNT(*) FROM Employee";
 
-                        string conStr = UserFunctions.connectionString;
+            string conStr = UserFunctions.connectionString;
 
             try
             {
-                                using (OracleConnection connection = new OracleConnection(conStr))
+                using (OracleConnection connection = new OracleConnection(conStr))
                 {
-                                        connection.Open();
+                    connection.Open();
 
-                                        using (OracleCommand cmd = new OracleCommand(employeeCountQuery, connection))
+                    using (OracleCommand cmd = new OracleCommand(employeeCountQuery, connection))
                     {
                         totalEmployees = Convert.ToInt32(cmd.ExecuteScalar());
                     }
@@ -132,17 +132,17 @@ namespace WindowsFormsApp1.AllForms.Admin
         {
             int totalPassengers = 0;
 
-                        string passengerCountQuery = "SELECT COUNT(*) FROM Passenger";
+            string passengerCountQuery = "SELECT COUNT(*) FROM Passenger";
 
-                        string conStr = UserFunctions.connectionString;
+            string conStr = UserFunctions.connectionString;
 
             try
             {
-                                using (OracleConnection connection = new OracleConnection(conStr))
+                using (OracleConnection connection = new OracleConnection(conStr))
                 {
-                                        connection.Open();
+                    connection.Open();
 
-                                        using (OracleCommand cmd = new OracleCommand(passengerCountQuery, connection))
+                    using (OracleCommand cmd = new OracleCommand(passengerCountQuery, connection))
                     {
                         totalPassengers = Convert.ToInt32(cmd.ExecuteScalar());
                     }

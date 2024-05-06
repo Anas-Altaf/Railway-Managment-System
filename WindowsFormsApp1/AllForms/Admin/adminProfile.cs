@@ -59,7 +59,6 @@ namespace WindowsFormsApp1.AllForms.Admin
                             string aName = reader["A_NAME"].ToString();
                             string aAbout = reader["A_About"].ToString();
 
-                            // Display retrieved information in textboxes
                             adminName.Text = aName;
                             adminEmail.Text = emailFromAdmin;
                             adminAbout.Text = aAbout;

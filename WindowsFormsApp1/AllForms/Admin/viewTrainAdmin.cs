@@ -12,7 +12,7 @@ using WindowsFormsApp1.Static_Resources;
 
 namespace WindowsFormsApp1.AllForms.Admin
 {
-    
+
     public partial class viewTrainAdmin : Form
     {
         string conStr = UserFunctions.connectionString;
@@ -37,7 +37,7 @@ namespace WindowsFormsApp1.AllForms.Admin
                 connection = new OracleConnection(conStr);
                 connection.Open();
 
-                                string sql = "SELECT * FROM TRAINSCHEDULE WHERE train_id = :trainId";
+                string sql = "SELECT * FROM TRAINSCHEDULE WHERE train_id = :trainId";
                 using (OracleCommand cmd = new OracleCommand(sql, connection))
                 {
                     cmd.Parameters.Add(new OracleParameter(":trainId", trainId));
@@ -46,12 +46,12 @@ namespace WindowsFormsApp1.AllForms.Admin
                     {
                         if (reader.Read())
                         {
-                                                        trainNamebox.Text = reader.GetString(0);                              trainDestinationBox.Text = reader.GetString(1);                              trainArrivalBox.Text = reader.GetString(2);                               traintypeBox.Text = reader.GetString(3);                               trainEndTimeBox.Text = reader.GetString(4);                              trainStartTimeBox.Text = reader.GetString(5);                             trainAnnoucementBox.Text = reader.GetString(6); 
-                            
+                            trainNamebox.Text = reader.GetString(0); trainDestinationBox.Text = reader.GetString(1); trainArrivalBox.Text = reader.GetString(2); traintypeBox.Text = reader.GetString(3); trainEndTimeBox.Text = reader.GetString(4); trainStartTimeBox.Text = reader.GetString(5); trainAnnoucementBox.Text = reader.GetString(6);
+
                         }
                         else
                         {
-                                                        trainNamebox.Text = "";
+                            trainNamebox.Text = "";
                             trainDestinationBox.Text = "";
                             traintypeBox.Text = "";
                             trainArrivalBox.Text = "";
@@ -68,7 +68,8 @@ namespace WindowsFormsApp1.AllForms.Admin
             {
                 MessageBox.Show("An error occurred while connecting to the database: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)             {
+            catch (Exception ex)
+            {
                 MessageBox.Show("An unexpected error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
@@ -85,19 +86,19 @@ namespace WindowsFormsApp1.AllForms.Admin
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-                        openFileDialog1.Title = "Select Image";
+            openFileDialog1.Title = "Select Image";
 
-                        openFileDialog1.Filter = "All Files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 0; 
-                        openFileDialog1.Filter += "|Image Files (.bmp;.jpg;.jpeg,.png)|.BMP;.JPG;.JPEG;.PNG";
+            openFileDialog1.Filter = "All Files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 0;
+            openFileDialog1.Filter += "|Image Files (.bmp;.jpg;.jpeg,.png)|.BMP;.JPG;.JPEG;.PNG";
 
-                        DialogResult result = openFileDialog1.ShowDialog();
+            DialogResult result = openFileDialog1.ShowDialog();
 
-                        if (result == DialogResult.OK)
+            if (result == DialogResult.OK)
             {
                 try
                 {
-                                        string imagePath = openFileDialog1.FileName;
+                    string imagePath = openFileDialog1.FileName;
                     trainImageBox.Image = Image.FromFile(imagePath);
                     trainImageBox.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -108,6 +109,5 @@ namespace WindowsFormsApp1.AllForms.Admin
                 }
             }
         }
-
     }
 }

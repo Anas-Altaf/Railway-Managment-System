@@ -21,28 +21,28 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void assignTasks_click(object sender, EventArgs e)
         {
-                        string query = "SELECT e_id, task FROM Employee WHERE task_status = 'assigned'";
+            string query = "SELECT e_id, task FROM Employee WHERE task_status = 'assigned'";
 
-                        string conStr = UserFunctions.connectionString;
+            string conStr = UserFunctions.connectionString;
 
             try
             {
-                                using (OracleConnection connection = new OracleConnection(conStr))
+                using (OracleConnection connection = new OracleConnection(conStr))
                 {
-                                        connection.Open();
+                    connection.Open();
 
-                                        using (OracleCommand cmd = new OracleCommand(query, connection))
+                    using (OracleCommand cmd = new OracleCommand(query, connection))
                     {
-                                                DataTable dataTable = new DataTable();
+                        DataTable dataTable = new DataTable();
 
-                                                using (OracleDataAdapter adapter = new OracleDataAdapter(cmd))
+                        using (OracleDataAdapter adapter = new OracleDataAdapter(cmd))
                         {
                             adapter.Fill(dataTable);
                         }
 
-                                                if (dataTable.Rows.Count > 0)
+                        if (dataTable.Rows.Count > 0)
                         {
-                                                        string assignedTasks = "";
+                            string assignedTasks = "";
                             foreach (DataRow row in dataTable.Rows)
                             {
                                 string eId = row["e_id"].ToString();
@@ -50,11 +50,11 @@ namespace WindowsFormsApp1.AllForms.Admin
                                 assignedTasks += $"Employee ID: {eId}, Task: {task}\n";
                             }
 
-                                                        textBox3.Text = assignedTasks;
+                            textBox3.Text = assignedTasks;
                         }
                         else
                         {
-                                                        textBox3.Text = "No tasks are currently assigned.";
+                            textBox3.Text = "No tasks are currently assigned.";
                         }
                     }
                 }
@@ -67,30 +67,30 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void completeTasks_click(object sender, EventArgs e)
         {
-                        textBox3.Text = "";
+            textBox3.Text = "";
 
-                        string query = "SELECT e_id, task FROM Employee WHERE task_status = 'completed'";
+            string query = "SELECT e_id, task FROM Employee WHERE task_status = 'completed'";
 
-                        string conStr = UserFunctions.connectionString;
+            string conStr = UserFunctions.connectionString;
 
             try
             {
-                                using (OracleConnection connection = new OracleConnection(conStr))
+                using (OracleConnection connection = new OracleConnection(conStr))
                 {
-                                        connection.Open();
+                    connection.Open();
 
-                                        using (OracleCommand cmd = new OracleCommand(query, connection))
+                    using (OracleCommand cmd = new OracleCommand(query, connection))
                     {
-                                                DataTable dataTable = new DataTable();
+                        DataTable dataTable = new DataTable();
 
-                                                using (OracleDataAdapter adapter = new OracleDataAdapter(cmd))
+                        using (OracleDataAdapter adapter = new OracleDataAdapter(cmd))
                         {
                             adapter.Fill(dataTable);
                         }
 
-                                                if (dataTable.Rows.Count > 0)
+                        if (dataTable.Rows.Count > 0)
                         {
-                                                        string completedTasks = "";
+                            string completedTasks = "";
                             foreach (DataRow row in dataTable.Rows)
                             {
                                 string eId = row["e_id"].ToString();
@@ -98,11 +98,11 @@ namespace WindowsFormsApp1.AllForms.Admin
                                 completedTasks += $"Employee ID: {eId}, Task: {task}\n";
                             }
 
-                                                        textBox3.Text = completedTasks;
+                            textBox3.Text = completedTasks;
                         }
                         else
                         {
-                                                        textBox3.Text = "No tasks are currently completed.";
+                            textBox3.Text = "No tasks are currently completed.";
                         }
                     }
                 }
@@ -115,44 +115,44 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void searchID_click(object sender, EventArgs e)
         {
-                        textBox2.Text = "";
+            textBox2.Text = "";
 
-                        string eId = textBox1.Text.Trim();
+            string eId = textBox1.Text.Trim();
 
-                        if (string.IsNullOrEmpty(eId))
+            if (string.IsNullOrEmpty(eId))
             {
                 MessageBox.Show("Please enter an Employee ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-                        string query = $"SELECT task FROM Employee WHERE e_id = '{eId}'";
+            string query = $"SELECT task FROM Employee WHERE e_id = '{eId}'";
 
-                        string conStr = UserFunctions.connectionString;
+            string conStr = UserFunctions.connectionString;
 
             try
             {
-                                using (OracleConnection connection = new OracleConnection(conStr))
+                using (OracleConnection connection = new OracleConnection(conStr))
                 {
-                                        connection.Open();
+                    connection.Open();
 
-                                        using (OracleCommand cmd = new OracleCommand(query, connection))
+                    using (OracleCommand cmd = new OracleCommand(query, connection))
                     {
-                                                object result = cmd.ExecuteScalar();
+                        object result = cmd.ExecuteScalar();
 
-                                                if (result == null)
+                        if (result == null)
                         {
-                                                        MessageBox.Show("Invalid Employee ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Invalid Employee ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         else
                         {
-                                                        string task = result.ToString();
+                            string task = result.ToString();
                             if (string.IsNullOrEmpty(task))
                             {
-                                                                
+
                             }
                             else
                             {
-                                                                textBox2.Text = "Task is already assigned for this Employee ID.";
+                                textBox2.Text = "Task is already assigned for this Employee ID.";
                             }
                         }
                     }
@@ -166,38 +166,38 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void assignButton_click(object sender, EventArgs e)
         {
-                        string eId = textBox1.Text.Trim();
+            string eId = textBox1.Text.Trim();
 
-                        if (string.IsNullOrEmpty(eId))
+            if (string.IsNullOrEmpty(eId))
             {
                 MessageBox.Show("Please enter an Employee ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-                        if (string.IsNullOrEmpty(textBox2.Text))
+            if (string.IsNullOrEmpty(textBox2.Text))
             {
                 MessageBox.Show("Please enter a task to assign.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-                        string task = GetTaskForEmployee(eId);
+            string task = GetTaskForEmployee(eId);
             if (!string.IsNullOrEmpty(task))
             {
                 MessageBox.Show("Task is already assigned for this Employee ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-                        string conStr = UserFunctions.connectionString;
+            string conStr = UserFunctions.connectionString;
 
-                        string updateQuery = $"UPDATE Employee SET task = '{textBox2.Text}', task_status = 'assigned' WHERE e_id = '{eId}' AND task IS NULL";
+            string updateQuery = $"UPDATE Employee SET task = '{textBox2.Text}', task_status = 'assigned' WHERE e_id = '{eId}' AND task IS NULL";
 
             try
             {
-                                using (OracleConnection connection = new OracleConnection(conStr))
+                using (OracleConnection connection = new OracleConnection(conStr))
                 {
-                                        connection.Open();
+                    connection.Open();
 
-                                        using (OracleCommand cmd = new OracleCommand(updateQuery, connection))
+                    using (OracleCommand cmd = new OracleCommand(updateQuery, connection))
                     {
                         int rowsAffected = cmd.ExecuteNonQuery();
                         if (rowsAffected > 0)
@@ -217,23 +217,23 @@ namespace WindowsFormsApp1.AllForms.Admin
             }
         }
 
-                private string GetTaskForEmployee(string eId)
+        private string GetTaskForEmployee(string eId)
         {
-                        string conStr = UserFunctions.connectionString;
+            string conStr = UserFunctions.connectionString;
 
-                        string query = $"SELECT task FROM Employee WHERE e_id = '{eId}'";
+            string query = $"SELECT task FROM Employee WHERE e_id = '{eId}'";
 
             try
             {
-                                using (OracleConnection connection = new OracleConnection(conStr))
+                using (OracleConnection connection = new OracleConnection(conStr))
                 {
-                                        connection.Open();
+                    connection.Open();
 
-                                        using (OracleCommand cmd = new OracleCommand(query, connection))
+                    using (OracleCommand cmd = new OracleCommand(query, connection))
                     {
-                                                object result = cmd.ExecuteScalar();
+                        object result = cmd.ExecuteScalar();
 
-                                                if (result != null && result != DBNull.Value)
+                        if (result != null && result != DBNull.Value)
                         {
                             return result.ToString();
                         }
@@ -245,7 +245,8 @@ namespace WindowsFormsApp1.AllForms.Admin
                 MessageBox.Show("Error retrieving task for Employee ID: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return null;         }
+            return null;
+        }
 
 
     }

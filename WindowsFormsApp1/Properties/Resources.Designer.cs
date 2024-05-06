@@ -584,6 +584,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_seat_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-seat-25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_settings_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-settings-24", resourceCulture);
@@ -717,6 +727,16 @@ namespace WindowsFormsApp1.Properties {
         public static System.Drawing.Bitmap icons8_task_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-task-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icons8_ticket_purchase_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-ticket-purchase-25", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
