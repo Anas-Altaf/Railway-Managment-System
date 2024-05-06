@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.AllForms.Passenger
 {
-    public partial class checkProfilePassenger : Form
+    public partial class passengerProfile : Form
     {
-        public checkProfilePassenger()
+        public passengerProfile()
         {
             InitializeComponent();
         }
