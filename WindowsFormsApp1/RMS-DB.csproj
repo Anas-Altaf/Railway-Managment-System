@@ -272,6 +272,12 @@
     <Compile Include="AllForms\Employee\sellTickets.Designer.cs">
       <DependentUpon>sellTickets.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllForms\Employee\viewTaskEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Employee\viewTaskEmployee.Designer.cs">
+      <DependentUpon>viewTaskEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllForms\Passenger\passengerProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Employee\sellTickets.resx">
       <DependentUpon>sellTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Employee\viewTaskEmployee.resx">
+      <DependentUpon>viewTaskEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Passenger\passengerProfile.resx">
       <DependentUpon>passengerProfile.cs</DependentUpon>
