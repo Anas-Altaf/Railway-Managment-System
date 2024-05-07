@@ -241,6 +241,19 @@
     <Compile Include="AllForms\Admin\viewTrainAdmin.Designer.cs">
       <DependentUpon>viewTrainAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllForms\Employee\Employee.cs" />
+    <Compile Include="AllForms\Employee\frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Employee\frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Employee\sellTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Employee\sellTickets.Designer.cs">
+      <DependentUpon>sellTickets.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllForms\Passenger\passengerProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +341,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Admin\viewTrainAdmin.resx">
       <DependentUpon>viewTrainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Employee\frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Employee\sellTickets.resx">
+      <DependentUpon>sellTickets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Passenger\passengerProfile.resx">
       <DependentUpon>passengerProfile.cs</DependentUpon>
