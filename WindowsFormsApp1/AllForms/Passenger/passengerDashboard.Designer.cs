@@ -32,30 +32,31 @@
             this.centralPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.adminCheckProfileBtn = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.adminManageProfileBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.adminManageScheduleBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.adminRevenueBtn = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.adminViewTrainsBtn = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.passengerLogoutBtn = new System.Windows.Forms.Button();
             this.mainTitle = new System.Windows.Forms.Label();
             this.tempInfo = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
-            this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.backButton = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.adminProfileButton = new System.Windows.Forms.Button();
-            this.menuButton = new System.Windows.Forms.PictureBox();
-            this.adminCheckProfileBtn = new System.Windows.Forms.Button();
-            this.adminManageProfileBtn = new System.Windows.Forms.Button();
-            this.adminManageScheduleBtn = new System.Windows.Forms.Button();
-            this.adminRevenueBtn = new System.Windows.Forms.Button();
-            this.adminViewTrainsBtn = new System.Windows.Forms.Button();
-            this.passengerLogoutBtn = new System.Windows.Forms.Button();
+            this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
+            this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -65,7 +66,6 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.sideBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.SuspendLayout();
             // 
             // centralPanel
@@ -99,6 +99,18 @@
             this.panel1.Size = new System.Drawing.Size(191, 49);
             this.panel1.TabIndex = 0;
             // 
+            // menuButton
+            // 
+            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_menu_50;
+            this.menuButton.Location = new System.Drawing.Point(9, 15);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(35, 25);
+            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.menuButton.TabIndex = 0;
+            this.menuButton.TabStop = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.adminCheckProfileBtn);
@@ -106,6 +118,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(188, 43);
             this.panel2.TabIndex = 1;
+            // 
+            // adminCheckProfileBtn
+            // 
+            this.adminCheckProfileBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.adminCheckProfileBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.adminCheckProfileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adminCheckProfileBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminCheckProfileBtn.ForeColor = System.Drawing.Color.White;
+            this.adminCheckProfileBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_employees_25__1_;
+            this.adminCheckProfileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminCheckProfileBtn.Location = new System.Drawing.Point(-1, -2);
+            this.adminCheckProfileBtn.Name = "adminCheckProfileBtn";
+            this.adminCheckProfileBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.adminCheckProfileBtn.Size = new System.Drawing.Size(188, 55);
+            this.adminCheckProfileBtn.TabIndex = 1;
+            this.adminCheckProfileBtn.Text = "          Check Profile";
+            this.adminCheckProfileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminCheckProfileBtn.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -115,6 +145,24 @@
             this.panel5.Size = new System.Drawing.Size(208, 43);
             this.panel5.TabIndex = 2;
             // 
+            // adminManageProfileBtn
+            // 
+            this.adminManageProfileBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.adminManageProfileBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.adminManageProfileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adminManageProfileBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminManageProfileBtn.ForeColor = System.Drawing.Color.White;
+            this.adminManageProfileBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_seat_25;
+            this.adminManageProfileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminManageProfileBtn.Location = new System.Drawing.Point(-1, -6);
+            this.adminManageProfileBtn.Name = "adminManageProfileBtn";
+            this.adminManageProfileBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.adminManageProfileBtn.Size = new System.Drawing.Size(189, 55);
+            this.adminManageProfileBtn.TabIndex = 2;
+            this.adminManageProfileBtn.Text = "          Book Seat";
+            this.adminManageProfileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminManageProfileBtn.UseVisualStyleBackColor = true;
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.adminManageScheduleBtn);
@@ -122,6 +170,24 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(208, 43);
             this.panel4.TabIndex = 2;
+            // 
+            // adminManageScheduleBtn
+            // 
+            this.adminManageScheduleBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.adminManageScheduleBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.adminManageScheduleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adminManageScheduleBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminManageScheduleBtn.ForeColor = System.Drawing.Color.White;
+            this.adminManageScheduleBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_ticket_purchase_25;
+            this.adminManageScheduleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminManageScheduleBtn.Location = new System.Drawing.Point(-1, -10);
+            this.adminManageScheduleBtn.Name = "adminManageScheduleBtn";
+            this.adminManageScheduleBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.adminManageScheduleBtn.Size = new System.Drawing.Size(189, 56);
+            this.adminManageScheduleBtn.TabIndex = 3;
+            this.adminManageScheduleBtn.Text = "          Previous Reserv.";
+            this.adminManageScheduleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminManageScheduleBtn.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
@@ -131,6 +197,24 @@
             this.panel3.Size = new System.Drawing.Size(208, 37);
             this.panel3.TabIndex = 2;
             // 
+            // adminRevenueBtn
+            // 
+            this.adminRevenueBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.adminRevenueBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.adminRevenueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adminRevenueBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminRevenueBtn.ForeColor = System.Drawing.Color.White;
+            this.adminRevenueBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_open_email_25;
+            this.adminRevenueBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminRevenueBtn.Location = new System.Drawing.Point(-1, -15);
+            this.adminRevenueBtn.Name = "adminRevenueBtn";
+            this.adminRevenueBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.adminRevenueBtn.Size = new System.Drawing.Size(188, 54);
+            this.adminRevenueBtn.TabIndex = 4;
+            this.adminRevenueBtn.Text = "          Give Feedback";
+            this.adminRevenueBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminRevenueBtn.UseVisualStyleBackColor = true;
+            // 
             // panel14
             // 
             this.panel14.Controls.Add(this.adminViewTrainsBtn);
@@ -139,6 +223,24 @@
             this.panel14.Size = new System.Drawing.Size(208, 37);
             this.panel14.TabIndex = 3;
             // 
+            // adminViewTrainsBtn
+            // 
+            this.adminViewTrainsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.adminViewTrainsBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.adminViewTrainsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adminViewTrainsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminViewTrainsBtn.ForeColor = System.Drawing.Color.White;
+            this.adminViewTrainsBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_train_25;
+            this.adminViewTrainsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminViewTrainsBtn.Location = new System.Drawing.Point(-1, -14);
+            this.adminViewTrainsBtn.Name = "adminViewTrainsBtn";
+            this.adminViewTrainsBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.adminViewTrainsBtn.Size = new System.Drawing.Size(188, 54);
+            this.adminViewTrainsBtn.TabIndex = 5;
+            this.adminViewTrainsBtn.Text = "          Track Trains";
+            this.adminViewTrainsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.adminViewTrainsBtn.UseVisualStyleBackColor = true;
+            // 
             // panel15
             // 
             this.panel15.Controls.Add(this.passengerLogoutBtn);
@@ -146,6 +248,24 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(208, 37);
             this.panel15.TabIndex = 3;
+            // 
+            // passengerLogoutBtn
+            // 
+            this.passengerLogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.passengerLogoutBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.passengerLogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passengerLogoutBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passengerLogoutBtn.ForeColor = System.Drawing.Color.White;
+            this.passengerLogoutBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_logout_25;
+            this.passengerLogoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.passengerLogoutBtn.Location = new System.Drawing.Point(-1, -14);
+            this.passengerLogoutBtn.Name = "passengerLogoutBtn";
+            this.passengerLogoutBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.passengerLogoutBtn.Size = new System.Drawing.Size(188, 54);
+            this.passengerLogoutBtn.TabIndex = 6;
+            this.passengerLogoutBtn.Text = "          Log Out";
+            this.passengerLogoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.passengerLogoutBtn.UseVisualStyleBackColor = true;
             // 
             // mainTitle
             // 
@@ -185,43 +305,6 @@
             this.panel7.Size = new System.Drawing.Size(679, 52);
             this.panel7.TabIndex = 0;
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Black;
-            this.panel6.Controls.Add(this.panel7);
-            this.panel6.Controls.Add(this.button7);
-            this.panel6.Controls.Add(this.button6);
-            this.panel6.Controls.Add(this.adminProfileButton);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(194, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(788, 52);
-            this.panel6.TabIndex = 4;
-            // 
-            // sideBar
-            // 
-            this.sideBar.BackColor = System.Drawing.Color.Black;
-            this.sideBar.Controls.Add(this.panel1);
-            this.sideBar.Controls.Add(this.panel2);
-            this.sideBar.Controls.Add(this.panel5);
-            this.sideBar.Controls.Add(this.panel4);
-            this.sideBar.Controls.Add(this.panel3);
-            this.sideBar.Controls.Add(this.panel14);
-            this.sideBar.Controls.Add(this.panel15);
-            this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideBar.Location = new System.Drawing.Point(0, 0);
-            this.sideBar.MaximumSize = new System.Drawing.Size(211, 450);
-            this.sideBar.MinimumSize = new System.Drawing.Size(58, 450);
-            this.sideBar.Name = "sideBar";
-            this.sideBar.Size = new System.Drawing.Size(194, 450);
-            this.sideBar.TabIndex = 3;
-            // 
-            // sideBarTimer
-            // 
-            this.sideBarTimer.Enabled = true;
-            this.sideBarTimer.Interval = 10;
-            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
-            // 
             // backButton
             // 
             this.backButton.BackColor = System.Drawing.Color.Gold;
@@ -236,6 +319,19 @@
             this.backButton.Text = "Back";
             this.backButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.backButton.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.button7);
+            this.panel6.Controls.Add(this.button6);
+            this.panel6.Controls.Add(this.adminProfileButton);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(194, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(788, 52);
+            this.panel6.TabIndex = 4;
             // 
             // button7
             // 
@@ -278,125 +374,29 @@
             this.adminProfileButton.TabIndex = 1;
             this.adminProfileButton.UseVisualStyleBackColor = false;
             // 
-            // menuButton
+            // sideBar
             // 
-            this.menuButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_menu_50;
-            this.menuButton.Location = new System.Drawing.Point(9, 15);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(35, 25);
-            this.menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.menuButton.TabIndex = 0;
-            this.menuButton.TabStop = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+            this.sideBar.BackColor = System.Drawing.Color.Black;
+            this.sideBar.Controls.Add(this.panel1);
+            this.sideBar.Controls.Add(this.panel2);
+            this.sideBar.Controls.Add(this.panel5);
+            this.sideBar.Controls.Add(this.panel4);
+            this.sideBar.Controls.Add(this.panel3);
+            this.sideBar.Controls.Add(this.panel14);
+            this.sideBar.Controls.Add(this.panel15);
+            this.sideBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideBar.Location = new System.Drawing.Point(0, 0);
+            this.sideBar.MaximumSize = new System.Drawing.Size(211, 450);
+            this.sideBar.MinimumSize = new System.Drawing.Size(58, 450);
+            this.sideBar.Name = "sideBar";
+            this.sideBar.Size = new System.Drawing.Size(194, 450);
+            this.sideBar.TabIndex = 3;
             // 
-            // adminCheckProfileBtn
+            // sideBarTimer
             // 
-            this.adminCheckProfileBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminCheckProfileBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.adminCheckProfileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminCheckProfileBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminCheckProfileBtn.ForeColor = System.Drawing.Color.White;
-            this.adminCheckProfileBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_employees_25__1_;
-            this.adminCheckProfileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminCheckProfileBtn.Location = new System.Drawing.Point(-1, -2);
-            this.adminCheckProfileBtn.Name = "adminCheckProfileBtn";
-            this.adminCheckProfileBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.adminCheckProfileBtn.Size = new System.Drawing.Size(188, 55);
-            this.adminCheckProfileBtn.TabIndex = 1;
-            this.adminCheckProfileBtn.Text = "          Check Profile";
-            this.adminCheckProfileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminCheckProfileBtn.UseVisualStyleBackColor = true;
-            // 
-            // adminManageProfileBtn
-            // 
-            this.adminManageProfileBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminManageProfileBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.adminManageProfileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminManageProfileBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminManageProfileBtn.ForeColor = System.Drawing.Color.White;
-            this.adminManageProfileBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_seat_25;
-            this.adminManageProfileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminManageProfileBtn.Location = new System.Drawing.Point(-1, -6);
-            this.adminManageProfileBtn.Name = "adminManageProfileBtn";
-            this.adminManageProfileBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.adminManageProfileBtn.Size = new System.Drawing.Size(189, 55);
-            this.adminManageProfileBtn.TabIndex = 2;
-            this.adminManageProfileBtn.Text = "          Book Seat";
-            this.adminManageProfileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminManageProfileBtn.UseVisualStyleBackColor = true;
-            // 
-            // adminManageScheduleBtn
-            // 
-            this.adminManageScheduleBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminManageScheduleBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.adminManageScheduleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminManageScheduleBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminManageScheduleBtn.ForeColor = System.Drawing.Color.White;
-            this.adminManageScheduleBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_ticket_purchase_25;
-            this.adminManageScheduleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminManageScheduleBtn.Location = new System.Drawing.Point(-1, -10);
-            this.adminManageScheduleBtn.Name = "adminManageScheduleBtn";
-            this.adminManageScheduleBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.adminManageScheduleBtn.Size = new System.Drawing.Size(189, 56);
-            this.adminManageScheduleBtn.TabIndex = 3;
-            this.adminManageScheduleBtn.Text = "          Previous Reserv.";
-            this.adminManageScheduleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminManageScheduleBtn.UseVisualStyleBackColor = true;
-            // 
-            // adminRevenueBtn
-            // 
-            this.adminRevenueBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminRevenueBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.adminRevenueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminRevenueBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminRevenueBtn.ForeColor = System.Drawing.Color.White;
-            this.adminRevenueBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_open_email_25;
-            this.adminRevenueBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminRevenueBtn.Location = new System.Drawing.Point(-1, -15);
-            this.adminRevenueBtn.Name = "adminRevenueBtn";
-            this.adminRevenueBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.adminRevenueBtn.Size = new System.Drawing.Size(188, 54);
-            this.adminRevenueBtn.TabIndex = 4;
-            this.adminRevenueBtn.Text = "          Give Feedback";
-            this.adminRevenueBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminRevenueBtn.UseVisualStyleBackColor = true;
-            // 
-            // adminViewTrainsBtn
-            // 
-            this.adminViewTrainsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminViewTrainsBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.adminViewTrainsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminViewTrainsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminViewTrainsBtn.ForeColor = System.Drawing.Color.White;
-            this.adminViewTrainsBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_train_25;
-            this.adminViewTrainsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminViewTrainsBtn.Location = new System.Drawing.Point(-1, -14);
-            this.adminViewTrainsBtn.Name = "adminViewTrainsBtn";
-            this.adminViewTrainsBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.adminViewTrainsBtn.Size = new System.Drawing.Size(188, 54);
-            this.adminViewTrainsBtn.TabIndex = 5;
-            this.adminViewTrainsBtn.Text = "          Track Trains";
-            this.adminViewTrainsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminViewTrainsBtn.UseVisualStyleBackColor = true;
-            // 
-            // passengerLogoutBtn
-            // 
-            this.passengerLogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.passengerLogoutBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.passengerLogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.passengerLogoutBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passengerLogoutBtn.ForeColor = System.Drawing.Color.White;
-            this.passengerLogoutBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_logout_25;
-            this.passengerLogoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.passengerLogoutBtn.Location = new System.Drawing.Point(-1, -14);
-            this.passengerLogoutBtn.Name = "passengerLogoutBtn";
-            this.passengerLogoutBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.passengerLogoutBtn.Size = new System.Drawing.Size(188, 54);
-            this.passengerLogoutBtn.TabIndex = 6;
-            this.passengerLogoutBtn.Text = "          Log Out";
-            this.passengerLogoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.passengerLogoutBtn.UseVisualStyleBackColor = true;
+            this.sideBarTimer.Enabled = true;
+            this.sideBarTimer.Interval = 10;
+            this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
             // 
             // passengerDashboard
             // 
@@ -411,6 +411,7 @@
             this.Load += new System.EventHandler(this.passengerDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -421,7 +422,6 @@
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.sideBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -242,11 +242,29 @@
       <DependentUpon>viewTrainAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="AllForms\Employee\Employee.cs" />
+    <Compile Include="AllForms\Employee\employeeDashoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Employee\employeeDashoard.Designer.cs">
+      <DependentUpon>employeeDashoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Employee\employeeProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Employee\employeeProfile.Designer.cs">
+      <DependentUpon>employeeProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllForms\Employee\frmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AllForms\Employee\frmEmployee.Designer.cs">
       <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Employee\salaryEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Employee\salaryEmployee.Designer.cs">
+      <DependentUpon>salaryEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="AllForms\Employee\sellTickets.cs">
       <SubType>Form</SubType>
@@ -342,8 +360,17 @@
     <EmbeddedResource Include="AllForms\Admin\viewTrainAdmin.resx">
       <DependentUpon>viewTrainAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Employee\employeeDashoard.resx">
+      <DependentUpon>employeeDashoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Employee\employeeProfile.resx">
+      <DependentUpon>employeeProfile.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Employee\frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Employee\salaryEmployee.resx">
+      <DependentUpon>salaryEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Employee\sellTickets.resx">
       <DependentUpon>sellTickets.cs</DependentUpon>
@@ -704,6 +731,8 @@
     <None Include="Resources\icons8-verified-account.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-tickets-25.png" />
+    <None Include="Resources\icons8-money-25.png" />
     <None Include="Resources\icons8-ticket-purchase-25.png" />
     <None Include="Resources\icons8-seat-25.png" />
     <None Include="Resources\icons8-back-25.png" />
