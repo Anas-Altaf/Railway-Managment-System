@@ -260,6 +260,12 @@
     <Compile Include="AllForms\Employee\frmEmployee.Designer.cs">
       <DependentUpon>frmEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllForms\Employee\helpSupportEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Employee\helpSupportEmployee.Designer.cs">
+      <DependentUpon>helpSupportEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllForms\Employee\salaryEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Employee\frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Employee\helpSupportEmployee.resx">
+      <DependentUpon>helpSupportEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Employee\salaryEmployee.resx">
       <DependentUpon>salaryEmployee.cs</DependentUpon>
