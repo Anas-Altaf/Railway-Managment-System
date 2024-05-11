@@ -40,7 +40,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.emailBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.statusBarTextBox = new System.Windows.Forms.TextBox();
             this.backButton = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
@@ -77,7 +76,7 @@
             this.panel1.Controls.Add(this.passengerLoginBtn);
             this.panel1.Location = new System.Drawing.Point(385, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(415, 438);
+            this.panel1.Size = new System.Drawing.Size(415, 449);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -199,15 +198,6 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Email";
             // 
-            // statusBarTextBox
-            // 
-            this.statusBarTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusBarTextBox.Location = new System.Drawing.Point(0, 430);
-            this.statusBarTextBox.Multiline = true;
-            this.statusBarTextBox.Name = "statusBarTextBox";
-            this.statusBarTextBox.Size = new System.Drawing.Size(800, 20);
-            this.statusBarTextBox.TabIndex = 14;
-            // 
             // backButton
             // 
             this.backButton.BackColor = System.Drawing.Color.Transparent;
@@ -223,14 +213,15 @@
             // 
             // LoginPassenger
             // 
+            this.AcceptButton = this.passengerLoginBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.a_fast_modern_train_in_motion_at_sunset_a_commercial_transportation_free_photo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.statusBarTextBox);
             this.Controls.Add(this.backButton);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "LoginPassenger";
             this.Text = "LoginPassenger";
             this.panel1.ResumeLayout(false);
@@ -238,7 +229,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -253,7 +243,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox statusBarTextBox;
         private System.Windows.Forms.PictureBox backButton;
         private System.Windows.Forms.Label createAccountButton;
         private System.Windows.Forms.Label forgotPassword;

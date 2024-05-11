@@ -16,6 +16,7 @@ namespace WindowsFormsApp1.AllForms.Employee
         Form pageForm;
         bool sideBarExpand;
         Timer timer = null;
+        string _email = "umair@employee.com";
         private void ShowTempText(string text, int durationSeconds)
         {
 
@@ -52,6 +53,11 @@ namespace WindowsFormsApp1.AllForms.Employee
         {
             InitializeComponent();
         }
+        public employeeDashoard(string email)
+        {
+            InitializeComponent();
+            _email = email;
+        }
 
         private void menuButton_Click(object sender, EventArgs e)
         {
@@ -82,19 +88,19 @@ namespace WindowsFormsApp1.AllForms.Employee
         private void backButton_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Employee Dashboard";
-            LoadPage(new employeeProfile());
+            LoadPage(new employeeProfile(_email));
         }
 
         private void EmpProfileButton_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Employee Profile";
-            LoadPage(new employeeProfile());
+            LoadPage(new employeeProfile(_email));
         }
 
         private void EmpCheckProfileBtn_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Employee Profile";
-            LoadPage(new employeeProfile());
+            LoadPage(new employeeProfile(_email));
         }
 
         private void EmpSalaryBtn_Click(object sender, EventArgs e)
@@ -132,9 +138,15 @@ namespace WindowsFormsApp1.AllForms.Employee
             }
             else
             {
-                ShowTempText("Login action declined!", 4);
+                ShowTempText("Logout action declined!", 3);
 
             }
+        }
+
+        private void employeeDashoard_Load(object sender, EventArgs e)
+        {
+            mainTitle.Text = "Employee Dashboard";
+            LoadPage(new employeeProfile(_email));
         }
     }
 }

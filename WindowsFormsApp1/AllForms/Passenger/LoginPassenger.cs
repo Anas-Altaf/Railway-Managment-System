@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.AllForms.Employee;
+using WindowsFormsApp1.AllForms.Passenger;
 using WindowsFormsApp1.Static_Resources;
 
 namespace WindowsFormsApp1
@@ -15,6 +17,7 @@ namespace WindowsFormsApp1
     public partial class LoginPassenger : Form
     {
         string conStr = UserFunctions.connectionString;
+
         public LoginPassenger()
         {
             InitializeComponent();
@@ -79,13 +82,19 @@ namespace WindowsFormsApp1
                     {
                         if (reader.Read())
                         {
-                            MessageBox.Show("Login successful!, Passenger Interface is not ready!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            return;
+                            MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            this.Close();
+                            var passengerDash = new passengerDashboard(email);
+                            passengerDash.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid email address or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
 
-                    MessageBox.Show("Invalid email address or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
                 }
             }
             catch (OracleException ex)

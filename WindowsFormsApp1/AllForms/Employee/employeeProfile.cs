@@ -16,9 +16,6 @@ namespace WindowsFormsApp1.AllForms.Employee
     public partial class employeeProfile : Form
     {
         string conStr = UserFunctions.connectionString;
-        //private TextBox adminNameTextBox;
-        //private TextBox emailTextBox;
-        //private TextBox passwordTextBox;
         private string emailFromEmployee = "umair@employee.com";
         public employeeProfile()
         {

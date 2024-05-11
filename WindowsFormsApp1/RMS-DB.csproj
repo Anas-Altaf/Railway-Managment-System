@@ -284,11 +284,11 @@
     <Compile Include="AllForms\Employee\viewTaskEmployee.Designer.cs">
       <DependentUpon>viewTaskEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllForms\Passenger\passengerProfile.cs">
+    <Compile Include="AllForms\Passenger\passengerCheckProfile.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllForms\Passenger\passengerProfile.Designer.cs">
-      <DependentUpon>passengerProfile.cs</DependentUpon>
+    <Compile Include="AllForms\Passenger\passengerCheckProfile.Designer.cs">
+      <DependentUpon>passengerCheckProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="AllForms\Passenger\OTPWindow.cs">
       <SubType>Form</SubType>
@@ -393,8 +393,8 @@
     <EmbeddedResource Include="AllForms\Employee\viewTaskEmployee.resx">
       <DependentUpon>viewTaskEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllForms\Passenger\passengerProfile.resx">
-      <DependentUpon>passengerProfile.cs</DependentUpon>
+    <EmbeddedResource Include="AllForms\Passenger\passengerCheckProfile.resx">
+      <DependentUpon>passengerCheckProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Passenger\OTPWindow.resx">
       <DependentUpon>OTPWindow.cs</DependentUpon>

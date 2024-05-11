@@ -32,10 +32,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.submitBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.helpsupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.helpsupportstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
             this.response = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -46,12 +46,17 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(298, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 37);
+            this.label1.Size = new System.Drawing.Size(245, 37);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Help/Support";
+            this.label1.Text = "Help and Support";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.email,
@@ -82,21 +87,6 @@
             this.submitBtn.UseVisualStyleBackColor = true;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
-            // email
-            // 
-            this.email.HeaderText = "P_EMAIL_ID";
-            this.email.Name = "email";
-            // 
-            // helpsupport
-            // 
-            this.helpsupport.HeaderText = "Conflict";
-            this.helpsupport.Name = "helpsupport";
-            // 
-            // helpsupportstatus
-            // 
-            this.helpsupportstatus.HeaderText = "STATUS";
-            this.helpsupportstatus.Name = "helpsupportstatus";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -107,8 +97,27 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Respond Passenger";
             // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.email.HeaderText = "P_EMAIL_ID";
+            this.email.Name = "email";
+            // 
+            // helpsupport
+            // 
+            this.helpsupport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.helpsupport.HeaderText = "Conflict";
+            this.helpsupport.Name = "helpsupport";
+            // 
+            // helpsupportstatus
+            // 
+            this.helpsupportstatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.helpsupportstatus.HeaderText = "STATUS";
+            this.helpsupportstatus.Name = "helpsupportstatus";
+            // 
             // response
             // 
+            this.response.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.response.HeaderText = "Response";
             this.response.Name = "response";
             // 
@@ -138,10 +147,10 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button submitBtn;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn helpsupport;
         private System.Windows.Forms.DataGridViewTextBoxColumn helpsupportstatus;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn response;
     }
 }

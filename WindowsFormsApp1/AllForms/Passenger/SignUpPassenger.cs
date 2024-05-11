@@ -93,7 +93,6 @@ namespace WindowsFormsApp1
                 otpObj.ShowDialog();
                 bool otpStatus = otpObj.OTPStatusInfo1;
 
-                statusBarTextBox.Text = @"OTP saved Bro, Now save the passenger data";
                 if (otpStatus)
                 {
                     string insertPassengerSql = "INSERT INTO Passenger (p_email_id, p_name, p_phone_number, p_password, p_cnic) VALUES (:email, :name, :phoneNumber, :password, :cnic)";

@@ -217,11 +217,11 @@
             this.tempInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tempInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tempInfo.ForeColor = System.Drawing.Color.White;
-            this.tempInfo.Location = new System.Drawing.Point(301, 18);
+            this.tempInfo.Location = new System.Drawing.Point(324, 18);
             this.tempInfo.Multiline = true;
             this.tempInfo.Name = "tempInfo";
             this.tempInfo.ReadOnly = true;
-            this.tempInfo.Size = new System.Drawing.Size(378, 21);
+            this.tempInfo.Size = new System.Drawing.Size(355, 21);
             this.tempInfo.TabIndex = 101;
             this.tempInfo.Text = "Login action declined";
             this.tempInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -416,6 +416,7 @@
             this.Controls.Add(this.sideBar);
             this.Name = "employeeDashoard";
             this.Text = "employeeDashoard";
+            this.Load += new System.EventHandler(this.employeeDashoard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).EndInit();

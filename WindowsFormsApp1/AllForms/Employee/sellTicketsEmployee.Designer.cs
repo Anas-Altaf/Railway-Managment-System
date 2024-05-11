@@ -59,16 +59,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(708, 100);
+            this.panel1.Size = new System.Drawing.Size(708, 44);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(708, 100);
+            this.label1.Size = new System.Drawing.Size(708, 43);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ticket Booking";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,9 +77,9 @@
             // 
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 100);
+            this.panel2.Location = new System.Drawing.Point(0, 44);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(199, 409);
+            this.panel2.Size = new System.Drawing.Size(199, 465);
             this.panel2.TabIndex = 1;
             // 
             // groupBox1
@@ -89,7 +89,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(199, 409);
+            this.groupBox1.Size = new System.Drawing.Size(199, 465);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Info";
@@ -101,7 +101,7 @@
             this.lstCustomers.ItemHeight = 25;
             this.lstCustomers.Location = new System.Drawing.Point(3, 26);
             this.lstCustomers.Name = "lstCustomers";
-            this.lstCustomers.Size = new System.Drawing.Size(193, 380);
+            this.lstCustomers.Size = new System.Drawing.Size(193, 436);
             this.lstCustomers.TabIndex = 0;
             this.lstCustomers.SelectedIndexChanged += new System.EventHandler(this.lstCustomers_SelectedIndexChanged);
             // 
@@ -208,9 +208,9 @@
             // 
             this.panel4.Controls.Add(this.groupBox2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(199, 100);
+            this.panel4.Location = new System.Drawing.Point(199, 44);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(509, 272);
+            this.panel4.Size = new System.Drawing.Size(509, 328);
             this.panel4.TabIndex = 3;
             // 
             // groupBox2
@@ -219,7 +219,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(509, 272);
+            this.groupBox2.Size = new System.Drawing.Size(509, 328);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
@@ -237,6 +237,7 @@
             this.pnChairs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.pnChairs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.pnChairs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnChairs.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnChairs.Location = new System.Drawing.Point(3, 19);
             this.pnChairs.Name = "pnChairs";
             this.pnChairs.RowCount = 10;
@@ -250,11 +251,11 @@
             this.pnChairs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.pnChairs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.pnChairs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.pnChairs.Size = new System.Drawing.Size(503, 250);
+            this.pnChairs.Size = new System.Drawing.Size(503, 306);
             this.pnChairs.TabIndex = 0;
             this.pnChairs.Click += new System.EventHandler(this.lblchair_click);
             // 
-            // sellTickets
+            // sellTicketsEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -265,8 +266,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "sellTickets";
+            this.Name = "sellTicketsEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ticket Booking";
             this.Load += new System.EventHandler(this.sellTickets_Load);

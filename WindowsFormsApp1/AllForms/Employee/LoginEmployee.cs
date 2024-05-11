@@ -60,8 +60,8 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
                     this.Close();
-                    employeeDashoard employeeDash = new employeeDashoard();
-                    employeeDash.ShowDialog();
+                    employeeDashoard employeeDash = new employeeDashoard(e_email_id);                              
+                    employeeDash.Show();
                 }
                 else
                 {

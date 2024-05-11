@@ -130,7 +130,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                ShowTempText("Login action declined!", 4);
+                ShowTempText("Logout action declined!", 3);
 
             }
         }

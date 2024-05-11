@@ -46,7 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.forgotPassLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.statusBarTextBox = new System.Windows.Forms.TextBox();
             this.backButton = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -96,7 +95,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(347, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(453, 430);
+            this.panel1.Size = new System.Drawing.Size(453, 450);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -289,17 +288,6 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "SignUp";
             // 
-            // statusBarTextBox
-            // 
-            this.statusBarTextBox.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
-            this.statusBarTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusBarTextBox.Location = new System.Drawing.Point(0, 430);
-            this.statusBarTextBox.Multiline = true;
-            this.statusBarTextBox.Name = "statusBarTextBox";
-            this.statusBarTextBox.ReadOnly = true;
-            this.statusBarTextBox.Size = new System.Drawing.Size(800, 20);
-            this.statusBarTextBox.TabIndex = 14;
-            // 
             // backButton
             // 
             this.backButton.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
@@ -336,7 +324,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.statusBarTextBox);
             this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Name = "SignUpPassenger";
@@ -348,7 +335,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -363,7 +349,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label forgotPassLabel;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox statusBarTextBox;
         private System.Windows.Forms.PictureBox backButton;
         private System.Windows.Forms.Label passengerNameLabel;
         private System.Windows.Forms.TextBox NameBox;
