@@ -304,6 +304,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_eye_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_eye_25", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_eye_25__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-eye-25 (1)", resourceCulture);
@@ -817,6 +827,16 @@ namespace WindowsFormsApp1.Properties {
         public static System.Drawing.Bitmap icons8_verified_account1 {
             get {
                 object obj = ResourceManager.GetObject("icons8-verified-account1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap passwordImage1 {
+            get {
+                object obj = ResourceManager.GetObject("passwordImage1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

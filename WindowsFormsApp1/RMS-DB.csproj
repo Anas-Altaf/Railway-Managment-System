@@ -749,6 +749,8 @@
     <None Include="Resources\icons8-verified-account.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-eye-25.png" />
+    <None Include="Resources\passwordImage1.bmp" />
     <None Include="Resources\icons8-eye-25 %281%29.png" />
     <None Include="Resources\icons8-update-25.png" />
     <None Include="Resources\icons8-tickets-25.png" />

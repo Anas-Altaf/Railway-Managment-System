@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -79,16 +80,15 @@ namespace WindowsFormsApp1.AllForms.Employee
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            bool isPasswordVisible = false;
             if (empPassword.PasswordChar == '*')
             {
                 empPassword.PasswordChar = (char)0;
-                isPasswordVisible = true;
+                pictureBox1.Image = Properties.Resources.icons8_eye_25;
             }
             else
             {
                 empPassword.PasswordChar = '*';
-                isPasswordVisible = false;
+                pictureBox1.Image = Properties.Resources.icons8_eye_25__1_;
             }
         }
 

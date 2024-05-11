@@ -131,10 +131,11 @@
             // 
             this.empPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empPassword.Location = new System.Drawing.Point(157, 232);
+            this.empPassword.Margin = new System.Windows.Forms.Padding(0);
             this.empPassword.Multiline = true;
             this.empPassword.Name = "empPassword";
             this.empPassword.PasswordChar = '*';
-            this.empPassword.Size = new System.Drawing.Size(263, 31);
+            this.empPassword.Size = new System.Drawing.Size(269, 31);
             this.empPassword.TabIndex = 67;
             this.empPassword.Text = "admin@rmsdb.com";
             // 
@@ -152,6 +153,7 @@
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_eye_25__1_;
             this.pictureBox1.Location = new System.Drawing.Point(426, 232);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(36, 31);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -166,7 +168,7 @@
             this.updateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_update_25;
             this.updateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.updateButton.Location = new System.Drawing.Point(583, 302);
+            this.updateButton.Location = new System.Drawing.Point(546, 302);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(82, 39);
             this.updateButton.TabIndex = 68;
@@ -182,7 +184,7 @@
             this.logoutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_back_25;
             this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(676, 302);
+            this.logoutButton.Location = new System.Drawing.Point(639, 302);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(82, 39);
             this.logoutButton.TabIndex = 65;
@@ -195,7 +197,7 @@
             // 
             this.empPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.empPicture.Image = global::WindowsFormsApp1.Properties.Resources.icons8_admin_100;
-            this.empPicture.Location = new System.Drawing.Point(583, 109);
+            this.empPicture.Location = new System.Drawing.Point(546, 109);
             this.empPicture.Name = "empPicture";
             this.empPicture.Size = new System.Drawing.Size(175, 173);
             this.empPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
