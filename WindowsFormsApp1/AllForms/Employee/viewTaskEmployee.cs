@@ -44,7 +44,7 @@ namespace WindowsFormsApp1.AllForms.Employee
         {
             checkedListBox1.Items.Clear();
             string emailFromEmployee = "umair@employee.com";
-            string sql = "SELECT e_task FROM employee_task WHERE e_email_id = :Email";
+            string sql = "SELECT e_task, e_task_status FROM employee_task WHERE e_email_id = :Email";
             using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(sql, connection))
             {
@@ -58,7 +58,18 @@ namespace WindowsFormsApp1.AllForms.Employee
                         while (reader.Read())
                         {
                             string task = reader["e_task"].ToString();
+                            string status = reader["e_task_status"].ToString();
+
+                            // Add the task to checkedListBox1
                             checkedListBox1.Items.Add(task);
+
+                            // Check the task if its status is 'Completed'
+                            if (status == "Completed")
+                            {
+                                int index = checkedListBox1.Items.IndexOf(task);
+                                if (index != -1)
+                                    checkedListBox1.SetItemChecked(index, true);
+                            }
                         }
                     }
                 }
@@ -71,7 +82,35 @@ namespace WindowsFormsApp1.AllForms.Employee
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-
+            string emailFromEmployee = "umair@employee.com";
+            using (OracleConnection connection = new OracleConnection(conStr))
+            {
+                connection.Open();
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
+                {
+                    string task = checkedListBox1.Items[i].ToString();
+                    string status = checkedListBox1.GetItemChecked(i) ? "Completed" : "Assigned";
+                    string sql = "UPDATE employee_task SET e_task_status = :Status WHERE e_email_id = :Email AND e_task = :Task";
+                    using (OracleCommand cmd = new OracleCommand(sql, connection))
+                    {
+                        cmd.Parameters.Add(":Status", OracleDbType.Varchar2).Value = status;
+                        cmd.Parameters.Add(":Email", OracleDbType.Varchar2).Value = emailFromEmployee;
+                        cmd.Parameters.Add(":Task", OracleDbType.Varchar2).Value = task;
+                        try
+                        {
+                            int rowsAffected = cmd.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show($"Task '{task}' status updated to '{status}'.");
+                            }
+                        }
+                        catch (OracleException ex)
+                        {
+                            MessageBox.Show("An error occurred while updating task status: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
         }
     }
 }
