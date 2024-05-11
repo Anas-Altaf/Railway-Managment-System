@@ -16,9 +16,9 @@ namespace WindowsFormsApp1.AllForms.Admin
     public partial class adminProfile : Form
     {
         string conStr = UserFunctions.connectionString;
-        private TextBox adminNameTextBox;
-        private TextBox emailTextBox;
-        private TextBox passwordTextBox;
+        //private TextBox adminNameTextBox;
+        //private TextBox emailTextBox;
+        //private TextBox passwordTextBox;
         private string emailFromAdmin = "umair@rmsdb.com";
         public adminProfile()
         {

@@ -34,9 +34,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.adminCheckProfileBtn = new System.Windows.Forms.Button();
+            this.EmpCheckProfileBtn = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.adminManageProfileBtn = new System.Windows.Forms.Button();
+            this.EmpSalaryBtn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.backButton = new System.Windows.Forms.Button();
@@ -44,16 +44,17 @@
             this.tempInfo = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.adminProfileButton = new System.Windows.Forms.Button();
+            this.EmpProfileButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.adminManageScheduleBtn = new System.Windows.Forms.Button();
+            this.EmpManageTaskBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.adminRevenueBtn = new System.Windows.Forms.Button();
+            this.EmpSupportBtn = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.adminViewTrainsBtn = new System.Windows.Forms.Button();
+            this.EmpSelTicketBtn = new System.Windows.Forms.Button();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.passengerLogoutBtn = new System.Windows.Forms.Button();
+            this.EmpLogoutBtn = new System.Windows.Forms.Button();
+            this.centralPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel2.SuspendLayout();
@@ -107,55 +108,57 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.adminCheckProfileBtn);
+            this.panel2.Controls.Add(this.EmpCheckProfileBtn);
             this.panel2.Location = new System.Drawing.Point(3, 58);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(188, 43);
             this.panel2.TabIndex = 1;
             // 
-            // adminCheckProfileBtn
+            // EmpCheckProfileBtn
             // 
-            this.adminCheckProfileBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminCheckProfileBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.adminCheckProfileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminCheckProfileBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminCheckProfileBtn.ForeColor = System.Drawing.Color.White;
-            this.adminCheckProfileBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_employees_25__1_;
-            this.adminCheckProfileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminCheckProfileBtn.Location = new System.Drawing.Point(-1, -2);
-            this.adminCheckProfileBtn.Name = "adminCheckProfileBtn";
-            this.adminCheckProfileBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.adminCheckProfileBtn.Size = new System.Drawing.Size(188, 55);
-            this.adminCheckProfileBtn.TabIndex = 1;
-            this.adminCheckProfileBtn.Text = "          Check Profile";
-            this.adminCheckProfileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminCheckProfileBtn.UseVisualStyleBackColor = true;
+            this.EmpCheckProfileBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EmpCheckProfileBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.EmpCheckProfileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmpCheckProfileBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpCheckProfileBtn.ForeColor = System.Drawing.Color.White;
+            this.EmpCheckProfileBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_employees_25__1_;
+            this.EmpCheckProfileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpCheckProfileBtn.Location = new System.Drawing.Point(-1, -2);
+            this.EmpCheckProfileBtn.Name = "EmpCheckProfileBtn";
+            this.EmpCheckProfileBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.EmpCheckProfileBtn.Size = new System.Drawing.Size(188, 55);
+            this.EmpCheckProfileBtn.TabIndex = 1;
+            this.EmpCheckProfileBtn.Text = "          Check Profile";
+            this.EmpCheckProfileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpCheckProfileBtn.UseVisualStyleBackColor = true;
+            this.EmpCheckProfileBtn.Click += new System.EventHandler(this.EmpCheckProfileBtn_Click);
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.adminManageProfileBtn);
+            this.panel5.Controls.Add(this.EmpSalaryBtn);
             this.panel5.Location = new System.Drawing.Point(3, 107);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(208, 43);
             this.panel5.TabIndex = 2;
             // 
-            // adminManageProfileBtn
+            // EmpSalaryBtn
             // 
-            this.adminManageProfileBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminManageProfileBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.adminManageProfileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminManageProfileBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminManageProfileBtn.ForeColor = System.Drawing.Color.White;
-            this.adminManageProfileBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_money_25;
-            this.adminManageProfileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminManageProfileBtn.Location = new System.Drawing.Point(-1, -6);
-            this.adminManageProfileBtn.Name = "adminManageProfileBtn";
-            this.adminManageProfileBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.adminManageProfileBtn.Size = new System.Drawing.Size(189, 55);
-            this.adminManageProfileBtn.TabIndex = 2;
-            this.adminManageProfileBtn.Text = "          Salary";
-            this.adminManageProfileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminManageProfileBtn.UseVisualStyleBackColor = true;
+            this.EmpSalaryBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EmpSalaryBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.EmpSalaryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmpSalaryBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpSalaryBtn.ForeColor = System.Drawing.Color.White;
+            this.EmpSalaryBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_money_25;
+            this.EmpSalaryBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpSalaryBtn.Location = new System.Drawing.Point(-1, -6);
+            this.EmpSalaryBtn.Name = "EmpSalaryBtn";
+            this.EmpSalaryBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.EmpSalaryBtn.Size = new System.Drawing.Size(189, 55);
+            this.EmpSalaryBtn.TabIndex = 2;
+            this.EmpSalaryBtn.Text = "          Salary";
+            this.EmpSalaryBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpSalaryBtn.UseVisualStyleBackColor = true;
+            this.EmpSalaryBtn.Click += new System.EventHandler(this.EmpSalaryBtn_Click);
             // 
             // panel6
             // 
@@ -163,7 +166,7 @@
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.button7);
             this.panel6.Controls.Add(this.button6);
-            this.panel6.Controls.Add(this.adminProfileButton);
+            this.panel6.Controls.Add(this.EmpProfileButton);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(194, 0);
             this.panel6.Name = "panel6";
@@ -195,6 +198,7 @@
             this.backButton.Text = "Back";
             this.backButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // mainTitle
             // 
@@ -250,97 +254,101 @@
             this.button6.TabIndex = 2;
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // adminProfileButton
+            // EmpProfileButton
             // 
-            this.adminProfileButton.BackColor = System.Drawing.Color.Black;
-            this.adminProfileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.adminProfileButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminProfileButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.adminProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminProfileButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_administrator_male_48;
-            this.adminProfileButton.Location = new System.Drawing.Point(748, 0);
-            this.adminProfileButton.Name = "adminProfileButton";
-            this.adminProfileButton.Size = new System.Drawing.Size(40, 52);
-            this.adminProfileButton.TabIndex = 1;
-            this.adminProfileButton.UseVisualStyleBackColor = false;
+            this.EmpProfileButton.BackColor = System.Drawing.Color.Black;
+            this.EmpProfileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EmpProfileButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EmpProfileButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.EmpProfileButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmpProfileButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_administrator_male_48;
+            this.EmpProfileButton.Location = new System.Drawing.Point(748, 0);
+            this.EmpProfileButton.Name = "EmpProfileButton";
+            this.EmpProfileButton.Size = new System.Drawing.Size(40, 52);
+            this.EmpProfileButton.TabIndex = 1;
+            this.EmpProfileButton.UseVisualStyleBackColor = false;
+            this.EmpProfileButton.Click += new System.EventHandler(this.EmpProfileButton_Click);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.adminManageScheduleBtn);
+            this.panel4.Controls.Add(this.EmpManageTaskBtn);
             this.panel4.Location = new System.Drawing.Point(3, 156);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(208, 43);
             this.panel4.TabIndex = 2;
             // 
-            // adminManageScheduleBtn
+            // EmpManageTaskBtn
             // 
-            this.adminManageScheduleBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminManageScheduleBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.adminManageScheduleBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminManageScheduleBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminManageScheduleBtn.ForeColor = System.Drawing.Color.White;
-            this.adminManageScheduleBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_task_25;
-            this.adminManageScheduleBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminManageScheduleBtn.Location = new System.Drawing.Point(-1, -10);
-            this.adminManageScheduleBtn.Name = "adminManageScheduleBtn";
-            this.adminManageScheduleBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.adminManageScheduleBtn.Size = new System.Drawing.Size(189, 56);
-            this.adminManageScheduleBtn.TabIndex = 3;
-            this.adminManageScheduleBtn.Text = "          View Tasks";
-            this.adminManageScheduleBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminManageScheduleBtn.UseVisualStyleBackColor = true;
+            this.EmpManageTaskBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EmpManageTaskBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.EmpManageTaskBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmpManageTaskBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpManageTaskBtn.ForeColor = System.Drawing.Color.White;
+            this.EmpManageTaskBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_task_25;
+            this.EmpManageTaskBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpManageTaskBtn.Location = new System.Drawing.Point(-1, -10);
+            this.EmpManageTaskBtn.Name = "EmpManageTaskBtn";
+            this.EmpManageTaskBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.EmpManageTaskBtn.Size = new System.Drawing.Size(189, 56);
+            this.EmpManageTaskBtn.TabIndex = 3;
+            this.EmpManageTaskBtn.Text = "          View Tasks";
+            this.EmpManageTaskBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpManageTaskBtn.UseVisualStyleBackColor = true;
+            this.EmpManageTaskBtn.Click += new System.EventHandler(this.EmpManageTaskBtn_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.adminRevenueBtn);
+            this.panel3.Controls.Add(this.EmpSupportBtn);
             this.panel3.Location = new System.Drawing.Point(3, 205);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(208, 37);
             this.panel3.TabIndex = 2;
             // 
-            // adminRevenueBtn
+            // EmpSupportBtn
             // 
-            this.adminRevenueBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminRevenueBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.adminRevenueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminRevenueBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminRevenueBtn.ForeColor = System.Drawing.Color.White;
-            this.adminRevenueBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_help_26;
-            this.adminRevenueBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminRevenueBtn.Location = new System.Drawing.Point(-1, -15);
-            this.adminRevenueBtn.Name = "adminRevenueBtn";
-            this.adminRevenueBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.adminRevenueBtn.Size = new System.Drawing.Size(188, 54);
-            this.adminRevenueBtn.TabIndex = 4;
-            this.adminRevenueBtn.Text = "          Support/Help";
-            this.adminRevenueBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminRevenueBtn.UseVisualStyleBackColor = true;
+            this.EmpSupportBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EmpSupportBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.EmpSupportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmpSupportBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpSupportBtn.ForeColor = System.Drawing.Color.White;
+            this.EmpSupportBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_help_26;
+            this.EmpSupportBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpSupportBtn.Location = new System.Drawing.Point(-1, -15);
+            this.EmpSupportBtn.Name = "EmpSupportBtn";
+            this.EmpSupportBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.EmpSupportBtn.Size = new System.Drawing.Size(188, 54);
+            this.EmpSupportBtn.TabIndex = 4;
+            this.EmpSupportBtn.Text = "          Support/Help";
+            this.EmpSupportBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpSupportBtn.UseVisualStyleBackColor = true;
+            this.EmpSupportBtn.Click += new System.EventHandler(this.EmpSupportBtn_Click);
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.adminViewTrainsBtn);
+            this.panel14.Controls.Add(this.EmpSelTicketBtn);
             this.panel14.Location = new System.Drawing.Point(3, 248);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(208, 37);
             this.panel14.TabIndex = 3;
             // 
-            // adminViewTrainsBtn
+            // EmpSelTicketBtn
             // 
-            this.adminViewTrainsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.adminViewTrainsBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.adminViewTrainsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.adminViewTrainsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adminViewTrainsBtn.ForeColor = System.Drawing.Color.White;
-            this.adminViewTrainsBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_tickets_25;
-            this.adminViewTrainsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminViewTrainsBtn.Location = new System.Drawing.Point(-1, -14);
-            this.adminViewTrainsBtn.Name = "adminViewTrainsBtn";
-            this.adminViewTrainsBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.adminViewTrainsBtn.Size = new System.Drawing.Size(188, 54);
-            this.adminViewTrainsBtn.TabIndex = 5;
-            this.adminViewTrainsBtn.Text = "          Sell Tickets";
-            this.adminViewTrainsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.adminViewTrainsBtn.UseVisualStyleBackColor = true;
+            this.EmpSelTicketBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EmpSelTicketBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.EmpSelTicketBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmpSelTicketBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpSelTicketBtn.ForeColor = System.Drawing.Color.White;
+            this.EmpSelTicketBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_tickets_25;
+            this.EmpSelTicketBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpSelTicketBtn.Location = new System.Drawing.Point(-1, -14);
+            this.EmpSelTicketBtn.Name = "EmpSelTicketBtn";
+            this.EmpSelTicketBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.EmpSelTicketBtn.Size = new System.Drawing.Size(188, 54);
+            this.EmpSelTicketBtn.TabIndex = 5;
+            this.EmpSelTicketBtn.Text = "          Sell Tickets";
+            this.EmpSelTicketBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpSelTicketBtn.UseVisualStyleBackColor = true;
+            this.EmpSelTicketBtn.Click += new System.EventHandler(this.EmpSelTicketBtn_Click);
             // 
             // sideBar
             // 
@@ -362,35 +370,48 @@
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.passengerLogoutBtn);
+            this.panel15.Controls.Add(this.EmpLogoutBtn);
             this.panel15.Location = new System.Drawing.Point(3, 291);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(208, 37);
             this.panel15.TabIndex = 3;
             // 
-            // passengerLogoutBtn
+            // EmpLogoutBtn
             // 
-            this.passengerLogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.passengerLogoutBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.passengerLogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.passengerLogoutBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passengerLogoutBtn.ForeColor = System.Drawing.Color.White;
-            this.passengerLogoutBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_logout_25;
-            this.passengerLogoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.passengerLogoutBtn.Location = new System.Drawing.Point(-1, -14);
-            this.passengerLogoutBtn.Name = "passengerLogoutBtn";
-            this.passengerLogoutBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.passengerLogoutBtn.Size = new System.Drawing.Size(188, 54);
-            this.passengerLogoutBtn.TabIndex = 6;
-            this.passengerLogoutBtn.Text = "          Log Out";
-            this.passengerLogoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.passengerLogoutBtn.UseVisualStyleBackColor = true;
+            this.EmpLogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EmpLogoutBtn.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.EmpLogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EmpLogoutBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpLogoutBtn.ForeColor = System.Drawing.Color.White;
+            this.EmpLogoutBtn.Image = global::WindowsFormsApp1.Properties.Resources.icons8_logout_25;
+            this.EmpLogoutBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpLogoutBtn.Location = new System.Drawing.Point(-1, -14);
+            this.EmpLogoutBtn.Name = "EmpLogoutBtn";
+            this.EmpLogoutBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.EmpLogoutBtn.Size = new System.Drawing.Size(188, 54);
+            this.EmpLogoutBtn.TabIndex = 6;
+            this.EmpLogoutBtn.Text = "          Log Out";
+            this.EmpLogoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EmpLogoutBtn.UseVisualStyleBackColor = true;
+            this.EmpLogoutBtn.Click += new System.EventHandler(this.EmpLogoutBtn_Click);
+            // 
+            // centralPanel
+            // 
+            this.centralPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.centralPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.centralPanel.Location = new System.Drawing.Point(194, 52);
+            this.centralPanel.MaximumSize = new System.Drawing.Size(788, 397);
+            this.centralPanel.MinimumSize = new System.Drawing.Size(788, 397);
+            this.centralPanel.Name = "centralPanel";
+            this.centralPanel.Size = new System.Drawing.Size(788, 397);
+            this.centralPanel.TabIndex = 8;
             // 
             // employeeDashoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 427);
+            this.ClientSize = new System.Drawing.Size(982, 449);
+            this.Controls.Add(this.centralPanel);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.sideBar);
             this.Name = "employeeDashoard";
@@ -415,29 +436,30 @@
         #endregion
 
         private System.Windows.Forms.Timer sideBarTimer;
-        private System.Windows.Forms.Button adminProfileButton;
+        private System.Windows.Forms.Button EmpProfileButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox menuButton;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button adminCheckProfileBtn;
+        private System.Windows.Forms.Button EmpCheckProfileBtn;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button adminManageProfileBtn;
+        private System.Windows.Forms.Button EmpSalaryBtn;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Label mainTitle;
         private System.Windows.Forms.TextBox tempInfo;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button adminManageScheduleBtn;
+        private System.Windows.Forms.Button EmpManageTaskBtn;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button adminRevenueBtn;
-        private System.Windows.Forms.Button passengerLogoutBtn;
+        private System.Windows.Forms.Button EmpSupportBtn;
+        private System.Windows.Forms.Button EmpLogoutBtn;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Button adminViewTrainsBtn;
+        private System.Windows.Forms.Button EmpSelTicketBtn;
         private System.Windows.Forms.FlowLayoutPanel sideBar;
         private System.Windows.Forms.Panel panel15;
+        public System.Windows.Forms.Panel centralPanel;
     }
 }

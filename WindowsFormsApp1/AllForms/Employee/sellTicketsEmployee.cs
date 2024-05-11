@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.AllForms.Employee
 {
-    public partial class sellTickets : Form
+    public partial class sellTicketsEmployee : Form
     {
         List <Employee> ListCustomer = new List <Employee>();
-        public sellTickets()
+        public sellTicketsEmployee()
         {
             InitializeComponent();
         }

@@ -319,6 +319,7 @@
             this.backButton.Text = "Back";
             this.backButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // panel6
             // 

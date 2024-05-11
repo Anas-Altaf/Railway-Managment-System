@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1.AllForms.Employee
 {
-    partial class sellTickets
+    partial class sellTicketsEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -34,14 +34,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lstCustomers = new System.Windows.Forms.ListBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.lblTotalPrice = new System.Windows.Forms.Label();
-            this.btnOrder = new System.Windows.Forms.Button();
-            this.btnCancelTicket = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnCancelTicket = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pnChairs = new System.Windows.Forms.TableLayoutPanel();
@@ -121,44 +121,36 @@
             this.panel3.Size = new System.Drawing.Size(509, 137);
             this.panel3.TabIndex = 2;
             // 
-            // listBox2
+            // btnClose
             // 
-            this.listBox2.BackColor = System.Drawing.Color.Tomato;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(0, 0);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(509, 137);
-            this.listBox2.TabIndex = 0;
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Location = new System.Drawing.Point(319, 90);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(79, 31);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label2
+            // btnCancelTicket
             // 
-            this.label2.Location = new System.Drawing.Point(50, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Price:";
+            this.btnCancelTicket.Location = new System.Drawing.Point(189, 90);
+            this.btnCancelTicket.Name = "btnCancelTicket";
+            this.btnCancelTicket.Size = new System.Drawing.Size(101, 31);
+            this.btnCancelTicket.TabIndex = 6;
+            this.btnCancelTicket.Text = "Cancel Ticket";
+            this.btnCancelTicket.UseVisualStyleBackColor = true;
+            this.btnCancelTicket.Click += new System.EventHandler(this.btnCancelTicket_Click);
             // 
-            // label3
+            // btnOrder
             // 
-            this.label3.Location = new System.Drawing.Point(50, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Total Price:";
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblPrice.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPrice.Location = new System.Drawing.Point(164, 21);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(264, 19);
-            this.lblPrice.TabIndex = 3;
-            this.lblPrice.Text = "Price";
-            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOrder.Location = new System.Drawing.Point(81, 90);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(79, 31);
+            this.btnOrder.TabIndex = 5;
+            this.btnOrder.Text = "Order";
+            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // lblTotalPrice
             // 
@@ -173,36 +165,44 @@
             this.lblTotalPrice.Text = "Total Price";
             this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnOrder
+            // lblPrice
             // 
-            this.btnOrder.Location = new System.Drawing.Point(81, 90);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(79, 31);
-            this.btnOrder.TabIndex = 5;
-            this.btnOrder.Text = "Order";
-            this.btnOrder.UseVisualStyleBackColor = true;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPrice.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblPrice.Location = new System.Drawing.Point(164, 21);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(264, 19);
+            this.lblPrice.TabIndex = 3;
+            this.lblPrice.Text = "Price";
+            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnCancelTicket
+            // label3
             // 
-            this.btnCancelTicket.Location = new System.Drawing.Point(189, 90);
-            this.btnCancelTicket.Name = "btnCancelTicket";
-            this.btnCancelTicket.Size = new System.Drawing.Size(101, 31);
-            this.btnCancelTicket.TabIndex = 6;
-            this.btnCancelTicket.Text = "Cancel Ticket";
-            this.btnCancelTicket.UseVisualStyleBackColor = true;
-            this.btnCancelTicket.Click += new System.EventHandler(this.btnCancelTicket_Click);
+            this.label3.Location = new System.Drawing.Point(50, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Total Price:";
             // 
-            // btnClose
+            // label2
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.Location = new System.Drawing.Point(319, 90);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(79, 31);
-            this.btnClose.TabIndex = 7;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.label2.Location = new System.Drawing.Point(50, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Price:";
+            // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.Color.Tomato;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(0, 0);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(509, 132);
+            this.listBox2.TabIndex = 0;
             // 
             // panel4
             // 
@@ -265,7 +265,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "sellTickets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ticket Booking";

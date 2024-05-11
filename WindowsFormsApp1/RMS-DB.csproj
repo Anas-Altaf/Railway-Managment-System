@@ -272,11 +272,11 @@
     <Compile Include="AllForms\Employee\salaryEmployee.Designer.cs">
       <DependentUpon>salaryEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllForms\Employee\sellTickets.cs">
+    <Compile Include="AllForms\Employee\sellTicketsEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllForms\Employee\sellTickets.Designer.cs">
-      <DependentUpon>sellTickets.cs</DependentUpon>
+    <Compile Include="AllForms\Employee\sellTicketsEmployee.Designer.cs">
+      <DependentUpon>sellTicketsEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="AllForms\Employee\viewTaskEmployee.cs">
       <SubType>Form</SubType>
@@ -387,8 +387,8 @@
     <EmbeddedResource Include="AllForms\Employee\salaryEmployee.resx">
       <DependentUpon>salaryEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllForms\Employee\sellTickets.resx">
-      <DependentUpon>sellTickets.cs</DependentUpon>
+    <EmbeddedResource Include="AllForms\Employee\sellTicketsEmployee.resx">
+      <DependentUpon>sellTicketsEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Employee\viewTaskEmployee.resx">
       <DependentUpon>viewTaskEmployee.cs</DependentUpon>
@@ -749,6 +749,8 @@
     <None Include="Resources\icons8-verified-account.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-eye-25 %281%29.png" />
+    <None Include="Resources\icons8-update-25.png" />
     <None Include="Resources\icons8-tickets-25.png" />
     <None Include="Resources\icons8-money-25.png" />
     <None Include="Resources\icons8-ticket-purchase-25.png" />

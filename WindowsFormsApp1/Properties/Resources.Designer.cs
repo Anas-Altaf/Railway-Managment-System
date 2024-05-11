@@ -304,6 +304,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_eye_25__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-25 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_feedback_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-feedback-48", resourceCulture);
@@ -777,6 +787,16 @@ namespace WindowsFormsApp1.Properties {
         public static System.Drawing.Bitmap icons8_train_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-train-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icons8_update_25 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-update-25", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
