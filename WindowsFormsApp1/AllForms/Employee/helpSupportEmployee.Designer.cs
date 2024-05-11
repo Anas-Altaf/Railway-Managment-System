@@ -30,9 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.submitBtn = new System.Windows.Forms.Button();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.helpsupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.helpsupportstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.response = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,52 +53,79 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 60);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.email,
+            this.helpsupport,
+            this.helpsupportstatus,
+            this.response});
+            this.dataGridView1.Location = new System.Drawing.Point(32, 61);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(719, 133);
             this.dataGridView1.TabIndex = 5;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(305, 210);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 31);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Resolve Issue";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(32, 256);
+            this.textBox1.Location = new System.Drawing.Point(32, 252);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(719, 88);
             this.textBox1.TabIndex = 7;
             // 
-            // button2
+            // submitBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(640, 350);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 35);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Submit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.submitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitBtn.Location = new System.Drawing.Point(640, 350);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(111, 35);
+            this.submitBtn.TabIndex = 8;
+            this.submitBtn.Text = "Submit";
+            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
+            // 
+            // email
+            // 
+            this.email.HeaderText = "P_EMAIL_ID";
+            this.email.Name = "email";
+            // 
+            // helpsupport
+            // 
+            this.helpsupport.HeaderText = "Conflict";
+            this.helpsupport.Name = "helpsupport";
+            // 
+            // helpsupportstatus
+            // 
+            this.helpsupportstatus.HeaderText = "STATUS";
+            this.helpsupportstatus.Name = "helpsupportstatus";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(289, 210);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(213, 30);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Respond Passenger";
+            // 
+            // response
+            // 
+            this.response.HeaderText = "Response";
+            this.response.Name = "response";
             // 
             // helpSupportEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 397);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "helpSupportEmployee";
             this.Text = "helpSupportEmployee";
+            this.Load += new System.EventHandler(this.helpSupportEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -105,8 +136,12 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button submitBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn helpsupport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn helpsupportstatus;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn response;
     }
 }
