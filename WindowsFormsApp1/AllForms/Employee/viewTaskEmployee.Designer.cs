@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnTodoTasks = new System.Windows.Forms.Button();
             this.listBoxTodoTasks = new System.Windows.Forms.ListBox();
+            this.submitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkedListBox1
@@ -82,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 56);
+            this.label2.Location = new System.Drawing.Point(36, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 21);
             this.label2.TabIndex = 4;
@@ -106,11 +107,22 @@
             this.listBoxTodoTasks.Size = new System.Drawing.Size(307, 95);
             this.listBoxTodoTasks.TabIndex = 5;
             // 
+            // submitBtn
+            // 
+            this.submitBtn.Location = new System.Drawing.Point(666, 57);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(73, 23);
+            this.submitBtn.TabIndex = 7;
+            this.submitBtn.Text = "Submit";
+            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
+            // 
             // viewTaskEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 397);
+            this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.btnTodoTasks);
             this.Controls.Add(this.listBoxTodoTasks);
             this.Controls.Add(this.label2);
@@ -121,6 +133,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "viewTaskEmployee";
             this.Text = "viewTaskEmployee";
+            this.Load += new System.EventHandler(this.viewTaskEmployee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +148,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnTodoTasks;
         private System.Windows.Forms.ListBox listBoxTodoTasks;
+        private System.Windows.Forms.Button submitBtn;
     }
 }
