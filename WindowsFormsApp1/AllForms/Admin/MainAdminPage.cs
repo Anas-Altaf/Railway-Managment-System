@@ -32,14 +32,14 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void adminCheckProfileBtn_Click(object sender, EventArgs e)
         {
-            LoadPage(new checkProfileAdmin());
+            LoadPage(new adminProfile());
         }
 
 
 
         private void adminManageProfileBtn_Click(object sender, EventArgs e)
         {
-            LoadPage(new manageProfileAdmin());
+            LoadPage(new manageProfileEmployee());
         }
 
         private void adminManageScheduleBtn_Click(object sender, EventArgs e)

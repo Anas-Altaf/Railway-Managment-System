@@ -65,6 +65,7 @@
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Gold;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
@@ -87,6 +88,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Gold;
             this.groupBox1.Controls.Add(this.lstCustomers);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,6 +113,7 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Gold;
             this.panel3.Controls.Add(this.btnClose);
             this.panel3.Controls.Add(this.btnCancelTicket);
             this.panel3.Controls.Add(this.btnOrder);
@@ -214,7 +217,7 @@
             // 
             // listBox2
             // 
-            this.listBox2.BackColor = System.Drawing.Color.Tomato;
+            this.listBox2.BackColor = System.Drawing.Color.Gold;
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 16;
             this.listBox2.Location = new System.Drawing.Point(0, 0);
@@ -235,6 +238,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.Gold;
             this.groupBox2.Controls.Add(this.pnChairs);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
@@ -246,6 +250,7 @@
             // 
             // pnChairs
             // 
+            this.pnChairs.BackColor = System.Drawing.Color.Gold;
             this.pnChairs.ColumnCount = 10;
             this.pnChairs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.pnChairs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));

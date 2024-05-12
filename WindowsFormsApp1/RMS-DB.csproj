@@ -199,23 +199,17 @@
     <Compile Include="AllForms\Admin\assignTasksAdmin.Designer.cs">
       <DependentUpon>assignTasksAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllForms\Admin\checkProfileAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AllForms\Admin\checkProfileAdmin.Designer.cs">
-      <DependentUpon>checkProfileAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="AllForms\Admin\MainAdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AllForms\Admin\MainAdminPage.Designer.cs">
       <DependentUpon>MainAdminPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="AllForms\Admin\manageProfileAdmin.cs">
+    <Compile Include="AllForms\Admin\manageProfileEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AllForms\Admin\manageProfileAdmin.Designer.cs">
-      <DependentUpon>manageProfileAdmin.cs</DependentUpon>
+    <Compile Include="AllForms\Admin\manageProfileEmployee.Designer.cs">
+      <DependentUpon>manageProfileEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="AllForms\Admin\manageTrainAdmin.cs">
       <SubType>Form</SubType>
@@ -369,14 +363,11 @@
     <EmbeddedResource Include="AllForms\Admin\assignTasksAdmin.resx">
       <DependentUpon>assignTasksAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllForms\Admin\checkProfileAdmin.resx">
-      <DependentUpon>checkProfileAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Admin\MainAdminPage.resx">
       <DependentUpon>MainAdminPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AllForms\Admin\manageProfileAdmin.resx">
-      <DependentUpon>manageProfileAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="AllForms\Admin\manageProfileEmployee.resx">
+      <DependentUpon>manageProfileEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Admin\manageTrainAdmin.resx">
       <DependentUpon>manageTrainAdmin.cs</DependentUpon>

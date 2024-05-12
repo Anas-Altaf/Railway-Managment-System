@@ -78,15 +78,15 @@ namespace WindowsFormsApp1
 
         private void adminCheckProfileBtn_Click(object sender, EventArgs e)
         {
-            LoadPage(new checkProfileAdmin());
-            mainTitle.Text = "Search Employees";
+            LoadPage(new adminProfile(_email));
+            mainTitle.Text = "Admin Profile";
         }
 
 
 
         private void adminManageProfileBtn_Click(object sender, EventArgs e)
         {
-            LoadPage(new manageProfileAdmin());
+            LoadPage(new manageProfileEmployee());
             mainTitle.Text = "Manage Employees ";
         }
 
@@ -163,6 +163,7 @@ namespace WindowsFormsApp1
         private void adminProfileButton_Click(object sender, EventArgs e)
         {
             LoadPage(new adminProfile(_email));
+            mainTitle.Text = "Admin Profile";
         }
     }
 }

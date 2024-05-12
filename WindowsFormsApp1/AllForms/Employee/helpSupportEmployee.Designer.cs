@@ -30,13 +30,13 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.submitBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.helpsupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.helpsupportstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.response = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.submitBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +68,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(719, 133);
             this.dataGridView1.TabIndex = 5;
             // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.email.HeaderText = "P_EMAIL_ID";
+            this.email.Name = "email";
+            // 
+            // helpsupport
+            // 
+            this.helpsupport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.helpsupport.HeaderText = "Conflict";
+            this.helpsupport.Name = "helpsupport";
+            // 
+            // helpsupportstatus
+            // 
+            this.helpsupportstatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.helpsupportstatus.HeaderText = "STATUS";
+            this.helpsupportstatus.Name = "helpsupportstatus";
+            // 
+            // response
+            // 
+            this.response.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.response.HeaderText = "Response";
+            this.response.Name = "response";
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(32, 252);
@@ -96,30 +120,6 @@
             this.label2.Size = new System.Drawing.Size(213, 30);
             this.label2.TabIndex = 9;
             this.label2.Text = "Respond Passenger";
-            // 
-            // email
-            // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.email.HeaderText = "P_EMAIL_ID";
-            this.email.Name = "email";
-            // 
-            // helpsupport
-            // 
-            this.helpsupport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.helpsupport.HeaderText = "Conflict";
-            this.helpsupport.Name = "helpsupport";
-            // 
-            // helpsupportstatus
-            // 
-            this.helpsupportstatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.helpsupportstatus.HeaderText = "STATUS";
-            this.helpsupportstatus.Name = "helpsupportstatus";
-            // 
-            // response
-            // 
-            this.response.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.response.HeaderText = "Response";
-            this.response.Name = "response";
             // 
             // helpSupportEmployee
             // 
