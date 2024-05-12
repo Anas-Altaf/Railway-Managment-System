@@ -124,5 +124,17 @@ namespace WindowsFormsApp1.AllForms.Passenger
             mainTitle.Text = "Passenger Dashboard";
             LoadPage(new passengerCheckProfile(_email));
         }
+
+        private void PassengerBookSeats_Click(object sender, EventArgs e)
+        {
+            mainTitle.Text = "Book Seats";
+            LoadPage(new bookSeatsPassenger());
+        }
+
+        private void PassengerReportAndFeedback_Click(object sender, EventArgs e)
+        {
+            mainTitle.Text = "Feedback and Reports";
+            LoadPage(new passengerGiveFeedback());
+        }
     }
 }

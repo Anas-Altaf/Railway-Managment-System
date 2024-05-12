@@ -61,6 +61,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(708, 44);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -68,10 +69,11 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(708, 43);
+            this.label1.Size = new System.Drawing.Size(708, 44);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ticket Booking";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
@@ -81,6 +83,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(199, 465);
             this.panel2.TabIndex = 1;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // groupBox1
             // 
@@ -93,6 +96,7 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Info";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // lstCustomers
             // 
@@ -120,36 +124,46 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(509, 137);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(319, 90);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(79, 31);
             this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnCancelTicket
             // 
+            this.btnCancelTicket.BackColor = System.Drawing.Color.White;
+            this.btnCancelTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelTicket.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelTicket.Location = new System.Drawing.Point(189, 90);
             this.btnCancelTicket.Name = "btnCancelTicket";
             this.btnCancelTicket.Size = new System.Drawing.Size(101, 31);
             this.btnCancelTicket.TabIndex = 6;
             this.btnCancelTicket.Text = "Cancel Ticket";
-            this.btnCancelTicket.UseVisualStyleBackColor = true;
+            this.btnCancelTicket.UseVisualStyleBackColor = false;
             this.btnCancelTicket.Click += new System.EventHandler(this.btnCancelTicket_Click);
             // 
             // btnOrder
             // 
+            this.btnOrder.BackColor = System.Drawing.Color.White;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrder.Location = new System.Drawing.Point(81, 90);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(79, 31);
             this.btnOrder.TabIndex = 5;
             this.btnOrder.Text = "Order";
-            this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.UseVisualStyleBackColor = false;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // lblTotalPrice
@@ -164,6 +178,7 @@
             this.lblTotalPrice.TabIndex = 4;
             this.lblTotalPrice.Text = "Total Price";
             this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalPrice.Click += new System.EventHandler(this.lblTotalPrice_Click);
             // 
             // lblPrice
             // 
@@ -177,6 +192,7 @@
             this.lblPrice.TabIndex = 3;
             this.lblPrice.Text = "Price";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPrice.Click += new System.EventHandler(this.lblPrice_Click);
             // 
             // label3
             // 
@@ -185,6 +201,7 @@
             this.label3.Size = new System.Drawing.Size(88, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Total Price:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -193,6 +210,7 @@
             this.label2.Size = new System.Drawing.Size(78, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Price:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // listBox2
             // 
@@ -203,6 +221,7 @@
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(509, 132);
             this.listBox2.TabIndex = 0;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // panel4
             // 
@@ -212,6 +231,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(509, 328);
             this.panel4.TabIndex = 3;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // groupBox2
             // 
@@ -222,6 +242,7 @@
             this.groupBox2.Size = new System.Drawing.Size(509, 328);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // pnChairs
             // 
@@ -254,6 +275,7 @@
             this.pnChairs.Size = new System.Drawing.Size(503, 306);
             this.pnChairs.TabIndex = 0;
             this.pnChairs.Click += new System.EventHandler(this.lblchair_click);
+            this.pnChairs.Paint += new System.Windows.Forms.PaintEventHandler(this.pnChairs_Paint);
             // 
             // sellTicketsEmployee
             // 

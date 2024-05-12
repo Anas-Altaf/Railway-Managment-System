@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -94,6 +95,7 @@ namespace WindowsFormsApp1.AllForms.Passenger
 
         private void passengerCheckProfile_Load(object sender, EventArgs e)
         {
+            //Loading Profile
             string sql = "SELECT P_NAME, P_PASSWORD, P_CNIC , P_PHONE_NUMBER FROM PASSENGER WHERE P_EMAIL_ID = :Email";
 
             using (OracleConnection connection = new OracleConnection(conStr))
@@ -130,6 +132,96 @@ namespace WindowsFormsApp1.AllForms.Passenger
                     MessageBox.Show("An error occurred while retrieving Passenger information: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+
+            // Loading Image
+            using (OracleConnection connection = new OracleConnection(conStr))
+            {
+                connection.Open();
+
+                sql = "SELECT P_PICTURE FROM Passenger WHERE P_EMAIL_ID = :email";
+
+                using (OracleCommand command = new OracleCommand(sql, connection))
+                {
+                    command.Parameters.Add(new OracleParameter(":email", emailFromPassenger));
+
+                    using (OracleDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            if (reader[0] != DBNull.Value)
+                            {
+                                byte[] imageData = (byte[])reader[0];
+                                passengerPicture.Image = Image.FromStream(new MemoryStream(imageData));
+                                passengerPicture.SizeMode = PictureBoxSizeMode.Zoom;
+                            }
+                            else
+                            {
+                                passengerPicture.Image = null; // Set to default image (optional)
+                                MessageBox.Show("No image found for passenger with email: " + emailFromPassenger);
+                                passengerPicture.Image = Properties.Resources.pngwing_com;
+                            }
+                        }
+                        else
+                        {
+                            passengerPicture.Image = null; // Set to default image (optional)
+                            MessageBox.Show("Passenger not found with email: " + emailFromPassenger);
+                        }
+                    }
+                }
+            }
         }
+
+        private void passengerPicture_Click(object sender, EventArgs e)
+        {
+            // Ask user to choose an image file
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    byte[] imageData;
+                    using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                    {
+                        imageData = new byte[fs.Length];
+                        fs.Read(imageData, 0, (int)fs.Length);
+                    }
+
+                    using (OracleConnection connection = new OracleConnection(conStr))
+                    {
+                        connection.Open();
+
+                        string sql = "UPDATE Passenger SET P_PICTURE = :imageData WHERE P_EMAIL_ID = :email";
+
+                        using (OracleCommand command = new OracleCommand(sql, connection))
+                        {
+                            // Use OracleDbType.Blob for image data parameter
+                            OracleParameter imageDataParam = new OracleParameter(":imageData", OracleDbType.Blob);
+                            imageDataParam.Value = imageData;
+                            command.Parameters.Add(imageDataParam);
+
+                            command.Parameters.Add(new OracleParameter(":email", emailFromPassenger));
+
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Passenger image updated successfully!");
+                        }
+                    }
+
+                    // Display the selected image in the picture box
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        passengerPicture.Image = Image.FromStream(ms);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating image: " + ex.Message);
+                }
+            }
+        }
+
+
+
     }
 }

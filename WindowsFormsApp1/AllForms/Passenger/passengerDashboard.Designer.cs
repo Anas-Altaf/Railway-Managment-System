@@ -164,13 +164,13 @@
             this.tempInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tempInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tempInfo.ForeColor = System.Drawing.Color.White;
-            this.tempInfo.Location = new System.Drawing.Point(301, 18);
+            this.tempInfo.Location = new System.Drawing.Point(339, 18);
             this.tempInfo.Multiline = true;
             this.tempInfo.Name = "tempInfo";
             this.tempInfo.ReadOnly = true;
-            this.tempInfo.Size = new System.Drawing.Size(378, 21);
+            this.tempInfo.Size = new System.Drawing.Size(340, 21);
             this.tempInfo.TabIndex = 101;
-            this.tempInfo.Text = "Login action declined";
+            this.tempInfo.Text = "Logout action declined";
             this.tempInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tempInfo.Visible = false;
             // 
@@ -328,6 +328,7 @@
             this.PassengerBookSeats.Text = "          Book Seat";
             this.PassengerBookSeats.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PassengerBookSeats.UseVisualStyleBackColor = true;
+            this.PassengerBookSeats.Click += new System.EventHandler(this.PassengerBookSeats_Click);
             // 
             // PassengerPrevReservations
             // 
@@ -343,7 +344,7 @@
             this.PassengerPrevReservations.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.PassengerPrevReservations.Size = new System.Drawing.Size(189, 56);
             this.PassengerPrevReservations.TabIndex = 3;
-            this.PassengerPrevReservations.Text = "          Prev Reservs";
+            this.PassengerPrevReservations.Text = "          Prev. Reservs";
             this.PassengerPrevReservations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PassengerPrevReservations.UseVisualStyleBackColor = true;
             // 
@@ -364,6 +365,7 @@
             this.PassengerReportAndFeedback.Text = "          Give Feedback";
             this.PassengerReportAndFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.PassengerReportAndFeedback.UseVisualStyleBackColor = true;
+            this.PassengerReportAndFeedback.Click += new System.EventHandler(this.PassengerReportAndFeedback_Click);
             // 
             // passengerTrackTrains
             // 

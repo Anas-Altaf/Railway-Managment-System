@@ -13,7 +13,7 @@ namespace WindowsFormsApp1.AllForms.Employee
 {
     public partial class sellTicketsEmployee : Form
     {
-        List <Employee> ListCustomer = new List <Employee>();
+        List<Employee> ListCustomer = new List<Employee>();
         public sellTicketsEmployee()
         {
             InitializeComponent();
@@ -48,36 +48,36 @@ namespace WindowsFormsApp1.AllForms.Employee
         private void lblchair_click(object sender, EventArgs e)
         {
             Label lblchair = sender as Label;
-            if(lblchair.BackColor==Color.White)
+            if (lblchair.BackColor == Color.White)
             {
                 lblchair.BackColor = Color.SkyBlue;
             }
-            else if(lblchair.BackColor == Color.SkyBlue)
+            else if (lblchair.BackColor == Color.SkyBlue)
             {
                 lblchair.BackColor = Color.White;
             }
-            else if( lblchair.BackColor == Color.YellowGreen)
+            else if (lblchair.BackColor == Color.YellowGreen)
             {
                 MessageBox.Show("The Chair " + lblchair.Text + " is choosen");
             }
-        
+
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
             frmEmployee frm = new frmEmployee();
-            if(frm.ShowDialog() == DialogResult.OK) 
+            if (frm.ShowDialog() == DialogResult.OK)
             {
                 Employee emp = new Employee();
                 emp.NameCustomer = frm.txtCustomerName.Text;
                 emp.PhoneCustomer = frm.txtPhoneNumber.Text;
-                for(int i=0; i<pnChairs.Controls.Count; i++) 
+                for (int i = 0; i < pnChairs.Controls.Count; i++)
                 {
                     Label lblchair = pnChairs.Controls[i] as Label;
-                    if(lblchair.BackColor == Color.SkyBlue)
+                    if (lblchair.BackColor == Color.SkyBlue)
                     {
                         lblchair.BackColor = Color.YellowGreen;
-                        int chair = int .Parse(lblchair.Text);
+                        int chair = int.Parse(lblchair.Text);
                         emp.chairs.Add(chair);
                     }
                 }
@@ -90,7 +90,7 @@ namespace WindowsFormsApp1.AllForms.Employee
         private void DisplayTotalMoneySys()
         {
             double sum = 0;
-            foreach(Employee emp in ListCustomer)
+            foreach (Employee emp in ListCustomer)
             {
                 sum += emp.Price;
                 lblTotalPrice.Text = sum + "USD";
@@ -99,7 +99,7 @@ namespace WindowsFormsApp1.AllForms.Employee
         private void DisplayCustomerOnListBox()
         {
             lstCustomers.Items.Clear();
-            foreach(Employee emp in ListCustomer)
+            foreach (Employee emp in ListCustomer)
             {
                 lstCustomers.Items.Add(emp);
             }
@@ -108,7 +108,7 @@ namespace WindowsFormsApp1.AllForms.Employee
         private void lstCustomers_SelectedIndexChanged(object sender, EventArgs e)
         {
             Employee emp = lstCustomers.SelectedItem as Employee;
-            lblPrice.Text = emp.Price + "USD"; 
+            lblPrice.Text = emp.Price + "USD";
         }
 
         private void btnCancelTicket_Click(object sender, EventArgs e)
@@ -121,10 +121,10 @@ namespace WindowsFormsApp1.AllForms.Employee
                     Label lblchair = pnChairs.Controls[i] as Label;
                     int codeChair = int.Parse(lblchair.Text);
                     int flag = 0;
-                    while(emp.chairs.Count > 0 && flag < emp.chairs.Count)
+                    while (emp.chairs.Count > 0 && flag < emp.chairs.Count)
                     {
                         int orderedChair = emp.chairs[0];
-                        if(codeChair == orderedChair)
+                        if (codeChair == orderedChair)
                         {
                             lblchair.BackColor = Color.White;
                             emp.chairs.Remove(orderedChair);
@@ -136,7 +136,7 @@ namespace WindowsFormsApp1.AllForms.Employee
                 DisplayCustomerOnListBox();
                 DisplayTotalMoneySys();
             }
-            else 
+            else
             {
                 MessageBox.Show("You should select Customer.");
             }
@@ -147,8 +147,73 @@ namespace WindowsFormsApp1.AllForms.Employee
             DialogResult ret = MessageBox.Show("Do you want to close the program", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (ret == DialogResult.Yes)
             {
-                Close();
+                this.Activate();
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnChairs_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblTotalPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPrice_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

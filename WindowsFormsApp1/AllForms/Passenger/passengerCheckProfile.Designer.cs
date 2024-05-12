@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.passengerPassword = new System.Windows.Forms.TextBox();
-            this.updateButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.logoutButton = new System.Windows.Forms.Button();
             this.passengerEmail = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.passengerPicture = new System.Windows.Forms.PictureBox();
             this.passengerName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,21 +40,13 @@
             this.passengerCNIC = new System.Windows.Forms.TextBox();
             this.passengerPh = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.logoutButton = new System.Windows.Forms.Button();
+            this.passengerPicture = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.passengerPicture)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_eye_25__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(428, 226);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 84;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // passengerPassword
             // 
@@ -72,22 +60,6 @@
             this.passengerPassword.TabIndex = 82;
             this.passengerPassword.Text = "passenger@rmsdb.com";
             // 
-            // updateButton
-            // 
-            this.updateButton.BackColor = System.Drawing.Color.Gold;
-            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_update_25;
-            this.updateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.updateButton.Location = new System.Drawing.Point(550, 312);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(82, 39);
-            this.updateButton.TabIndex = 83;
-            this.updateButton.Text = "Update";
-            this.updateButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.updateButton.UseVisualStyleBackColor = false;
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -97,22 +69,6 @@
             this.label1.Size = new System.Drawing.Size(83, 21);
             this.label1.TabIndex = 81;
             this.label1.Text = "Password:";
-            // 
-            // logoutButton
-            // 
-            this.logoutButton.BackColor = System.Drawing.Color.Gold;
-            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_back_25;
-            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logoutButton.Location = new System.Drawing.Point(643, 312);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(82, 39);
-            this.logoutButton.TabIndex = 80;
-            this.logoutButton.Text = "Logout";
-            this.logoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.logoutButton.UseVisualStyleBackColor = false;
-            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // passengerEmail
             // 
@@ -144,21 +100,10 @@
             this.label8.TabIndex = 76;
             this.label8.Text = "Email:";
             // 
-            // passengerPicture
-            // 
-            this.passengerPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.passengerPicture.Image = global::WindowsFormsApp1.Properties.Resources.icons8_admin_100;
-            this.passengerPicture.Location = new System.Drawing.Point(550, 119);
-            this.passengerPicture.Name = "passengerPicture";
-            this.passengerPicture.Size = new System.Drawing.Size(175, 173);
-            this.passengerPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.passengerPicture.TabIndex = 75;
-            this.passengerPicture.TabStop = false;
-            // 
             // passengerName
             // 
             this.passengerName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passengerName.Location = new System.Drawing.Point(161, 123);
+            this.passengerName.Location = new System.Drawing.Point(159, 123);
             this.passengerName.Multiline = true;
             this.passengerName.Name = "passengerName";
             this.passengerName.Size = new System.Drawing.Size(305, 31);
@@ -224,6 +169,62 @@
             this.label2.Size = new System.Drawing.Size(37, 21);
             this.label2.TabIndex = 78;
             this.label2.Text = "Ph#";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_eye_25__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(428, 226);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 84;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // updateButton
+            // 
+            this.updateButton.BackColor = System.Drawing.Color.Gold;
+            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_update_25;
+            this.updateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.updateButton.Location = new System.Drawing.Point(550, 312);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(82, 39);
+            this.updateButton.TabIndex = 83;
+            this.updateButton.Text = "Update";
+            this.updateButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.updateButton.UseVisualStyleBackColor = false;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.BackColor = System.Drawing.Color.Gold;
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutButton.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_back_25;
+            this.logoutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logoutButton.Location = new System.Drawing.Point(643, 312);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(82, 39);
+            this.logoutButton.TabIndex = 80;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.logoutButton.UseVisualStyleBackColor = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
+            // 
+            // passengerPicture
+            // 
+            this.passengerPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.passengerPicture.Image = global::WindowsFormsApp1.Properties.Resources.pngwing_com;
+            this.passengerPicture.Location = new System.Drawing.Point(550, 119);
+            this.passengerPicture.Name = "passengerPicture";
+            this.passengerPicture.Size = new System.Drawing.Size(175, 173);
+            this.passengerPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.passengerPicture.TabIndex = 75;
+            this.passengerPicture.TabStop = false;
+            this.passengerPicture.Click += new System.EventHandler(this.passengerPicture_Click);
             // 
             // passengerCheckProfile
             // 

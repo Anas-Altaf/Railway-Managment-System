@@ -284,6 +284,12 @@
     <Compile Include="AllForms\Employee\viewTaskEmployee.Designer.cs">
       <DependentUpon>viewTaskEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllForms\Passenger\bookSeatsPassenger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Passenger\bookSeatsPassenger.Designer.cs">
+      <DependentUpon>bookSeatsPassenger.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllForms\Passenger\passengerCheckProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +307,18 @@
     </Compile>
     <Compile Include="AllForms\Passenger\passengerDashboard.Designer.cs">
       <DependentUpon>passengerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Passenger\passengerGiveFeedback.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Passenger\passengerGiveFeedback.Designer.cs">
+      <DependentUpon>passengerGiveFeedback.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Passenger\passengerTrackTrain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Passenger\passengerTrackTrain.Designer.cs">
+      <DependentUpon>passengerTrackTrain.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -393,6 +411,9 @@
     <EmbeddedResource Include="AllForms\Employee\viewTaskEmployee.resx">
       <DependentUpon>viewTaskEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Passenger\bookSeatsPassenger.resx">
+      <DependentUpon>bookSeatsPassenger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Passenger\passengerCheckProfile.resx">
       <DependentUpon>passengerCheckProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -401,6 +422,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Passenger\passengerDashboard.resx">
       <DependentUpon>passengerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Passenger\passengerGiveFeedback.resx">
+      <DependentUpon>passengerGiveFeedback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Passenger\passengerTrackTrain.resx">
+      <DependentUpon>passengerTrackTrain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -749,6 +776,7 @@
     <None Include="Resources\icons8-verified-account.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pngwing.com.png" />
     <None Include="Resources\icons8-eye-25.png" />
     <None Include="Resources\passwordImage1.bmp" />
     <None Include="Resources\icons8-eye-25 %281%29.png" />
