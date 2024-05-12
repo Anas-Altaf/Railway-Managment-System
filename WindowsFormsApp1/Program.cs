@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(Dashboard.getDashboard());
-            Application.Run(new passengerTrackTrain());
+            Application.Run(new viewFeedbacksAAdmin());
      }
     }
 }
