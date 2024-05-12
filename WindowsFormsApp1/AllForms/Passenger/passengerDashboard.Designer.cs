@@ -384,6 +384,7 @@
             this.passengerTrackTrains.Text = "          Track Trains";
             this.passengerTrackTrains.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.passengerTrackTrains.UseVisualStyleBackColor = true;
+            this.passengerTrackTrains.Click += new System.EventHandler(this.passengerTrackTrains_Click);
             // 
             // passengerLogoutBtn
             // 

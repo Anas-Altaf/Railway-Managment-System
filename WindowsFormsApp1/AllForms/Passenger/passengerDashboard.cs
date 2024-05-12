@@ -136,5 +136,11 @@ namespace WindowsFormsApp1.AllForms.Passenger
             mainTitle.Text = "Feedback and Reports";
             LoadPage(new passengerGiveFeedback());
         }
+
+        private void passengerTrackTrains_Click(object sender, EventArgs e)
+        {
+            mainTitle.Text = "Track the Trains";
+            LoadPage(new passengerTrackTrain());
+        }
     }
 }
