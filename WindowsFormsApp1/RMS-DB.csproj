@@ -357,6 +357,7 @@
     </Compile>
     <Compile Include="Static Resources\UserFunctions.cs" />
     <Compile Include="Utilities\EmailManager\EmailManager.cs" />
+    <Compile Include="Utilities\EmailManager\TwilioSMSManager.cs" />
     <EmbeddedResource Include="AllForms\Admin\adminProfile.resx">
       <DependentUpon>adminProfile.cs</DependentUpon>
     </EmbeddedResource>
