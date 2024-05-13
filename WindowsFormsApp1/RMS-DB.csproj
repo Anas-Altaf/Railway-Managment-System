@@ -357,6 +357,7 @@
     </Compile>
     <Compile Include="Static Resources\UserFunctions.cs" />
     <Compile Include="Utilities\EmailManager\EmailManager.cs" />
+    <Compile Include="Utilities\EmailManager\TwilioSMSManager.cs" />
     <EmbeddedResource Include="AllForms\Admin\adminProfile.resx">
       <DependentUpon>adminProfile.cs</DependentUpon>
     </EmbeddedResource>
@@ -767,6 +768,7 @@
     <None Include="Resources\icons8-verified-account.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-reload-25.png" />
     <None Include="Resources\pngwing.com.png" />
     <None Include="Resources\icons8-eye-25.png" />
     <None Include="Resources\passwordImage1.bmp" />

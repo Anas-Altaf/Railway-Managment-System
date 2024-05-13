@@ -148,5 +148,25 @@ namespace WindowsFormsApp1.AllForms.Employee
             mainTitle.Text = "Employee Dashboard";
             LoadPage(new employeeProfile(_email));
         }
+
+        private void reloadButton_Click(object sender, EventArgs e)
+        {
+            if (pageForm != null)
+            {
+                centralPanel.Controls.Clear();
+
+                Type formType = pageForm.GetType();
+                pageForm = (Form)Activator.CreateInstance(formType);
+
+                pageForm.Dock = DockStyle.Fill;
+                pageForm.TopLevel = false;
+                centralPanel.Controls.Add(pageForm);
+                pageForm.Show();
+            }
+            else
+            {
+                ShowTempText("No form loaded to reload!", 3);
+            }
+        }
     }
 }
