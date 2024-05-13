@@ -114,5 +114,18 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (passwordBox.PasswordChar == '⚫')
+            {
+                passwordBox.PasswordChar = (char)0;
+                pictureBox1.Image = Properties.Resources.icons8_eye_25;
+            }
+            else
+            {
+                passwordBox.PasswordChar = '⚫';
+                pictureBox1.Image = Properties.Resources.icons8_eye_25__1_;
+            }
+        }
     }
 }

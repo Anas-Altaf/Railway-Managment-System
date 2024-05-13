@@ -162,5 +162,11 @@ namespace WindowsFormsApp1.AllForms.Passenger
                 ShowTempText("No form loaded to reload!", 3);
             }
         }
+
+        private void PassengerPrevReservations_Click(object sender, EventArgs e)
+        {
+            mainTitle.Text = "Tickets you Own";
+            LoadPage(new prevReservation(_email));
+        }
     }
 }

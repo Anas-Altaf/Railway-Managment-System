@@ -324,6 +324,26 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap icons8_eye_25__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-25 (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap icons8_eye_25__1_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-eye-25 (1)2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap icons8_feedback_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-feedback-48", resourceCulture);

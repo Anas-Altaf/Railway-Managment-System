@@ -3,26 +3,38 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Static_Resources;
 
-namespace WindowsFormsApp1.AllForms.Passenger
+namespace WindowsFormsApp1.AllForms.Employee
 {
-    public partial class bookSeatsPassenger : Form
+    public partial class employeeTicket : Form
     {
         string conStr = UserFunctions.connectionString;
-        public bookSeatsPassenger()
+        public employeeTicket()
         {
             InitializeComponent();
         }
 
-        private void bookSeatsPassenger_Load(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+                trainBox.Text = selectedRow.Cells["train_id"].Value.ToString();
+                destBox.Text = selectedRow.Cells["destination"].Value.ToString();
+                originBox.Text = selectedRow.Cells["origin"].Value.ToString();
+                ticketBox.Text = selectedRow.Cells["ticket_id"].Value.ToString();
+                emailBox.Text = selectedRow.Cells["p_email"].Value.ToString();
+                phoneBox.Text = selectedRow.Cells["p_phone"].Value.ToString();
+            }
+        }
+
+        private void employeeTicket_Load(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
             string sql = "SELECT TRAIN_ID, ticket_id, DESTINATION, origin, p_email, p_phone FROM TICKET";
@@ -52,19 +64,7 @@ namespace WindowsFormsApp1.AllForms.Passenger
                 }
             }
         }
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
-                trainBox.Text = selectedRow.Cells["train_id"].Value.ToString();
-                destBox.Text = selectedRow.Cells["destination"].Value.ToString();
-                originBox.Text = selectedRow.Cells["origin"].Value.ToString();
-                ticketBox.Text = selectedRow.Cells["ticket_id"].Value.ToString();
-                emailBox.Text = selectedRow.Cells["p_email"].Value.ToString();
-                phoneBox.Text = selectedRow.Cells["p_phone"].Value.ToString();
-            }
-        }
+
         private void searchBtn_Click(object sender, EventArgs e)
         {
             string origin = originBox.Text;
@@ -107,6 +107,7 @@ namespace WindowsFormsApp1.AllForms.Passenger
                 }
             }
         }
+
         private void bookBtn_Click(object sender, EventArgs e)
         {
             string trainId = trainBox.Text;
@@ -151,6 +152,7 @@ namespace WindowsFormsApp1.AllForms.Passenger
                 }
             }
         }
+
         private bool CheckTrainExists(string trainId)
         {
             string sql = "SELECT COUNT(*) FROM TRAINSCHEDULE WHERE TRAIN_ID = :TrainId";
@@ -208,6 +210,5 @@ namespace WindowsFormsApp1.AllForms.Passenger
                 }
             }
         }
-
     }
 }

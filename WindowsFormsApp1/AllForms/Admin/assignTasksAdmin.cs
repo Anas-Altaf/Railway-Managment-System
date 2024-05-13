@@ -117,7 +117,7 @@ namespace WindowsFormsApp1.AllForms.Admin
                 return;
             }
 
-            string query = "SELECT E_TASK FROM employee_TASK WHERE E_EMAIL_ID = :eId";
+            string query = @"SELECT E_TASK FROM employee_TASK WHERE E_EMAIL_ID = :eId";
 
             try
             {
@@ -170,15 +170,7 @@ namespace WindowsFormsApp1.AllForms.Admin
             }
 
             string task = GetTaskForEmployee(eId);
-            if (!string.IsNullOrEmpty(task))
-            {
-                MessageBox.Show("Task is already assigned for this Employee ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-
-
-            string updateQuery = $"UPDATE EMPLOYEE_TASK SET E_TASK = '{textBox2.Text}', E_TASK_STATUS = 'assigned' WHERE E_EMAIL_ID = '{eId}' AND E_TASK IS NULL";
+            string updateQuery = $"UPDATE EMPLOYEE_TASK SET E_TASK = '{textBox2.Text}', E_TASK_STATUS = 'Assigned' WHERE E_EMAIL_ID = '{eId}'";
 
             try
             {

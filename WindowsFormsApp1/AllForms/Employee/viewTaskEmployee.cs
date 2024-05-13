@@ -15,8 +15,14 @@ namespace WindowsFormsApp1.AllForms.Employee
     public partial class viewTaskEmployee : Form
     {
         string conStr = UserFunctions.connectionString;
+        string _email = @"umair@employee.com";
         public viewTaskEmployee()
         {
+            InitializeComponent();
+        } 
+        public viewTaskEmployee(string email)
+        {
+            _email = email;
             InitializeComponent();
         }
 
@@ -43,7 +49,7 @@ namespace WindowsFormsApp1.AllForms.Employee
         private void viewTaskEmployee_Load(object sender, EventArgs e)
         {
             checkedListBox1.Items.Clear();
-            string emailFromEmployee = "umair@employee.com";
+            string emailFromEmployee = _email;
             string sql = "SELECT e_task, e_task_status FROM employee_task WHERE e_email_id = :Email";
             using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(sql, connection))
@@ -82,7 +88,7 @@ namespace WindowsFormsApp1.AllForms.Employee
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            string emailFromEmployee = "umair@employee.com";
+            string emailFromEmployee = _email;
             using (OracleConnection connection = new OracleConnection(conStr))
             {
                 connection.Open();

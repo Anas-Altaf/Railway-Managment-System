@@ -106,13 +106,13 @@ namespace WindowsFormsApp1.AllForms.Employee
         private void EmpSalaryBtn_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Employee Salary";
-            LoadPage(new salaryEmployee());
+            LoadPage(new salaryEmployee(_email));
         }
 
         private void EmpManageTaskBtn_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Employee Tasks";
-            LoadPage(new viewTaskEmployee());
+            LoadPage(new viewTaskEmployee(_email));
         }
 
         private void EmpSupportBtn_Click(object sender, EventArgs e)
@@ -124,7 +124,7 @@ namespace WindowsFormsApp1.AllForms.Employee
         private void EmpSelTicketBtn_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Manage Tickets ";
-            LoadPage(new sellTicketsEmployee());
+            LoadPage(new employeeTicket());
         }
 
         private void EmpLogoutBtn_Click(object sender, EventArgs e)

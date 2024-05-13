@@ -50,6 +50,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8-train-64.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -248,6 +251,12 @@
     <Compile Include="AllForms\Employee\employeeProfile.Designer.cs">
       <DependentUpon>employeeProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="AllForms\Employee\employeeTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Employee\employeeTicket.Designer.cs">
+      <DependentUpon>employeeTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="AllForms\Employee\frmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,6 +322,12 @@
     </Compile>
     <Compile Include="AllForms\Passenger\passengerTrackTrain.Designer.cs">
       <DependentUpon>passengerTrackTrain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AllForms\Passenger\prevReservation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AllForms\Passenger\prevReservation.Designer.cs">
+      <DependentUpon>prevReservation.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
@@ -387,6 +402,9 @@
     <EmbeddedResource Include="AllForms\Employee\employeeProfile.resx">
       <DependentUpon>employeeProfile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Employee\employeeTicket.resx">
+      <DependentUpon>employeeTicket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Employee\frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
     </EmbeddedResource>
@@ -419,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AllForms\Passenger\passengerTrackTrain.resx">
       <DependentUpon>passengerTrackTrain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AllForms\Passenger\prevReservation.resx">
+      <DependentUpon>prevReservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -767,6 +788,8 @@
     <None Include="Resources\icons8-verified-account.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-eye-25 %281%292.png" />
+    <None Include="Resources\icons8-eye-25 %281%291.png" />
     <None Include="Resources\icons8-reload-25.png" />
     <None Include="Resources\pngwing.com.png" />
     <None Include="Resources\icons8-eye-25.png" />
@@ -778,6 +801,7 @@
     <None Include="Resources\icons8-ticket-purchase-25.png" />
     <None Include="Resources\icons8-seat-25.png" />
     <None Include="Resources\icons8-back-25.png" />
+    <Content Include="icons8-train-64.ico" />
     <Content Include="Passenger.sql" />
     <None Include="Resources\icons8-admin-100.png" />
     <Content Include="Resources\icons8-cross.gif" />

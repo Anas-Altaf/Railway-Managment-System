@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginEmployee));
             this.backButton = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.customPictureBox1 = new WindowsFormsApp1.Static_Resources.CustomPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.forgotPassword = new System.Windows.Forms.Label();
@@ -40,9 +39,11 @@
             this.emailBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.backButton)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // backButton
@@ -61,7 +62,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.customPictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.forgotPassword);
@@ -76,19 +77,6 @@
             this.panel1.Size = new System.Drawing.Size(415, 450);
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gold;
-            this.label9.Location = new System.Drawing.Point(126, 40);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 20);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "Employee";
             // 
             // customPictureBox1
             // 
@@ -141,7 +129,7 @@
             this.passwordBox.Location = new System.Drawing.Point(56, 217);
             this.passwordBox.Multiline = true;
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.PasswordChar = '*';
+            this.passwordBox.PasswordChar = '⚫';
             this.passwordBox.Size = new System.Drawing.Size(310, 27);
             this.passwordBox.TabIndex = 18;
             // 
@@ -198,6 +186,18 @@
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.icons8_eye_25__1_1;
+            this.pictureBox1.Location = new System.Drawing.Point(338, 222);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 18);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // LoginEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +214,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,8 +228,8 @@
         private System.Windows.Forms.TextBox emailBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.Label label9;
         private Static_Resources.CustomPictureBox customPictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

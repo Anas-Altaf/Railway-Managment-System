@@ -61,7 +61,7 @@ namespace WindowsFormsApp1.AllForms.Admin
             decimal totalTicketPrice = 0;
             decimal totalEmployeeSalary = 0;
 
-            string ticketPriceQuery = "SELECT SUM(ticket_price) FROM Passenger";
+            string ticketPriceQuery = "SELECT SUM(ticket_price) FROM ticket";
 
             string employeeSalaryQuery = "SELECT SUM(e_salary) FROM Employee";
 
@@ -132,7 +132,7 @@ namespace WindowsFormsApp1.AllForms.Admin
         {
             int totalPassengers = 0;
 
-            string passengerCountQuery = "SELECT COUNT(*) FROM Passenger";
+            string passengerCountQuery = "SELECT COUNT(*) FROM ticket";
 
             string conStr = UserFunctions.connectionString;
 
