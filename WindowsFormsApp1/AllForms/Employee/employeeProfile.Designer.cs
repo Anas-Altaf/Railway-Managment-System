@@ -203,6 +203,7 @@
             this.empPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.empPicture.TabIndex = 60;
             this.empPicture.TabStop = false;
+            this.empPicture.Click += new System.EventHandler(this.empPicture_Click);
             // 
             // employeeProfile
             // 

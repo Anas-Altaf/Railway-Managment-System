@@ -55,6 +55,7 @@
             this.PassengerProfileButton = new System.Windows.Forms.Button();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
             this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
+            this.reloadButton = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel2.SuspendLayout();
@@ -66,6 +67,7 @@
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.sideBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).BeginInit();
             this.SuspendLayout();
             // 
             // centralPanel
@@ -289,11 +291,11 @@
             this.tempInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tempInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tempInfo.ForeColor = System.Drawing.Color.White;
-            this.tempInfo.Location = new System.Drawing.Point(339, 18);
+            this.tempInfo.Location = new System.Drawing.Point(339, 21);
             this.tempInfo.Multiline = true;
             this.tempInfo.Name = "tempInfo";
             this.tempInfo.ReadOnly = true;
-            this.tempInfo.Size = new System.Drawing.Size(340, 21);
+            this.tempInfo.Size = new System.Drawing.Size(276, 21);
             this.tempInfo.TabIndex = 101;
             this.tempInfo.Text = "Logout action declined";
             this.tempInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -301,6 +303,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.reloadButton);
             this.panel7.Controls.Add(this.backButton);
             this.panel7.Controls.Add(this.mainTitle);
             this.panel7.Controls.Add(this.tempInfo);
@@ -405,6 +408,20 @@
             this.sideBarTimer.Interval = 10;
             this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
             // 
+            // reloadButton
+            // 
+            this.reloadButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reloadButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.reloadButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_reload_25;
+            this.reloadButton.Location = new System.Drawing.Point(649, 0);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(30, 52);
+            this.reloadButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.reloadButton.TabIndex = 103;
+            this.reloadButton.TabStop = false;
+            this.reloadButton.Tag = "Reload the Data";
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
+            // 
             // passengerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,6 +446,7 @@
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.sideBar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -461,5 +479,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.FlowLayoutPanel sideBar;
         private System.Windows.Forms.Timer sideBarTimer;
+        private System.Windows.Forms.PictureBox reloadButton;
     }
 }

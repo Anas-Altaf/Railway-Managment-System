@@ -767,6 +767,7 @@
     <None Include="Resources\icons8-verified-account.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-reload-25.png" />
     <None Include="Resources\pngwing.com.png" />
     <None Include="Resources\icons8-eye-25.png" />
     <None Include="Resources\passwordImage1.bmp" />

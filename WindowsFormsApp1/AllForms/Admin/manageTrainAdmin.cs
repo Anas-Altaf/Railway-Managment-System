@@ -151,7 +151,7 @@ namespace WindowsFormsApp1.AllForms.Admin
                                     byte[] imageData = (byte[])reader[0];
                                     trainImageBox.BackgroundImage = null;
                                     trainImageBox.Image = Image.FromStream(new MemoryStream(imageData));
-                                    trainImageBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                                    trainImageBox.SizeMode = PictureBoxSizeMode.Zoom;
                                 }
                                 else
                                 {

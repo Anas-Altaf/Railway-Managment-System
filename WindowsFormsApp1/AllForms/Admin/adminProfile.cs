@@ -78,6 +78,7 @@ namespace WindowsFormsApp1.AllForms.Admin
                     MessageBox.Show("An error occurred while retrieving admin information: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            try { 
 
             // Loading Image
             using (OracleConnection connection = new OracleConnection(conStr))
@@ -114,6 +115,11 @@ namespace WindowsFormsApp1.AllForms.Admin
                         }
                     }
                 }
+            }
+            }
+            catch(OracleException ex)
+            {
+                MessageBox.Show("An error occurred while retrieving image : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

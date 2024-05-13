@@ -32,6 +32,7 @@
             this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.reloadButton = new System.Windows.Forms.PictureBox();
             this.backButton = new System.Windows.Forms.Button();
             this.mainTitle = new System.Windows.Forms.Label();
             this.tempInfo = new System.Windows.Forms.TextBox();
@@ -61,6 +62,7 @@
             this.centralPanel = new System.Windows.Forms.Panel();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).BeginInit();
             this.panel17.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -95,6 +97,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.reloadButton);
             this.panel7.Controls.Add(this.backButton);
             this.panel7.Controls.Add(this.mainTitle);
             this.panel7.Controls.Add(this.tempInfo);
@@ -103,6 +106,20 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(679, 52);
             this.panel7.TabIndex = 0;
+            // 
+            // reloadButton
+            // 
+            this.reloadButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reloadButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.reloadButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_reload_25;
+            this.reloadButton.Location = new System.Drawing.Point(649, 0);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(30, 52);
+            this.reloadButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.reloadButton.TabIndex = 102;
+            this.reloadButton.TabStop = false;
+            this.reloadButton.Tag = "Reload the Data";
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
             // 
             // backButton
             // 
@@ -137,11 +154,11 @@
             this.tempInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tempInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tempInfo.ForeColor = System.Drawing.Color.White;
-            this.tempInfo.Location = new System.Drawing.Point(301, 18);
+            this.tempInfo.Location = new System.Drawing.Point(301, 20);
             this.tempInfo.Multiline = true;
             this.tempInfo.Name = "tempInfo";
             this.tempInfo.ReadOnly = true;
-            this.tempInfo.Size = new System.Drawing.Size(378, 21);
+            this.tempInfo.Size = new System.Drawing.Size(298, 21);
             this.tempInfo.TabIndex = 101;
             this.tempInfo.Text = "Login action declined";
             this.tempInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -485,6 +502,7 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel16.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
@@ -532,5 +550,6 @@
         public System.Windows.Forms.Panel centralPanel;
         private System.Windows.Forms.TextBox tempInfo;
         private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox reloadButton;
     }
 }

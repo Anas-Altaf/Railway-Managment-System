@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -54,14 +55,59 @@ namespace WindowsFormsApp1.AllForms.Employee
                         }
                         else
                         {
-                            MessageBox.Show("Admin information not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Employee information not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
                 catch (OracleException ex)
                 {
-                    MessageBox.Show("An error occurred while retrieving admin information: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("An error occurred while retrieving Employee information: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+
+            try
+            {
+
+                // Loading Image
+                using (OracleConnection connection = new OracleConnection(conStr))
+                {
+                    connection.Open();
+
+                    sql = "SELECT e_PICTURE FROM EMPLOYEE WHERE e_EMAIL_ID = :email";
+
+                    using (OracleCommand command = new OracleCommand(sql, connection))
+                    {
+                        command.Parameters.Add(new OracleParameter(":email", emailFromEmployee));
+
+                        using (OracleDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                if (reader[0] != DBNull.Value)
+                                {
+                                    byte[] imageData = (byte[])reader[0];
+                                    empPicture.Image = Image.FromStream(new MemoryStream(imageData));
+                                    empPicture.SizeMode = PictureBoxSizeMode.Zoom;
+                                }
+                                else
+                                {
+                                    empPicture.Image = null;
+                                    MessageBox.Show("No image found for Employee with email: " + emailFromEmployee);
+                                    empPicture.Image = Properties.Resources.pngwing_com;
+                                }
+                            }
+                            else
+                            {
+                                empPicture.Image = null;
+                                MessageBox.Show("Employee not found with email: " + emailFromEmployee);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show("An error occurred while retrieving image : " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -125,6 +171,56 @@ namespace WindowsFormsApp1.AllForms.Employee
                 catch (OracleException ex)
                 {
                     MessageBox.Show("An error occurred while updating employee information: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void empPicture_Click(object sender, EventArgs e)
+       {
+            // Ask user to choose an image file
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files (*.bmp;*.jpg;*.jpeg,*.png)|*.BMP;*.JPG;*.JPEG;*.PNG";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    byte[] imageData;
+                    using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                    {
+                        imageData = new byte[fs.Length];
+                        fs.Read(imageData, 0, (int)fs.Length);
+                    }
+
+                    using (OracleConnection connection = new OracleConnection(conStr))
+                    {
+                        connection.Open();
+
+                        string sql = "UPDATE EMPLOYEE SET e_PICTURE = :imageData WHERE e_EMAIL_ID = :email";
+
+                        using (OracleCommand command = new OracleCommand(sql, connection))
+                        {
+                            // Use OracleDbType.Blob for image data parameter
+                            OracleParameter imageDataParam = new OracleParameter(":imageData", OracleDbType.Blob);
+                            imageDataParam.Value = imageData;
+                            command.Parameters.Add(imageDataParam);
+
+                            command.Parameters.Add(new OracleParameter(":email", emailFromEmployee));
+
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Employee image updated successfully!");
+                        }
+                    }
+
+                    // Display the selected image in the picture box
+                    using (MemoryStream ms = new MemoryStream(imageData))
+                    {
+                        empPicture.Image = Image.FromStream(ms);
+                        empPicture.SizeMode = PictureBoxSizeMode.Zoom;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating image: " + ex.Message);
                 }
             }
         }
