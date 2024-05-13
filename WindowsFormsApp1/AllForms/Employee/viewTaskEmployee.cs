@@ -101,7 +101,7 @@ namespace WindowsFormsApp1.AllForms.Employee
                             int rowsAffected = cmd.ExecuteNonQuery();
                             if (rowsAffected > 0)
                             {
-                                MessageBox.Show($"Task '{task}' status updated to '{status}'.");
+                                //MessageBox.Show($"Task '{task}' status updated to '{status}'.");
                             }
                         }
                         catch (OracleException ex)

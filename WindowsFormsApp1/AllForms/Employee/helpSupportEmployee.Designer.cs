@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.submitBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.help_title = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.helpsupport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.helpsupportstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.response = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.submitBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,10 +53,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gold;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -67,11 +69,47 @@
             this.response});
             this.dataGridView1.Location = new System.Drawing.Point(32, 61);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(719, 133);
             this.dataGridView1.TabIndex = 5;
             // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.email.HeaderText = "EMAIL_ID";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // help_title
+            // 
+            this.help_title.HeaderText = "Title";
+            this.help_title.Name = "help_title";
+            this.help_title.ReadOnly = true;
+            // 
+            // helpsupport
+            // 
+            this.helpsupport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.helpsupport.HeaderText = "Conflict";
+            this.helpsupport.Name = "helpsupport";
+            this.helpsupport.ReadOnly = true;
+            // 
+            // helpsupportstatus
+            // 
+            this.helpsupportstatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.helpsupportstatus.HeaderText = "STATUS";
+            this.helpsupportstatus.Name = "helpsupportstatus";
+            this.helpsupportstatus.ReadOnly = true;
+            // 
+            // response
+            // 
+            this.response.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.response.HeaderText = "Response";
+            this.response.Name = "response";
+            this.response.ReadOnly = true;
+            // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.LemonChiffon;
             this.textBox1.Location = new System.Drawing.Point(32, 252);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -80,13 +118,15 @@
             // 
             // submitBtn
             // 
+            this.submitBtn.BackColor = System.Drawing.Color.Gold;
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitBtn.Location = new System.Drawing.Point(640, 350);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(111, 35);
             this.submitBtn.TabIndex = 8;
             this.submitBtn.Text = "Submit";
-            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.UseVisualStyleBackColor = false;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // label2
@@ -99,39 +139,11 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Respond Passenger";
             // 
-            // email
-            // 
-            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.email.HeaderText = "EMAIL_ID";
-            this.email.Name = "email";
-            // 
-            // help_title
-            // 
-            this.help_title.HeaderText = "Title";
-            this.help_title.Name = "help_title";
-            // 
-            // helpsupport
-            // 
-            this.helpsupport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.helpsupport.HeaderText = "Conflict";
-            this.helpsupport.Name = "helpsupport";
-            // 
-            // helpsupportstatus
-            // 
-            this.helpsupportstatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.helpsupportstatus.HeaderText = "STATUS";
-            this.helpsupportstatus.Name = "helpsupportstatus";
-            // 
-            // response
-            // 
-            this.response.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.response.HeaderText = "Response";
-            this.response.Name = "response";
-            // 
             // helpSupportEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(788, 397);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.submitBtn);

@@ -19,8 +19,8 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(Dashboard.getDashboard());
-            Application.Run(new viewFeedbacksAAdmin());
+            Application.Run(Dashboard.getDashboard());
+            //Application.Run(new assignTasksAdmin());
      }
     }
 }

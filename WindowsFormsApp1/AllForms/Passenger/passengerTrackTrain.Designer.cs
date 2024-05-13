@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.TRAIN_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TRAIN_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ANNOUNCEMENTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DESTINATION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ARRIVAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DEST_TIME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ARRIVAL_TIME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ANNOUNCEMENTS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,18 +49,18 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gold;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TRAIN_ID,
             this.TRAIN_NAME,
+            this.ANNOUNCEMENTS,
             this.DESTINATION,
             this.ARRIVAL,
             this.TYPE,
             this.DEST_TIME,
-            this.ARRIVAL_TIME,
-            this.ANNOUNCEMENTS});
+            this.ARRIVAL_TIME});
             this.dataGridView1.Location = new System.Drawing.Point(35, 62);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -87,6 +88,14 @@
             this.TRAIN_NAME.HeaderText = "TRAIN NAME";
             this.TRAIN_NAME.Name = "TRAIN_NAME";
             this.TRAIN_NAME.ReadOnly = true;
+            // 
+            // ANNOUNCEMENTS
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ANNOUNCEMENTS.DefaultCellStyle = dataGridViewCellStyle2;
+            this.ANNOUNCEMENTS.HeaderText = "STATUS";
+            this.ANNOUNCEMENTS.Name = "ANNOUNCEMENTS";
+            this.ANNOUNCEMENTS.ReadOnly = true;
             // 
             // DESTINATION
             // 
@@ -118,12 +127,6 @@
             this.ARRIVAL_TIME.Name = "ARRIVAL_TIME";
             this.ARRIVAL_TIME.ReadOnly = true;
             // 
-            // ANNOUNCEMENTS
-            // 
-            this.ANNOUNCEMENTS.HeaderText = "ANNOUNCEMENTS";
-            this.ANNOUNCEMENTS.Name = "ANNOUNCEMENTS";
-            this.ANNOUNCEMENTS.ReadOnly = true;
-            // 
             // passengerTrackTrain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,11 +150,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TRAIN_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TRAIN_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ANNOUNCEMENTS;
         private System.Windows.Forms.DataGridViewTextBoxColumn DESTINATION;
         private System.Windows.Forms.DataGridViewTextBoxColumn ARRIVAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn TYPE;
         private System.Windows.Forms.DataGridViewTextBoxColumn DEST_TIME;
         private System.Windows.Forms.DataGridViewTextBoxColumn ARRIVAL_TIME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ANNOUNCEMENTS;
     }
 }

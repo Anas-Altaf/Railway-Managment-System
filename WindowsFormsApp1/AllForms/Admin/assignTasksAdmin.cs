@@ -13,7 +13,9 @@ using WindowsFormsApp1.Static_Resources;
 namespace WindowsFormsApp1.AllForms.Admin
 {
     public partial class assignTasksAdmin : Form
+
     {
+        string conStr = UserFunctions.connectionString;
         public assignTasksAdmin()
         {
             InitializeComponent();
@@ -21,43 +23,36 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private void assignTasks_click(object sender, EventArgs e)
         {
-            string query = "SELECT e_id, task FROM Employee WHERE task_status = 'assigned'";
-
-            string conStr = UserFunctions.connectionString;
+            string query = "SELECT E_EMAIL_ID, E_TASK FROM EMPLOYEE_TASK WHERE E_TASK_STATUS = 'Assigned'";
 
             try
             {
-                using (OracleConnection connection = new OracleConnection(conStr))
+                OracleConnection connection = new OracleConnection(conStr);
+                OracleCommand cmd = new OracleCommand(query, connection);
+
+                connection.Open();
+                OracleDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
                 {
-                    connection.Open();
+                    StringBuilder assignedTasks = new StringBuilder();
 
-                    using (OracleCommand cmd = new OracleCommand(query, connection))
+                    while (reader.Read())
                     {
-                        DataTable dataTable = new DataTable();
-
-                        using (OracleDataAdapter adapter = new OracleDataAdapter(cmd))
-                        {
-                            adapter.Fill(dataTable);
-                        }
-
-                        if (dataTable.Rows.Count > 0)
-                        {
-                            string assignedTasks = "";
-                            foreach (DataRow row in dataTable.Rows)
-                            {
-                                string eId = row["e_id"].ToString();
-                                string task = row["task"].ToString();
-                                assignedTasks += $"Employee ID: {eId}, Task: {task}\n";
-                            }
-
-                            textBox3.Text = assignedTasks;
-                        }
-                        else
-                        {
-                            textBox3.Text = "No tasks are currently assigned.";
-                        }
+                        string eId = reader["E_EMAIL_ID"].ToString();
+                        string task = reader["E_TASK"].ToString();
+                        assignedTasks.AppendLine($"Employee ID: {eId}, Task: {task}");
                     }
+
+                    textBox3.Text = assignedTasks.ToString();
                 }
+                else
+                {
+                    textBox3.Text = "No tasks are currently assigned.";
+                }
+
+                reader.Close();
+                connection.Close();
             }
             catch (Exception ex)
             {
@@ -65,53 +60,50 @@ namespace WindowsFormsApp1.AllForms.Admin
             }
         }
 
+
+
+
         private void completeTasks_click(object sender, EventArgs e)
         {
             textBox3.Text = "";
 
-            string query = "SELECT e_id, task FROM Employee WHERE task_status = 'completed'";
-
-            string conStr = UserFunctions.connectionString;
+            string query = "SELECT E_EMAIL_ID, E_TASK FROM EMPLOYEE_TASK WHERE E_TASK_STATUS = 'Completed'";
 
             try
             {
-                using (OracleConnection connection = new OracleConnection(conStr))
+                OracleConnection connection = new OracleConnection(UserFunctions.connectionString);
+                OracleCommand cmd = new OracleCommand(query, connection);
+
+                connection.Open();
+                OracleDataReader reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
                 {
-                    connection.Open();
+                    StringBuilder completedTasks = new StringBuilder();
 
-                    using (OracleCommand cmd = new OracleCommand(query, connection))
+                    while (reader.Read())
                     {
-                        DataTable dataTable = new DataTable();
-
-                        using (OracleDataAdapter adapter = new OracleDataAdapter(cmd))
-                        {
-                            adapter.Fill(dataTable);
-                        }
-
-                        if (dataTable.Rows.Count > 0)
-                        {
-                            string completedTasks = "";
-                            foreach (DataRow row in dataTable.Rows)
-                            {
-                                string eId = row["e_id"].ToString();
-                                string task = row["task"].ToString();
-                                completedTasks += $"Employee ID: {eId}, Task: {task}\n";
-                            }
-
-                            textBox3.Text = completedTasks;
-                        }
-                        else
-                        {
-                            textBox3.Text = "No tasks are currently completed.";
-                        }
+                        string eId = reader["E_EMAIL_ID"].ToString();
+                        string task = reader["E_TASK"].ToString();
+                        completedTasks.AppendLine($"Employee ID: {eId}, Task: {task}");
                     }
+
+                    textBox3.Text = completedTasks.ToString();
                 }
+                else
+                {
+                    textBox3.Text = "No tasks are currently completed.";
+                }
+
+                reader.Close();
+                connection.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error retrieving completed tasks: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void searchID_click(object sender, EventArgs e)
         {
@@ -125,18 +117,18 @@ namespace WindowsFormsApp1.AllForms.Admin
                 return;
             }
 
-            string query = $"SELECT task FROM Employee WHERE e_id = '{eId}'";
-
-            string conStr = UserFunctions.connectionString;
+            string query = "SELECT E_TASK FROM employee_TASK WHERE E_EMAIL_ID = :eId";
 
             try
             {
-                using (OracleConnection connection = new OracleConnection(conStr))
+                using (OracleConnection connection = new OracleConnection(UserFunctions.connectionString))
                 {
                     connection.Open();
 
                     using (OracleCommand cmd = new OracleCommand(query, connection))
                     {
+                        cmd.Parameters.Add(new OracleParameter("eId", eId));
+
                         object result = cmd.ExecuteScalar();
 
                         if (result == null)
@@ -146,11 +138,7 @@ namespace WindowsFormsApp1.AllForms.Admin
                         else
                         {
                             string task = result.ToString();
-                            if (string.IsNullOrEmpty(task))
-                            {
-
-                            }
-                            else
+                            if (!string.IsNullOrEmpty(task))
                             {
                                 textBox2.Text = "Task is already assigned for this Employee ID.";
                             }
@@ -163,6 +151,7 @@ namespace WindowsFormsApp1.AllForms.Admin
                 MessageBox.Show("Error checking Employee ID: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void assignButton_click(object sender, EventArgs e)
         {
@@ -187,9 +176,9 @@ namespace WindowsFormsApp1.AllForms.Admin
                 return;
             }
 
-            string conStr = UserFunctions.connectionString;
 
-            string updateQuery = $"UPDATE Employee SET task = '{textBox2.Text}', task_status = 'assigned' WHERE e_id = '{eId}' AND task IS NULL";
+
+            string updateQuery = $"UPDATE EMPLOYEE_TASK SET E_TASK = '{textBox2.Text}', E_TASK_STATUS = 'assigned' WHERE E_EMAIL_ID = '{eId}' AND E_TASK IS NULL";
 
             try
             {
@@ -219,9 +208,9 @@ namespace WindowsFormsApp1.AllForms.Admin
 
         private string GetTaskForEmployee(string eId)
         {
-            string conStr = UserFunctions.connectionString;
 
-            string query = $"SELECT task FROM Employee WHERE e_id = '{eId}'";
+
+            string query = $"SELECT E_TASK FROM Employee WHERE E_EMAIL_ID = '{eId}'";
 
             try
             {

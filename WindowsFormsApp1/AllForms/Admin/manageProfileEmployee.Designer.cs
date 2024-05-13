@@ -61,7 +61,7 @@
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.panel13.Controls.Add(this.salaryBox);
             this.panel13.Controls.Add(this.label1);
             this.panel13.Controls.Add(this.updateBtn);
@@ -266,6 +266,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gold;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.e_id,

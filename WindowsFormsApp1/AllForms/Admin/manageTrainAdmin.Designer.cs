@@ -119,7 +119,7 @@
             // 
             // panel13
             // 
-            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.panel13.Controls.Add(this.idBox);
             this.panel13.Controls.Add(this.label2);
             this.panel13.Controls.Add(this.label9);
@@ -310,6 +310,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Gold;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.train_id,

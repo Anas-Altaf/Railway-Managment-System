@@ -149,8 +149,9 @@ namespace WindowsFormsApp1.AllForms.Admin
                                 if (reader[0] != DBNull.Value)
                                 {
                                     byte[] imageData = (byte[])reader[0];
+                                    trainImageBox.BackgroundImage = null;
                                     trainImageBox.Image = Image.FromStream(new MemoryStream(imageData));
-                                    trainImageBox.SizeMode = PictureBoxSizeMode.Zoom;
+                                    trainImageBox.SizeMode = PictureBoxSizeMode.StretchImage;
                                 }
                                 else
                                 {

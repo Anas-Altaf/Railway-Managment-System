@@ -19,15 +19,15 @@ namespace WindowsFormsApp1.Utilities
         {
             var message = new MimeMessage();
 
-                        message.From.Add(new MailboxAddress("RMS - Railway Mnagament System", "f223639@cfd.nu.edu.pk"));
+            message.From.Add(new MailboxAddress("RMS - Railway Mnagament System", "f223639@cfd.nu.edu.pk"));
 
-                        message.To.Add(new MailboxAddress("", recipientAddress));
+            message.To.Add(new MailboxAddress("", recipientAddress));
 
-                        message.Subject = "RMS - One Time OTP";
+            message.Subject = "RMS - One Time OTP";
 
-                        var bodyBuilder = new BodyBuilder();
+            var bodyBuilder = new BodyBuilder();
 
-                        bodyBuilder.HtmlBody = $@"
+            bodyBuilder.HtmlBody = $@"
     <!DOCTYPE html>
     <html>
     <head>
@@ -44,24 +44,24 @@ namespace WindowsFormsApp1.Utilities
     </html>
   ";
 
-                                                message.Body = bodyBuilder.ToMessageBody();
-            
+            message.Body = bodyBuilder.ToMessageBody();
+
             try
             {
                 var client = new SmtpClient();
 
-                                client.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls); 
-                                client.Authenticate(UserFunctions.testEmail, UserFunctions.testEmailPass);
+                client.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+                client.Authenticate(UserFunctions.testEmail, UserFunctions.testEmailPass);
 
                 client.Send(message);
-                client.Disconnect(true); 
+                client.Disconnect(true);
                 MessageBox.Show("Email sent successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (Exception ex)
             {
                 string errorMessage = "An error occurred while sending the email: ";
-                                if (ex is SmtpCommandException smtpEx)
+                if (ex is SmtpCommandException smtpEx)
                 {
                     errorMessage += "\nSMTP Error: " + smtpEx.StatusCode;
                     errorMessage += $"|{ex.Message}";

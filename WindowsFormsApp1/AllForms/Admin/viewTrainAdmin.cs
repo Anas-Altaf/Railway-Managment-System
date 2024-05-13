@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,48 @@ namespace WindowsFormsApp1.AllForms.Admin
                         if (reader.Read())
                         {
                             trainNamebox.Text = reader.GetString(0); trainDestinationBox.Text = reader.GetString(1); trainArrivalBox.Text = reader.GetString(2); traintypeBox.Text = reader.GetString(3); trainEndTimeBox.Text = reader.GetString(4); trainStartTimeBox.Text = reader.GetString(5); trainAnnoucementBox.Text = reader.GetString(6);
+                            
+
+                            // Loading Image
+                            using (OracleConnection connection1 = new OracleConnection(conStr))
+                            {
+                                connection1.Open();
+
+                               sql = "SELECT TRAIN_PICTURE FROM TRAINSCHEDULE WHERE Train_id = :id";
+
+                                using (OracleCommand command1 = new OracleCommand(sql, connection1))
+                                {
+                                    command1.Parameters.Add(new OracleParameter(":id", trainId));
+
+                                    using (OracleDataReader reader1 = command1.ExecuteReader())
+                                    {
+                                        if (reader1.Read())
+                                        {
+                                            if (reader1[0] != DBNull.Value)
+                                            {
+                                                byte[] imageData = (byte[])reader1[0];
+                                                trainImageBox.BackgroundImage = null;
+                                                trainImageBox.Image = Image.FromStream(new MemoryStream(imageData));
+                                                trainImageBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                                            }
+                                            else
+                                            {
+                                                trainImageBox.Image = null;
+                                                MessageBox.Show("No image found for Train with id: " + trainId);
+
+                                            }
+                                        }
+                                        else
+                                        {
+                                            trainImageBox.Image = null;
+                                            MessageBox.Show("Image not found with id: " + trainId);
+                                        }
+                                    }
+                                }
+                            }
+
+
+                            //Image loaded
 
                         }
                         else
@@ -58,6 +101,7 @@ namespace WindowsFormsApp1.AllForms.Admin
                             trainEndTimeBox.Text = "";
                             trainStartTimeBox.Text = "";
                             trainAnnoucementBox.Text = "";
+                            trainImageBox.Image = null;
 
                             MessageBox.Show("No train schedule found for the entered train ID.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         }

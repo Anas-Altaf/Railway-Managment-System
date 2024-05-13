@@ -42,7 +42,7 @@ namespace WindowsFormsApp1.AllForms.Passenger
                             string arrivalTime = reader["arrival_time"].ToString();
                             string name = reader["train_name"].ToString();
                             string announce = reader["announcements"].ToString();
-                            dataGridView1.Rows.Add(id, name, destination, arrival, type, destTime, arrivalTime, announce);
+                            dataGridView1.Rows.Add(id, name, announce, destination, arrival, type, destTime, arrivalTime);
                         }
                     }
                 }

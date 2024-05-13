@@ -29,7 +29,7 @@ namespace WindowsFormsApp1.AllForms.Employee
 
         private void employeeProfile_Load(object sender, EventArgs e)
         {
-            string sql = "SELECT E_USERNAME, E_PASSWORD, E_About FROM EMPLOYEE WHERE E_EMAIL_ID = :Email";
+            string sql = "SELECT E_NAME, E_PASSWORD, E_About FROM EMPLOYEE WHERE E_EMAIL_ID = :Email";
 
             using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(sql, connection))
@@ -43,7 +43,7 @@ namespace WindowsFormsApp1.AllForms.Employee
                     {
                         if (reader.Read())
                         {
-                            string eName = reader["E_USERNAME"].ToString();
+                            string eName = reader["E_NAME"].ToString();
                             string ePassword = reader["E_PASSWORD"].ToString();
                             string eAbout = reader["E_ABOUT"].ToString();
                            
@@ -96,7 +96,7 @@ namespace WindowsFormsApp1.AllForms.Employee
             string e_password = empPassword.Text;
             string e_about = empAbout.Text;
 
-            string sql = "UPDATE EMPLOYEE SET E_USERNAME = :Username, E_EMAIL_ID = :Email, E_PASSWORD = :Password, E_ABOUT = :About WHERE E_EMAIL_ID = :OldEmail";
+            string sql = "UPDATE EMPLOYEE SET E_NAME = :Username, E_EMAIL_ID = :Email, E_PASSWORD = :Password, E_ABOUT = :About WHERE E_EMAIL_ID = :OldEmail";
 
             using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(sql, connection))

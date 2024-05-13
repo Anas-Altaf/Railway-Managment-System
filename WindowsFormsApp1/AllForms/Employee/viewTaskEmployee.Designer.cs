@@ -40,6 +40,7 @@
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.BackColor = System.Drawing.Color.Wheat;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
             "washroom Cleaning",
@@ -53,6 +54,7 @@
             // 
             // listBoxCompleteTasks
             // 
+            this.listBoxCompleteTasks.BackColor = System.Drawing.Color.Wheat;
             this.listBoxCompleteTasks.FormattingEnabled = true;
             this.listBoxCompleteTasks.Location = new System.Drawing.Point(40, 284);
             this.listBoxCompleteTasks.Name = "listBoxCompleteTasks";
@@ -61,12 +63,14 @@
             // 
             // btnCompletedTasks
             // 
+            this.btnCompletedTasks.BackColor = System.Drawing.Color.Gold;
+            this.btnCompletedTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompletedTasks.Location = new System.Drawing.Point(40, 248);
             this.btnCompletedTasks.Name = "btnCompletedTasks";
             this.btnCompletedTasks.Size = new System.Drawing.Size(108, 23);
             this.btnCompletedTasks.TabIndex = 2;
             this.btnCompletedTasks.Text = "Completed Tasks";
-            this.btnCompletedTasks.UseVisualStyleBackColor = true;
+            this.btnCompletedTasks.UseVisualStyleBackColor = false;
             this.btnCompletedTasks.Click += new System.EventHandler(this.btnCompletedTasks_Click);
             // 
             // label1
@@ -91,16 +95,19 @@
             // 
             // btnTodoTasks
             // 
+            this.btnTodoTasks.BackColor = System.Drawing.Color.Gold;
+            this.btnTodoTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTodoTasks.Location = new System.Drawing.Point(432, 248);
             this.btnTodoTasks.Name = "btnTodoTasks";
             this.btnTodoTasks.Size = new System.Drawing.Size(93, 23);
             this.btnTodoTasks.TabIndex = 6;
             this.btnTodoTasks.Text = "To-do Tasks";
-            this.btnTodoTasks.UseVisualStyleBackColor = true;
+            this.btnTodoTasks.UseVisualStyleBackColor = false;
             this.btnTodoTasks.Click += new System.EventHandler(this.btnTodoTasks_Click);
             // 
             // listBoxTodoTasks
             // 
+            this.listBoxTodoTasks.BackColor = System.Drawing.Color.Wheat;
             this.listBoxTodoTasks.FormattingEnabled = true;
             this.listBoxTodoTasks.Location = new System.Drawing.Point(432, 284);
             this.listBoxTodoTasks.Name = "listBoxTodoTasks";
@@ -109,18 +116,21 @@
             // 
             // submitBtn
             // 
+            this.submitBtn.BackColor = System.Drawing.Color.Gold;
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.submitBtn.Location = new System.Drawing.Point(666, 57);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(73, 23);
             this.submitBtn.TabIndex = 7;
             this.submitBtn.Text = "Submit";
-            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.UseVisualStyleBackColor = false;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // viewTaskEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(788, 397);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.btnTodoTasks);

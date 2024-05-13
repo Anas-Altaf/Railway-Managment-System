@@ -24,7 +24,7 @@ namespace WindowsFormsApp1.AllForms.Employee
         private void helpSupportEmployee_Load(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            string sql = "SELECT p_email_id, P_HELPSUPPORT, P_HELPSUPPORTSTATUS, E_RESPONSE FROM HELPSUPPORTEMPLOYEE";
+            string sql = "SELECT p_email_id, HELP_TITLE, P_HELPSUPPORT, P_HELPSUPPORTSTATUS, E_RESPONSE FROM HELPSUPPORTEMPLOYEE";
             using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(sql, connection))
             {
@@ -37,9 +37,10 @@ namespace WindowsFormsApp1.AllForms.Employee
                         {
                             string email = reader["p_email_id"].ToString();
                             string helpSupport = reader["P_HELPSUPPORT"].ToString();
+                            string helpTitle = reader["HELP_TITLE"].ToString();
                             string helpSupportStatus = reader["P_HELPSUPPORTSTATUS"].ToString();
                             string response = reader["E_RESPONSE"].ToString();
-                            dataGridView1.Rows.Add(email, helpSupport, helpSupportStatus, response);
+                            dataGridView1.Rows.Add(email, helpTitle, helpSupport, helpSupportStatus, response);
                         }
                     }
                 }
