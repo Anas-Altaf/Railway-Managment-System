@@ -48,6 +48,7 @@
             this.mainTitle = new System.Windows.Forms.Label();
             this.tempInfo = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.reloadButton = new System.Windows.Forms.PictureBox();
             this.backButton = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.PassengerProfileButton = new System.Windows.Forms.Button();
             this.sideBar = new System.Windows.Forms.FlowLayoutPanel();
             this.sideBarTimer = new System.Windows.Forms.Timer(this.components);
-            this.reloadButton = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel2.SuspendLayout();
@@ -65,9 +65,9 @@
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).BeginInit();
             this.panel6.SuspendLayout();
             this.sideBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).BeginInit();
             this.SuspendLayout();
             // 
             // centralPanel
@@ -313,6 +313,20 @@
             this.panel7.Size = new System.Drawing.Size(679, 52);
             this.panel7.TabIndex = 0;
             // 
+            // reloadButton
+            // 
+            this.reloadButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reloadButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.reloadButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_reload_25;
+            this.reloadButton.Location = new System.Drawing.Point(649, 0);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(30, 52);
+            this.reloadButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.reloadButton.TabIndex = 103;
+            this.reloadButton.TabStop = false;
+            this.reloadButton.Tag = "Reload the Data";
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
+            // 
             // backButton
             // 
             this.backButton.BackColor = System.Drawing.Color.Gold;
@@ -408,20 +422,6 @@
             this.sideBarTimer.Interval = 10;
             this.sideBarTimer.Tick += new System.EventHandler(this.sideBarTimer_Tick);
             // 
-            // reloadButton
-            // 
-            this.reloadButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reloadButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.reloadButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_reload_25;
-            this.reloadButton.Location = new System.Drawing.Point(649, 0);
-            this.reloadButton.Name = "reloadButton";
-            this.reloadButton.Size = new System.Drawing.Size(30, 52);
-            this.reloadButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.reloadButton.TabIndex = 103;
-            this.reloadButton.TabStop = false;
-            this.reloadButton.Tag = "Reload the Data";
-            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
-            // 
             // passengerDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,9 +444,9 @@
             this.panel15.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).EndInit();
             this.panel6.ResumeLayout(false);
             this.sideBar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).EndInit();
             this.ResumeLayout(false);
 
         }

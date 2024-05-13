@@ -39,6 +39,7 @@
             this.EmpSalaryBtn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.reloadButton = new System.Windows.Forms.PictureBox();
             this.backButton = new System.Windows.Forms.Button();
             this.mainTitle = new System.Windows.Forms.Label();
             this.tempInfo = new System.Windows.Forms.TextBox();
@@ -55,19 +56,18 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.EmpLogoutBtn = new System.Windows.Forms.Button();
             this.centralPanel = new System.Windows.Forms.Panel();
-            this.reloadButton = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.menuButton)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel14.SuspendLayout();
             this.sideBar.SuspendLayout();
             this.panel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).BeginInit();
             this.SuspendLayout();
             // 
             // sideBarTimer
@@ -186,6 +186,20 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(679, 52);
             this.panel7.TabIndex = 0;
+            // 
+            // reloadButton
+            // 
+            this.reloadButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reloadButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.reloadButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_reload_25;
+            this.reloadButton.Location = new System.Drawing.Point(649, 0);
+            this.reloadButton.Name = "reloadButton";
+            this.reloadButton.Size = new System.Drawing.Size(30, 52);
+            this.reloadButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.reloadButton.TabIndex = 103;
+            this.reloadButton.TabStop = false;
+            this.reloadButton.Tag = "Reload the Data";
+            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
             // 
             // backButton
             // 
@@ -409,20 +423,6 @@
             this.centralPanel.Size = new System.Drawing.Size(788, 397);
             this.centralPanel.TabIndex = 8;
             // 
-            // reloadButton
-            // 
-            this.reloadButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reloadButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.reloadButton.Image = global::WindowsFormsApp1.Properties.Resources.icons8_reload_25;
-            this.reloadButton.Location = new System.Drawing.Point(649, 0);
-            this.reloadButton.Name = "reloadButton";
-            this.reloadButton.Size = new System.Drawing.Size(30, 52);
-            this.reloadButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.reloadButton.TabIndex = 103;
-            this.reloadButton.TabStop = false;
-            this.reloadButton.Tag = "Reload the Data";
-            this.reloadButton.Click += new System.EventHandler(this.reloadButton_Click);
-            // 
             // employeeDashoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,12 +442,12 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.sideBar.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.reloadButton)).EndInit();
             this.ResumeLayout(false);
 
         }

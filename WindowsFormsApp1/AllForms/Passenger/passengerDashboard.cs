@@ -128,7 +128,7 @@ namespace WindowsFormsApp1.AllForms.Passenger
         private void PassengerBookSeats_Click(object sender, EventArgs e)
         {
             mainTitle.Text = "Book Seats";
-            //LoadPage(new bookSeatsPassenger());
+            LoadPage(new bookSeatsPassenger());
         }
 
         private void PassengerReportAndFeedback_Click(object sender, EventArgs e)
