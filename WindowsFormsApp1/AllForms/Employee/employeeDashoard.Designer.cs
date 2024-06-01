@@ -431,6 +431,8 @@
             this.Controls.Add(this.centralPanel);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.sideBar);
+            this.MaximumSize = new System.Drawing.Size(998, 488);
+            this.MinimumSize = new System.Drawing.Size(998, 488);
             this.Name = "employeeDashoard";
             this.Text = "employeeDashoard";
             this.Load += new System.EventHandler(this.employeeDashoard_Load);

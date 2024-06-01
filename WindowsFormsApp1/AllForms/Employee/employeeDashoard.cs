@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,15 +9,58 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.AllForms.Admin;
+using WindowsFormsApp1.Static_Resources;
 
 namespace WindowsFormsApp1.AllForms.Employee
 {
     public partial class employeeDashoard : Form
     {
+        string conStr = UserFunctions.connectionString;
+
         Form pageForm;
         bool sideBarExpand;
         Timer timer = null;
         string _email = "umair@employee.com";
+        public static string GetEmployeeTypeByEmail(string connectionString, string email)
+        {
+            string employeeType = null;
+
+            try
+            {
+                using (OracleConnection connection = new OracleConnection(connectionString))
+                {
+                    string query = "SELECT E_TYPE FROM EMPLOYEE WHERE E_EMAIL_ID = :Email";
+
+                    using (OracleCommand command = new OracleCommand(query, connection))
+                    {
+                        command.Parameters.Add(":Email", OracleDbType.Varchar2).Value = email;
+
+                        connection.Open();
+
+                        object result = command.ExecuteScalar();
+
+                        if (result != DBNull.Value)
+                        {
+                            employeeType = result.ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No employee found with the provided email.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show("An Oracle error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return employeeType;
+        }
         private void ShowTempText(string text, int durationSeconds)
         {
 
@@ -39,7 +83,6 @@ namespace WindowsFormsApp1.AllForms.Employee
         }
         public void LoadPage(Form _pageForm)
         {
-
             centralPanel.Controls.Clear();
             pageForm = _pageForm;
             pageForm.Dock = DockStyle.Fill;
@@ -57,6 +100,22 @@ namespace WindowsFormsApp1.AllForms.Employee
         {
             InitializeComponent();
             _email = email;
+
+            string employeeTYPE = GetEmployeeTypeByEmail(conStr,_email).ToLower().Trim();
+
+            if(employeeTYPE == "cashier")
+            {
+                EmpSupportBtn.Enabled = false;
+            }
+            else if(employeeTYPE=="driver")
+            {
+                EmpSelTicketBtn.Enabled = false;
+                EmpSupportBtn.Enabled = false;
+            }
+            else if (employeeTYPE == "feedback manager")
+            {
+                EmpSelTicketBtn.Enabled = false;
+            }
         }
 
         private void menuButton_Click(object sender, EventArgs e)

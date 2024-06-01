@@ -34,6 +34,8 @@
             this.train_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.origin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.p_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.originBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -53,8 +55,6 @@
             this.emailBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.phoneBox = new System.Windows.Forms.TextBox();
-            this.p_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.p_phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,6 +111,18 @@
             this.destination.HeaderText = "DESTINATION";
             this.destination.Name = "destination";
             this.destination.ReadOnly = true;
+            // 
+            // p_email
+            // 
+            this.p_email.HeaderText = "EMAIL";
+            this.p_email.Name = "p_email";
+            this.p_email.ReadOnly = true;
+            // 
+            // p_phone
+            // 
+            this.p_phone.HeaderText = "CONTACT";
+            this.p_phone.Name = "p_phone";
+            this.p_phone.ReadOnly = true;
             // 
             // label2
             // 
@@ -269,6 +281,7 @@
             this.ticketBox.Location = new System.Drawing.Point(452, 242);
             this.ticketBox.Multiline = true;
             this.ticketBox.Name = "ticketBox";
+            this.ticketBox.ReadOnly = true;
             this.ticketBox.Size = new System.Drawing.Size(199, 27);
             this.ticketBox.TabIndex = 15;
             // 
@@ -311,18 +324,6 @@
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(199, 27);
             this.phoneBox.TabIndex = 19;
-            // 
-            // p_email
-            // 
-            this.p_email.HeaderText = "EMAIL";
-            this.p_email.Name = "p_email";
-            this.p_email.ReadOnly = true;
-            // 
-            // p_phone
-            // 
-            this.p_phone.HeaderText = "CONTACT";
-            this.p_phone.Name = "p_phone";
-            this.p_phone.ReadOnly = true;
             // 
             // bookSeatsPassenger
             // 

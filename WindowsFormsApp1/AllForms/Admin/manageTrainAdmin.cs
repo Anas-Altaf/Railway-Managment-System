@@ -17,12 +17,56 @@ namespace WindowsFormsApp1.AllForms.Admin
     {
         private DataTable trainScheduleData;
         string conStr = UserFunctions.connectionString;
+        string trainID = "T020";
         public manageTrainAdmin()
         {
             InitializeComponent();
             trainScheduleData = new DataTable();
+            
         }
+        private string GetNextTicketId(string connectionString)
+        {
+            string nextTicketId = null;
 
+            try
+            {
+   
+                using (OracleConnection connection = new OracleConnection(connectionString))
+                {
+         
+                    string query = "SELECT MAX(TO_NUMBER(SUBSTR(TRAIN_ID, 2))) + 1 AS NextId FROM TRAINSCHEDULE";
+
+                    using (OracleCommand command = new OracleCommand(query, connection))
+                    {
+                        connection.Open();
+
+                        object result = command.ExecuteScalar();
+
+                        if (result != DBNull.Value)
+                        {
+                            int nextId = Convert.ToInt32(result);
+                            nextTicketId = $"T{nextId:D3}"; 
+                        }
+                        else
+                        {
+                            nextTicketId = trainID;
+                        }
+                    }
+                }
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show("An Oracle error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                nextTicketId = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                nextTicketId = null;
+            }
+
+            return nextTicketId;
+        }
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
@@ -80,6 +124,7 @@ namespace WindowsFormsApp1.AllForms.Admin
             string arrivalTime = arrTBox.Text;
             string name = nameBox.Text;
             string announce = annBox.Text;
+            trainID = GetNextTicketId(conStr);
 
             string sql = "INSERT INTO trainschedule (TRAIN_ID, TRAIN_NAME, DESTINATION, ARRIVAL, TYPE, ANNOUNCEMENTS, DEST_TIME,ARRIVAL_TIME) " +
                          "VALUES (:id, :name, :destination, :arrival, :type, :announce, :destTime, :arrivalTime)";
@@ -87,7 +132,8 @@ namespace WindowsFormsApp1.AllForms.Admin
             using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(sql, connection))
             {
-                cmd.Parameters.Add(new OracleParameter("id", id));
+                idBox.Text = trainID;
+                cmd.Parameters.Add(new OracleParameter("id", trainID));
                 cmd.Parameters.Add(new OracleParameter("name", name));
                 cmd.Parameters.Add(new OracleParameter("destination", destination));
                 cmd.Parameters.Add(new OracleParameter("arrival", arrival));

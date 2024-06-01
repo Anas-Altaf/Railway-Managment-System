@@ -151,6 +151,7 @@
             // 
             this.idBox.Location = new System.Drawing.Point(112, 30);
             this.idBox.Name = "idBox";
+            this.idBox.ReadOnly = true;
             this.idBox.Size = new System.Drawing.Size(158, 20);
             this.idBox.TabIndex = 63;
             // 

@@ -23,7 +23,7 @@ namespace WindowsFormsApp1.AllForms.Admin
         private void viewFeedbacksAAdmin_Load(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-            string sql = "SELECT p_email_id, P_HELPSUPPORT, P_HELPSUPPORTSTATUS, E_RESPONSE FROM HELPSUPPORTEMPLOYEE";
+            string sql = "SELECT p_email_id,help_title, P_HELPSUPPORT, P_HELPSUPPORTSTATUS, E_RESPONSE FROM HELPSUPPORTEMPLOYEE";
             using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(sql, connection))
             {
@@ -36,9 +36,10 @@ namespace WindowsFormsApp1.AllForms.Admin
                         {
                             string email = reader["p_email_id"].ToString();
                             string helpSupport = reader["P_HELPSUPPORT"].ToString();
+                            string helpSupportT = reader["help_title"].ToString();
                             string helpSupportStatus = reader["P_HELPSUPPORTSTATUS"].ToString();
                             string response = reader["E_RESPONSE"].ToString();
-                            dataGridView1.Rows.Add(email, helpSupport, helpSupportStatus, response);
+                            dataGridView1.Rows.Add(email, helpSupportT, helpSupport, helpSupportStatus, response);
                         }
                     }
                 }

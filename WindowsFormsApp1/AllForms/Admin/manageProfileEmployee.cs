@@ -19,9 +19,52 @@ namespace WindowsFormsApp1.AllForms.Admin
     public partial class manageProfileEmployee : Form
     {
         string conStr = UserFunctions.connectionString;
+        string _empID = "E020";
         public manageProfileEmployee()
         {
             InitializeComponent();
+        }
+
+        public string GetNextEmployeeId(string connectionString)
+        {
+            string nextEmployeeId = null;
+
+            try
+            {
+                using (OracleConnection connection = new OracleConnection(connectionString))
+                {
+                    string query = "SELECT MAX(TO_NUMBER(SUBSTR(E_ID, 2))) + 1 AS NextId FROM EMPLOYEE";
+
+                    using (OracleCommand command = new OracleCommand(query, connection))
+                    {
+                        connection.Open();
+
+                        object result = command.ExecuteScalar();
+
+                        if (result != DBNull.Value)
+                        {
+                            int nextId = Convert.ToInt32(result);
+                            nextEmployeeId = $"E{nextId:D3}"; // Format the next ID as E001, E002, ...
+                        }
+                        else
+                        {
+                            nextEmployeeId = "E001"; // If no records in the table, start from E001
+                        }
+                    }
+                }
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show("An Oracle error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                nextEmployeeId = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                nextEmployeeId = null;
+            }
+
+            return nextEmployeeId;
         }
 
         private void manageProfileEmployee_Load(object sender, EventArgs e)
@@ -160,6 +203,7 @@ namespace WindowsFormsApp1.AllForms.Admin
             string id = idBox.Text;
             string salary = salaryBox.Text;
             string type = typeBox.Text;
+            _empID = GetNextEmployeeId(conStr);
 
             string sql = "INSERT INTO employee (e_email_id, e_name, e_password, e_id, e_salary, e_type) " +
                          "VALUES (:email, :name, :password, :id, :salary, :type)";
@@ -167,10 +211,11 @@ namespace WindowsFormsApp1.AllForms.Admin
             using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(sql, connection))
             {
+                idBox.Text = _empID;
                 cmd.Parameters.Add(new OracleParameter("email", email));
                 cmd.Parameters.Add(new OracleParameter("name", name));
                 cmd.Parameters.Add(new OracleParameter("password", password));
-                cmd.Parameters.Add(new OracleParameter("id", id));
+                cmd.Parameters.Add(new OracleParameter("id", _empID));
                 cmd.Parameters.Add(new OracleParameter("salary", salary));
                 cmd.Parameters.Add(new OracleParameter("type", type));
 

@@ -115,6 +115,7 @@
             this.ticketBox.Location = new System.Drawing.Point(449, 248);
             this.ticketBox.Multiline = true;
             this.ticketBox.Name = "ticketBox";
+            this.ticketBox.ReadOnly = true;
             this.ticketBox.Size = new System.Drawing.Size(199, 27);
             this.ticketBox.TabIndex = 36;
             // 

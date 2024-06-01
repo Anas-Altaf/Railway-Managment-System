@@ -17,9 +17,53 @@ namespace WindowsFormsApp1.AllForms.Passenger
     public partial class bookSeatsPassenger : Form
     {
         string conStr = UserFunctions.connectionString;
+        string ticketID = "TK020";
+
         public bookSeatsPassenger()
         {
             InitializeComponent();
+        }
+
+        public string GetNextTicketId(string connectionString)
+        {
+            string nextTicketId = null;
+
+            try
+            {
+                using (OracleConnection connection = new OracleConnection(connectionString))
+                {
+                    string query = "SELECT MAX(TO_NUMBER(SUBSTR(TICKET_ID, 3))) + 1 AS NextId FROM TICKET";
+
+                    using (OracleCommand command = new OracleCommand(query, connection))
+                    {
+                        connection.Open();
+
+                        object result = command.ExecuteScalar();
+
+                        if (result != DBNull.Value)
+                        {
+                            int nextId = Convert.ToInt32(result);
+                            nextTicketId = $"TK{nextId:D3}";
+                        }
+                        else
+                        {
+                            nextTicketId = "TK001";
+                        }
+                    }
+                }
+            }
+            catch (OracleException ex)
+            {
+                MessageBox.Show("An Oracle error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                nextTicketId = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                nextTicketId = null;
+            }
+
+            return nextTicketId;
         }
 
         private void bookSeatsPassenger_Load(object sender, EventArgs e)
@@ -115,6 +159,7 @@ namespace WindowsFormsApp1.AllForms.Passenger
             string destination = destBox.Text;
             string email = emailBox.Text;
             string phone = phoneBox.Text;
+            ticketID = GetNextTicketId(conStr);
             bool trainExists = CheckTrainExists(trainId);
             if (!trainExists)
             {
@@ -126,8 +171,9 @@ namespace WindowsFormsApp1.AllForms.Passenger
             using (OracleConnection connection = new OracleConnection(conStr))
             using (OracleCommand cmd = new OracleCommand(insertSql, connection))
             {
+                ticketBox.Text = ticketID;
                 cmd.Parameters.Add(":TrainId", OracleDbType.Varchar2).Value = trainId;
-                cmd.Parameters.Add(":TicketId", OracleDbType.Varchar2).Value = ticketId;
+                cmd.Parameters.Add(":TicketId", OracleDbType.Varchar2).Value = ticketID;
                 cmd.Parameters.Add(":Origin", OracleDbType.Varchar2).Value = origin;
                 cmd.Parameters.Add(":Destination", OracleDbType.Varchar2).Value = destination;
                 cmd.Parameters.Add(":email", OracleDbType.Varchar2).Value = email;
